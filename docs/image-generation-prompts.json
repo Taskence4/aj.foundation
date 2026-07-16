@@ -1,0 +1,188 @@
+{
+  "project": "AJ Foundation website photography placeholders",
+  "version": "1.0",
+  "global_style": {
+    "visual_direction": "Premium documentary editorial photography for an Indian rehabilitation and skills-development nonprofit, authentic human connection, natural expressions, warm cinematic daylight, deep maroon and restrained crimson accents, realistic skin texture, subtle film grain, credible NGO communications aesthetic, inclusive and dignified.",
+    "ethical_direction": "People are portrayed with agency, dignity, and optimism. Do not identify incarcerated participants. Avoid prison uniforms, visible prison numbers, bars as a visual cliché, handcuffs, humiliation, fear, surveillance aesthetics, political insignia, official seals, readable personal records, logos, watermarks, and generated text.",
+    "technical_direction": "Photorealistic, natural color, balanced highlights, no HDR look, no excessive bokeh, no distorted hands or faces, no duplicate people, no text embedded in image, sRGB output.",
+    "default_negative_prompt": "prison bars, handcuffs, orange prison uniform, mugshot, distressed prisoner, humiliation, violence, weapons, police raid, political rally branding, party flag, official seal, readable private documents, watermark, logo, caption, artificial text, plastic skin, overprocessed HDR, extreme bokeh, distorted hands, extra fingers, duplicate faces, uncanny eyes"
+  },
+  "assets": [
+    {
+      "prompt_id": "IMG-01",
+      "target_file": "hero-background.webp",
+      "size": { "width": 2400, "height": 1500, "aspect_ratio": "8:5" },
+      "prompt": "Wide cinematic photograph of a hopeful Indian community gathering in a large indoor hall, diverse adults seen mostly as tasteful silhouettes and partial profiles, hands raised in participation and solidarity, warm backlight cutting through subtle atmospheric haze, authentic nonprofit community event rather than a concert or political rally, deep burgundy and charcoal tonality, left half deliberately dark and low-detail for large white website headline, strongest crowd energy in center and right, premium editorial documentary photography.",
+      "composition": "Full-bleed landscape. Preserve dark negative space across the left 48 percent. No essential faces near the outer 12 percent.",
+      "negative_prompt": "concert stage, celebrity, political signs, party flags, campaign logos, identifiable vulnerable individuals, bright text area, prison imagery"
+    },
+    {
+      "prompt_id": "IMG-02",
+      "target_file": "foundation-leader.webp",
+      "size": { "width": 1400, "height": 1800, "aspect_ratio": "7:9", "background": "transparent" },
+      "prompt": "Full upper-body studio portrait of a credible Indian nonprofit foundation leader, age 40 to 60, standing confidently behind a simple unbranded dark wooden lectern with one discreet microphone, composed and compassionate expression, refined formal Indian or business attire in charcoal with a subtle maroon accent, soft key light and natural skin texture, hands visible, photographed straight-on for a premium NGO website hero, isolated subject on transparent background.",
+      "composition": "Preserve complete head, shoulders, torso, hands, microphone, and lectern with 8 percent transparent padding around the silhouette.",
+      "negative_prompt": "politician, political pin, party colors, government emblem, national flag backdrop, aggressive gesture, text, cropped hands, missing lectern, opaque background"
+    },
+    {
+      "prompt_id": "IMG-03",
+      "target_file": "supporter-01.webp",
+      "size": { "width": 600, "height": 600, "aspect_ratio": "1:1" },
+      "prompt": "Warm natural head-and-shoulders portrait of an Indian woman volunteering with a skills-development nonprofit, age around 30, approachable confident expression, simple smart-casual clothing with a restrained maroon accent, soft neutral background, honest documentary portrait, circular-avatar safe.",
+      "composition": "Face centered, hair fully inside frame, eyes near 42 percent from top.",
+      "negative_prompt": "glamour portrait, corporate stock photo, heavy makeup, logo, text, cropped hair"
+    },
+    {
+      "prompt_id": "IMG-04",
+      "target_file": "supporter-02.webp",
+      "size": { "width": 600, "height": 600, "aspect_ratio": "1:1" },
+      "prompt": "Warm natural head-and-shoulders portrait of an Indian male vocational trainer in his early 40s, calm encouraging expression, smart-casual neutral clothing, subtle classroom background softly out of focus, authentic nonprofit documentary portrait, circular-avatar safe.",
+      "composition": "Face centered with comfortable headroom and shoulders visible.",
+      "negative_prompt": "hard corporate lighting, suit and tie stereotype, logo, text, cropped head"
+    },
+    {
+      "prompt_id": "IMG-05",
+      "target_file": "supporter-03.webp",
+      "size": { "width": 600, "height": 600, "aspect_ratio": "1:1" },
+      "prompt": "Warm natural head-and-shoulders portrait of a mature Indian woman who represents a community or institutional partner, age around 50, thoughtful trustworthy expression, understated professional attire, neutral warm background, premium documentary portrait, circular-avatar safe.",
+      "composition": "Face centered, eyes near 42 percent from top, clean outer edges.",
+      "negative_prompt": "political official, uniform, insignia, logo, text, severe expression"
+    },
+    {
+      "prompt_id": "IMG-06",
+      "target_file": "about-speaker.webp",
+      "size": { "width": 1200, "height": 1500, "aspect_ratio": "4:5" },
+      "prompt": "Candid vertical documentary photograph of an Indian nonprofit facilitator leading a practical communication and life-skills session, facilitator speaking with an open supportive gesture, a few adult participants visible from behind or softly out of focus, modest bright learning room, notebooks and learning materials, dignity and attentive engagement, warm natural side light, premium editorial photography.",
+      "composition": "Facilitator centered with generous headroom for a rounded arch crop; bottom corners expendable.",
+      "negative_prompt": "lecture hall stage, prison bars, uniforms, identifiable participant close-ups, visible private notes, posed handshake"
+    },
+    {
+      "prompt_id": "IMG-07",
+      "target_file": "about-collaboration.webp",
+      "size": { "width": 1200, "height": 1500, "aspect_ratio": "4:5" },
+      "prompt": "Vertical candid photograph of three Indian nonprofit and institutional stakeholders in a respectful programme-planning discussion around a small table, active listening, open notebook, simple meeting room, collaborative body language, diverse genders and ages, warm daylight, credible documentary NGO photography, no posed handshake.",
+      "composition": "Main faces and gestures inside central 70 percent, headroom suitable for an arched crop, documents too soft to read.",
+      "negative_prompt": "government seal, police uniform, prison uniform, readable paperwork, corporate boardroom luxury, staged handshake"
+    },
+    {
+      "prompt_id": "IMG-08",
+      "target_file": "programme-rehabilitation.webp",
+      "size": { "width": 1600, "height": 1100, "aspect_ratio": "16:11" },
+      "prompt": "Authentic small-circle rehabilitation learning session in India, adult participants and a trained facilitator discussing communication, responsibility, and confidence, attentive posture and respectful expressions, modest multipurpose classroom, warm natural light, participants framed in three-quarter view or from behind to protect identity, optimistic premium documentary photography.",
+      "composition": "Narrative interaction centered; top-left area visually quiet for a numbered interface badge; mobile side-crop safe.",
+      "negative_prompt": "therapy cliché, crying, prison bars, handcuffs, prison uniform, identifiable vulnerable person close-up, text"
+    },
+    {
+      "prompt_id": "IMG-09",
+      "target_file": "programme-engagement.webp",
+      "size": { "width": 1600, "height": 1100, "aspect_ratio": "16:11" },
+      "prompt": "Constructive group workshop in India with adult learners collaborating on a practical tabletop exercise using cards, paper, and markers, trainer guiding without dominating, engaged hands and natural expressions, purposeful learning atmosphere, warm documentary light, sophisticated nonprofit editorial style.",
+      "composition": "Activity centered, top-left clear for card badge, key hands and materials inside central 70 percent.",
+      "negative_prompt": "children, party game, readable personal information, prison imagery, staged cheering, text overlay"
+    },
+    {
+      "prompt_id": "IMG-10",
+      "target_file": "programme-employability.webp",
+      "size": { "width": 1600, "height": 1100, "aspect_ratio": "16:11" },
+      "prompt": "Practical employability and digital-literacy coaching session in India, adult learner working on a laptop while a mentor explains interview preparation and workplace communication, supportive body language, simple training room, screen content abstract and unreadable, authentic warm daylight, premium documentary nonprofit photography.",
+      "composition": "People and laptop centered, top-left clear for number badge, safe for moderate side crop.",
+      "negative_prompt": "generic corporate office, visible brand, readable screen data, prison imagery, exaggerated success pose"
+    },
+    {
+      "prompt_id": "IMG-11",
+      "target_file": "trust-volunteer.webp",
+      "size": { "width": 1800, "height": 1000, "aspect_ratio": "9:5" },
+      "prompt": "Wide candid photograph of an Indian volunteer mentor encouraging adults during a practical learning session, mentor leaning in to explain a task, collaborative eye-level interaction, participants shown respectfully in profile or from behind, warm natural light, confident and hopeful documentary storytelling.",
+      "composition": "Primary interaction center-right, wide-crop safe, expendable outer edges.",
+      "negative_prompt": "charity savior pose, handing out money, prison bars, uniforms, staged handshake, visible names"
+    },
+    {
+      "prompt_id": "IMG-12",
+      "target_file": "trust-partnership.webp",
+      "size": { "width": 1400, "height": 1400, "aspect_ratio": "1:1" },
+      "prompt": "Square documentary photograph of Indian foundation representatives and institutional stakeholders reviewing a rehabilitation programme plan around a table, notebooks and simple charts present but unreadable, calm professional collaboration, mixed genders, modest meeting room, warm daylight, trustworthy NGO editorial aesthetic.",
+      "composition": "Group centered and safe for mild portrait crop; hands and faces remain inside central 75 percent.",
+      "negative_prompt": "official government insignia, police uniforms, readable records, luxury office, political meeting, posed handshake"
+    },
+    {
+      "prompt_id": "IMG-13",
+      "target_file": "event-orientation.webp",
+      "size": { "width": 1800, "height": 1500, "aspect_ratio": "6:5" },
+      "prompt": "Indian nonprofit volunteer orientation in a clean community hall, facilitator addressing 15 to 20 seated adults, participants attentive and taking notes, realistic mixed ages and genders, simple presentation wall with no readable text, warm natural lighting, energetic but credible documentary event photography.",
+      "composition": "Speaker center-left, audience creating depth, crop safe from landscape to near-square.",
+      "negative_prompt": "political rally, campaign signage, concert, branded slideshow, empty room, raised fists"
+    },
+    {
+      "prompt_id": "IMG-14",
+      "target_file": "event-workshop.webp",
+      "size": { "width": 1800, "height": 1500, "aspect_ratio": "6:5" },
+      "prompt": "Hands-on skills and work-readiness workshop in India, several adult learners rotating through a practical planning activity with a facilitator, lively but orderly collaboration, notebooks, laptop, and simple learning materials, a setting distinct from a lecture event, warm editorial documentary photography.",
+      "composition": "Central cluster of activity, no essential subject at outer edges, crop safe to square.",
+      "negative_prompt": "same scene as orientation, political event, prison imagery, readable personal documents, artificial cheering"
+    },
+    {
+      "prompt_id": "IMG-15",
+      "target_file": "testimonial-partner.webp",
+      "size": { "width": 800, "height": 800, "aspect_ratio": "1:1" },
+      "prompt": "Natural head-and-shoulders editorial portrait of a credible Indian programme partner, mature adult with a thoughtful and approachable expression, understated professional clothing, warm neutral background, realistic skin texture, soft window light, premium NGO communications portrait, circular-avatar safe.",
+      "composition": "Face centered, eyes at 42 percent from top, shoulders visible, clean circular crop.",
+      "negative_prompt": "political portrait, official seal, uniform, stock-photo grin, glamour retouching, text"
+    },
+    {
+      "prompt_id": "IMG-16",
+      "target_file": "highlight-main.webp",
+      "size": { "width": 1800, "height": 1440, "aspect_ratio": "5:4" },
+      "prompt": "Powerful documentary overview of an AJ Foundation-style rehabilitation and skills programme in action in India, facilitator and diverse adult learners engaged around a shared table, visible practical learning materials, layered foreground and background storytelling, hopeful energy, authentic modest venue, warm directional daylight, premium photojournalistic nonprofit image.",
+      "composition": "Strong central narrative moment, safe for square crop, no essential face in outer 15 percent.",
+      "negative_prompt": "posed group photo, banner, political branding, prison bars, uniforms, charitable handout, readable names"
+    },
+    {
+      "prompt_id": "IMG-17",
+      "target_file": "highlight-skills.webp",
+      "size": { "width": 1400, "height": 1050, "aspect_ratio": "4:3" },
+      "prompt": "Close documentary view of Indian adult learners and a mentor doing practical work-readiness planning, hands using a laptop, printed exercise cards, and a notebook, subtle maroon detail, faces only partially visible, warm natural light, tactile authentic editorial photography.",
+      "composition": "Hands, laptop, and materials centered; horizontal crop; all screen and paper content unreadable.",
+      "negative_prompt": "brand logos, readable CV, readable computer screen, distorted fingers, generic office stock image"
+    },
+    {
+      "prompt_id": "IMG-18",
+      "target_file": "highlight-community.webp",
+      "size": { "width": 1400, "height": 1050, "aspect_ratio": "4:3" },
+      "prompt": "Candid small-group community discussion in India, female facilitator and three adults exchanging ideas around a simple table, attentive eye contact and open body language, different room and wardrobe from other website images, warm daylight, dignified premium documentary photography.",
+      "composition": "Faces inside central 70 percent, safe for landscape and square crop.",
+      "negative_prompt": "posed handshake, political meeting, uniforms, readable notes, repeated people from other prompts"
+    },
+    {
+      "prompt_id": "IMG-19",
+      "target_file": "donation-background.webp",
+      "size": { "width": 2400, "height": 1200, "aspect_ratio": "2:1" },
+      "prompt": "Wide overhead-to-oblique documentary photograph of Indian volunteers preparing dignified learning and skills-development kits, hands arranging notebooks, pens, folders, and simple training materials on a long table, collective action and care, dark charcoal and warm maroon palette, cinematic low-key natural light, generous dark negative space for white website copy.",
+      "composition": "Full-bleed 2:1 background, important hands and materials centered, dark low-detail zones on both sides, edge-crop safe.",
+      "negative_prompt": "money, donation cheque, begging, food handout, visible brand, readable names, prison bars, embedded text"
+    },
+    {
+      "prompt_id": "IMG-20",
+      "target_file": "news-skills-rehabilitation.webp",
+      "size": { "width": 1600, "height": 1100, "aspect_ratio": "16:11" },
+      "prompt": "Editorial documentary image for an article about why skills training matters in rehabilitation, Indian adult learner practicing a communication exercise with a facilitator and small group, grounded modest setting, focused hopeful expressions, warm natural light, credible nonprofit journalism.",
+      "composition": "Central action, visually quiet top-left for category label, mobile side-crop safe.",
+      "negative_prompt": "headline text, prison cliché, distressed subject, political imagery, identifiable vulnerable close-up"
+    },
+    {
+      "prompt_id": "IMG-21",
+      "target_file": "news-work-readiness.webp",
+      "size": { "width": 1600, "height": 1100, "aspect_ratio": "16:11" },
+      "prompt": "Editorial documentary image for an article about preparing for work after release, Indian career coach conducting a respectful mock interview with an adult learner across a simple table, confident posture developing, notebook and neutral laptop, authentic training room, warm daylight, realistic nonprofit photojournalism.",
+      "composition": "Interaction centered-right with quiet top-left for category badge; screen and notes unreadable.",
+      "negative_prompt": "corporate boardroom, job offer celebration, readable CV, prison bars, uniforms, political branding"
+    },
+    {
+      "prompt_id": "IMG-22",
+      "target_file": "news-institutional-trust.webp",
+      "size": { "width": 1600, "height": 1100, "aspect_ratio": "16:11" },
+      "prompt": "Editorial documentary image for an article about trusted rehabilitation programmes, Indian foundation coordinator and institutional stakeholders calmly reviewing a programme progress dashboard and printed plan, transparent collaborative process, understated meeting room, warm natural light, professional NGO journalism, no official branding.",
+      "composition": "Participants centered, top-left quiet for category label, charts abstract and unreadable, crop safe.",
+      "negative_prompt": "government emblem, police uniform, readable confidential data, political meeting, staged handshake, embedded text"
+    }
+  ]
+}
