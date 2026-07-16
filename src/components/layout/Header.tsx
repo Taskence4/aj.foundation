@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
+import { withBasePath } from "@/lib/utils";
 
 const links = [
   ["Home", "#home"],
@@ -21,7 +22,7 @@ export function Header() {
         <Link href="#home" className="brand" onClick={() => setOpen(false)}>
           <Image
             className="brand-logo brand-logo-light"
-            src="/brand/aj-foundation-transparent.webp"
+            src={withBasePath("/brand/aj-foundation-transparent.webp")}
             alt="AJ Foundation"
             width={320}
             height={89}
