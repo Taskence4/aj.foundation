@@ -62,7 +62,7 @@ export default function Home() {
       <section id="home" className="hero-section">
         <Image className="hero-bg" src={withBasePath("/images/aj-foundation/hero-background.webp")} alt="A community solidarity gathering" fill priority sizes="100vw" />
         <div className="hero-shade" />
-        <Image className="hero-candidate" src={withBasePath("/images/aj-foundation/founder.webp")} alt="AJ Foundation founder speaking at a podium" width={928} height={1152} priority />
+        <Image className="hero-candidate" src={withBasePath("/images/aj-foundation/founder.webp")} alt="AJ Foundation founder speaking at a podium" width={1126} height={1397} priority />
         <div className="site-shell hero-content">
           <Eyebrow light>People deserve a second chance.</Eyebrow>
           <h1>Building skills.<br />Restoring purpose.</h1>
