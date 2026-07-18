@@ -17,6 +17,7 @@ import { priorities } from "@/data/priorities";
 import { faqs } from "@/data/faqs";
 import { updates } from "@/data/updates";
 import { withBasePath } from "@/lib/utils";
+import { UpdateCard } from "@/components/updates/UpdateCard";
 
 const programmeImages = [
   withBasePath("/images/aj-foundation/programme-rehabilitation.webp"),
@@ -261,15 +262,10 @@ export default function Home() {
         <div className="site-shell">
           <div className="section-row">
             <div className="section-intro"><Eyebrow>Updates & insights</Eyebrow><h2>Stories, learnings, and field updates</h2></div>
-            <ActionLink href="#contact" light>More news</ActionLink>
+            <ActionLink href="/updates" light>More news</ActionLink>
           </div>
           <div className="news-grid">
-            {updates.map((post, index) => (
-              <article className="news-card" key={post.slug}>
-                <div className="news-image"><Image src={[withBasePath("/images/aj-foundation/news-skills-rehabilitation.webp"), withBasePath("/images/aj-foundation/news-work-readiness.webp"), withBasePath("/images/aj-foundation/news-institutional-trust.webp")][index]} alt="" fill sizes="(max-width: 768px) 100vw, 33vw" /><span>{post.category}</span></div>
-                <div className="news-body"><small>AJ FOUNDATION · FIELD NOTE</small><h3>{post.title}</h3><p>{post.excerpt}</p><Link href="#contact"><ArrowUpRight /></Link></div>
-              </article>
-            ))}
+            {updates.map((post) => <UpdateCard key={post.slug} post={post} />)}
           </div>
         </div>
       </section>

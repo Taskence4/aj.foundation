@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SiteMotion } from "@/components/layout/SiteMotion";
 
 const inter = localFont({
   variable: "--font-inter",
@@ -21,5 +22,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" className={`${inter.variable} ${parkinsans.variable}`}><body><Header /><main>{children}</main><Footer /></body></html>;
+  return <html lang="en" className={`${inter.variable} ${parkinsans.variable}`}><body><SiteMotion /><Header /><main>{children}</main><Footer /></body></html>;
 }
