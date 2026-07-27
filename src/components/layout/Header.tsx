@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { withBasePath } from "@/lib/utils";
+import { HashLink } from "@/components/HashLink";
 
 const links = [
   ["Home", "/#home"],
@@ -38,9 +39,15 @@ export function Header() {
           />
         </Link>
         <nav className={`header-nav ${open ? "open" : ""}`}>
-          {links.map(([label, href]) => <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>)}
+          {links.map(([label, href]) =>
+            href.includes("#") ? (
+              <HashLink key={href} href={href} onClick={() => setOpen(false)}>{label}</HashLink>
+            ) : (
+              <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>
+            ),
+          )}
         </nav>
-        <Link className="header-cta" href="/#contact"><span>Join the Mission</span><i><ArrowRight size={18} /></i></Link>
+        <HashLink className="header-cta" href="/#contact"><span>Join the Mission</span><i><ArrowRight size={18} /></i></HashLink>
         <button className="menu-button" type="button" onClick={() => setOpen(!open)} aria-label="Toggle navigation">{open ? <X /> : <Menu />}</button>
       </div>
     </header>

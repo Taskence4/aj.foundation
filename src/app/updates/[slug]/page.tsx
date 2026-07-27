@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowUpRight, CalendarDays, Clock3 } from "lucide-react";
 import { UpdateCard } from "@/components/updates/UpdateCard";
 import { getUpdate, updates } from "@/data/updates";
 import { withBasePath } from "@/lib/utils";
+import { HashLink } from "@/components/HashLink";
 
 export const dynamicParams = false;
 
@@ -77,7 +78,7 @@ export default async function UpdateArticlePage({ params }: PageProps<"/updates/
           <div className="article-closing">
             <strong>From insight to implementation</strong>
             <p>AJ Foundation works with institutions, trainers, employers, volunteers, and supporters to build practical pathways for rehabilitation and reintegration.</p>
-            <Link className="action-link" href="/#contact"><span>Start a conversation</span><span className="action-icon"><ArrowUpRight /></span></Link>
+            <HashLink className="action-link" href="/#contact"><span>Start a conversation</span><span className="action-icon"><ArrowUpRight /></span></HashLink>
           </div>
         </div>
       </article>

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import {
   ArrowUpRight,
   Check,
@@ -16,6 +15,7 @@ import { updates } from "@/data/updates";
 import { withBasePath } from "@/lib/utils";
 import { UpdateCard } from "@/components/updates/UpdateCard";
 import { ContactCTAForm } from "@/components/sections/ContactCTAForm";
+import { HashLink } from "@/components/HashLink";
 
 const programmeImages = [
   withBasePath("/images/aj-foundation/programme-rehabilitation.webp"),
@@ -29,10 +29,10 @@ function Eyebrow({ children, light = false }: { children: React.ReactNode; light
 
 function ActionLink({ href, children, light = false }: { href: string; children: React.ReactNode; light?: boolean }) {
   return (
-    <Link className={`action-link ${light ? "action-link-light" : ""}`} href={href}>
+    <HashLink className={`action-link ${light ? "action-link-light" : ""}`} href={href}>
       <span>{children}</span>
       <span className="action-icon"><ArrowUpRight size={18} /></span>
-    </Link>
+    </HashLink>
   );
 }
 
@@ -109,7 +109,7 @@ export default function Home() {
                 <div className="programme-body">
                   <h3>{item.title}</h3>
                   <p>{item.body}</p>
-                  <Link href="#contact" aria-label={`Learn about ${item.title}`}><ArrowUpRight /></Link>
+                  <HashLink href="#contact" aria-label={`Learn about ${item.title}`}><ArrowUpRight /></HashLink>
                 </div>
               </article>
             ))}

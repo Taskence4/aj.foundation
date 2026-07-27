@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { UpdateCard } from "@/components/updates/UpdateCard";
 import { updates } from "@/data/updates";
+import { HashLink } from "@/components/HashLink";
 
 export const metadata: Metadata = {
   title: "Updates & Insights | AJ Foundation",
@@ -15,7 +15,7 @@ export default function UpdatesPage() {
     <>
       <section className="updates-page-hero">
         <div className="site-shell updates-page-hero-inner">
-          <Link className="page-back-link" href="/#updates"><ArrowLeft /> Back to home</Link>
+          <HashLink className="page-back-link" href="/#updates"><ArrowLeft /> Back to home</HashLink>
           <p className="eyebrow eyebrow-light">Updates & insights</p>
           <h1>Ideas for rehabilitation that lasts.</h1>
           <p>
@@ -43,7 +43,7 @@ export default function UpdatesPage() {
       <section className="editorial-cta">
         <div className="site-shell editorial-cta-inner">
           <div><span>Build the next pathway with us</span><h2>Turn shared insight into practical action.</h2></div>
-          <Link className="action-link action-link-light" href="/#contact"><span>Work with AJ Foundation</span><span className="action-icon"><ArrowUpRight /></span></Link>
+          <HashLink className="action-link action-link-light" href="/#contact"><span>Work with AJ Foundation</span><span className="action-icon"><ArrowUpRight /></span></HashLink>
         </div>
       </section>
     </>
