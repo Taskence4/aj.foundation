@@ -70,8 +70,8 @@ export function SiteMotion() {
       elements.forEach((element) => revealObserver.observe(element));
     }, 40);
 
-    const leaveTimer = window.setTimeout(() => setLeaving(true), 360);
-    const hideTimer = window.setTimeout(() => setLoading(false), 760);
+    const leaveTimer = window.setTimeout(() => setLeaving(true), 680);
+    const hideTimer = window.setTimeout(() => setLoading(false), 1140);
 
     return () => {
       window.clearTimeout(revealTimer);

@@ -18,6 +18,7 @@ import { faqs } from "@/data/faqs";
 import { updates } from "@/data/updates";
 import { withBasePath } from "@/lib/utils";
 import { UpdateCard } from "@/components/updates/UpdateCard";
+import { ContactCTAForm } from "@/components/sections/ContactCTAForm";
 
 const programmeImages = [
   withBasePath("/images/aj-foundation/programme-rehabilitation.webp"),
@@ -275,10 +276,10 @@ export default function Home() {
           <Eyebrow light>Work with us</Eyebrow>
           <h2>Join the mission today for progress.</h2>
           <p>Institutions, volunteers, trainers, employers, donors, and partners all have a role in building practical pathways for reintegration.</p>
-          <ActionLink href="mailto:info@ajfoundation.org" light>Join the mission</ActionLink>
           <div className="join-points">
             {["Volunteer", "Partner", "Train", "Support"].map((point) => <span key={point}><Check />{point}</span>)}
           </div>
+          <ContactCTAForm />
         </div>
       </section>
     </>

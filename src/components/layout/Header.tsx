@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { withBasePath } from "@/lib/utils";
 
@@ -16,8 +16,17 @@ const links = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="main-header">
+    <header className={`main-header ${scrolled ? "is-scrolled" : ""}`}>
       <div className="site-shell header-inner">
         <Link href="/" className="brand" onClick={() => setOpen(false)}>
           <Image
