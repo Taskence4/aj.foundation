@@ -2,13 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowUpRight,
-  CalendarDays,
   Check,
-  Clock3,
   Compass,
   HandHeart,
   HeartHandshake,
-  MapPin,
   Quote,
   ShieldCheck,
   Sparkles,
@@ -24,25 +21,6 @@ const programmeImages = [
   withBasePath("/images/aj-foundation/programme-rehabilitation.webp"),
   withBasePath("/images/aj-foundation/programme-engagement.webp"),
   withBasePath("/images/aj-foundation/programme-employability.webp"),
-];
-
-const events = [
-  {
-    title: "Volunteer orientation session",
-    body: "An introduction for volunteers interested in skills training, mentoring, and programme coordination.",
-    image: withBasePath("/images/aj-foundation/event-orientation.webp"),
-    date: "Dates announced soon",
-    time: "Registration open",
-    location: "Venue to be confirmed",
-  },
-  {
-    title: "Skills for rehabilitation workshop",
-    body: "A focused workshop on structured skills training, employability, and reintegration.",
-    image: withBasePath("/images/aj-foundation/event-workshop.webp"),
-    date: "Dates announced soon",
-    time: "Registration open",
-    location: "Venue to be confirmed",
-  },
 ];
 
 function Eyebrow({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
@@ -164,33 +142,6 @@ export default function Home() {
               <div><h3>Focused on real results</h3><p>From self-belief and employability to documentation awareness and post-release readiness.</p></div>
               <ActionLink href="#contact">Join our mission</ActionLink>
             </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="events" className="section section-white">
-        <div className="site-shell">
-          <div className="section-intro centered">
-            <Eyebrow>Join our events</Eyebrow>
-            <h2>Upcoming events and community sessions</h2>
-          </div>
-          <div className="event-list">
-            {events.map((event, index) => (
-              <article className="event-card" key={event.title}>
-                <div className="event-image"><Image src={event.image} alt="Community event" fill sizes="(max-width: 800px) 100vw, 42vw" /></div>
-                <div className="event-content">
-                  <span className="event-number">0{index + 1}</span>
-                  <h3>{event.title}</h3>
-                  <p>{event.body}</p>
-                  <ul>
-                    <li><CalendarDays /> <span><small>Date</small>{event.date}</span></li>
-                    <li><Clock3 /> <span><small>Time</small>{event.time}</span></li>
-                    <li><MapPin /> <span><small>Location</small>{event.location}</span></li>
-                  </ul>
-                  <ActionLink href="#contact" light>Event details</ActionLink>
-                </div>
-              </article>
-            ))}
           </div>
         </div>
       </section>

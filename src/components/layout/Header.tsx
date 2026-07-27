@@ -10,7 +10,6 @@ const links = [
   ["Home", "/#home"],
   ["About", "/#about"],
   ["Programmes", "/#programmes"],
-  ["Events", "/#events"],
   ["Updates", "/updates"],
 ];
 

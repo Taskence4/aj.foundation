@@ -11,7 +11,6 @@ const revealSelector = [
   ".programme-card",
   ".trust-card",
   ".trust-photo",
-  ".event-card",
   ".testimonial-stage",
   ".highlight-grid figure",
   ".donation-copy",
