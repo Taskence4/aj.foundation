@@ -162,7 +162,7 @@ export default function Home() {
             <Quote className="quote-mark" />
             <blockquote>“A practical approach to rehabilitation—focused, respectful, and built with a clear purpose.”</blockquote>
             <div className="testimonial-person">
-              <div className="testimonial-avatar"><Image src={withBasePath("/images/aj-foundation/testimonial-partner.webp")} alt="Programme partner" fill sizes="72px" /></div>
+              <div className="testimonial-avatar"><Image src={withBasePath("/images/aj-foundation/supporter-03.webp")} alt="Programme partner" fill sizes="72px" /></div>
               <div><strong>Programme partner</strong><span>Institutional stakeholder</span></div>
             </div>
           </div>
