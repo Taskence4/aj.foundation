@@ -23,6 +23,7 @@ export function UpdateCard({ post, priority = false }: UpdateCardProps) {
           sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 33vw"
         />
         <span>{post.category}</span>
+        <span className="ai-tag">Representational image</span>
       </Link>
       <div className="news-body">
         <small>AJ FOUNDATION · FIELD NOTE</small>

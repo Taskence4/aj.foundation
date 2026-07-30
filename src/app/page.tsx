@@ -21,6 +21,8 @@ const programmeImages = [
   withBasePath("/images/aj-foundation/programme-rehabilitation.webp"),
   withBasePath("/images/aj-foundation/programme-engagement.webp"),
   withBasePath("/images/aj-foundation/programme-employability.webp"),
+  withBasePath("/images/aj-foundation/event-orientation.webp"),
+  withBasePath("/images/aj-foundation/event-workshop.webp"),
 ];
 
 function Eyebrow({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
@@ -43,6 +45,7 @@ export default function Home() {
         <Image className="hero-bg" src={withBasePath("/images/aj-foundation/hero-background.webp")} alt="A community solidarity gathering" fill priority sizes="100vw" />
         <div className="hero-shade" />
         <Image className="hero-candidate" src={withBasePath("/images/aj-foundation/founder.webp")} alt="AJ Foundation founder speaking at a podium" width={1126} height={1397} priority />
+        <span className="ai-tag">Representational image</span>
         <div className="site-shell hero-content">
           <Eyebrow light>People deserve a second chance.</Eyebrow>
           <h1>Building skills.<br />Restoring purpose.</h1>
@@ -76,6 +79,7 @@ export default function Home() {
           <div className="about-grid">
             <figure className="portrait-card portrait-tall">
               <Image src={withBasePath("/images/aj-foundation/about-speaker.webp")} alt="A facilitator leading a communication skills session" fill sizes="(max-width: 768px) 100vw, 30vw" />
+              <span className="ai-tag">Representational image</span>
             </figure>
             <div className="about-center">
               <div className="about-stat"><strong>5</strong><span>core programme pillars</span></div>
@@ -85,6 +89,7 @@ export default function Home() {
             </div>
             <figure className="portrait-card portrait-offset">
               <Image src={withBasePath("/images/aj-foundation/about-collaboration.webp")} alt="Programme stakeholders planning together" fill sizes="(max-width: 768px) 100vw, 30vw" />
+              <span className="ai-tag">Representational image</span>
             </figure>
           </div>
         </div>
@@ -100,11 +105,12 @@ export default function Home() {
             <ActionLink href="#contact" light>Partner with us</ActionLink>
           </div>
           <div className="programme-grid">
-            {priorities.slice(0, 3).map((item, index) => (
+            {priorities.map((item, index) => (
               <article className="programme-card" key={item.slug}>
                 <div className="programme-image">
                   <Image src={programmeImages[index]} alt="" fill sizes="(max-width: 768px) 100vw, 33vw" />
                   <span>0{index + 1}</span>
+                  <span className="ai-tag">Representational image</span>
                 </div>
                 <div className="programme-body">
                   <h3>{item.title}</h3>
@@ -131,8 +137,8 @@ export default function Home() {
               <HeartHandshake />
               <div><h3>People-first support</h3><p>Every programme is designed around dignity, responsibility, and practical outcomes.</p></div>
             </article>
-            <figure className="trust-photo wide-photo"><Image src={withBasePath("/images/aj-foundation/trust-volunteer.webp")} alt="A mentor supporting a vocational training session" fill sizes="50vw" /></figure>
-            <figure className="trust-photo"><Image src={withBasePath("/images/aj-foundation/trust-partnership.webp")} alt="An institutional programme review meeting" fill sizes="33vw" /></figure>
+            <figure className="trust-photo wide-photo"><Image src={withBasePath("/images/aj-foundation/trust-volunteer.webp")} alt="A mentor supporting a vocational training session" fill sizes="50vw" /><span className="ai-tag">Representational image</span></figure>
+            <figure className="trust-photo"><Image src={withBasePath("/images/aj-foundation/trust-partnership.webp")} alt="An institutional programme review meeting" fill sizes="33vw" /><span className="ai-tag">Representational image</span></figure>
             <article className="trust-card light-card">
               <ShieldCheck />
               <div><h3>Institution-ready</h3><p>Transparent, safe, and reliable programmes built to work within institutional realities.</p></div>
@@ -170,10 +176,10 @@ export default function Home() {
             <p className="section-sidecopy">Practical learning, institutional collaboration, and community participation in action.</p>
           </div>
           <div className="highlight-grid">
-            <figure className="highlight-a"><Image src={withBasePath("/images/aj-foundation/highlight-main.webp")} alt="A practical vocational skills programme in progress" fill sizes="60vw" /></figure>
-            <figure className="highlight-b"><Image src={withBasePath("/images/aj-foundation/highlight-skills.webp")} alt="Learners reviewing work-readiness materials" fill sizes="40vw" /></figure>
-            <figure><Image src={withBasePath("/images/aj-foundation/highlight-community.webp")} alt="A community group discussion" fill sizes="20vw" /></figure>
-            <figure><Image src={withBasePath("/images/aj-foundation/highlight-institutional.webp")} alt="Stakeholders reviewing programme plans" fill sizes="20vw" /></figure>
+            <figure className="highlight-a"><Image src={withBasePath("/images/aj-foundation/highlight-main.webp")} alt="A practical vocational skills programme in progress" fill sizes="60vw" /><span className="ai-tag">Representational image</span></figure>
+            <figure className="highlight-b"><Image src={withBasePath("/images/aj-foundation/highlight-skills.webp")} alt="Learners reviewing work-readiness materials" fill sizes="40vw" /><span className="ai-tag">Representational image</span></figure>
+            <figure><Image src={withBasePath("/images/aj-foundation/highlight-community.webp")} alt="A community group discussion" fill sizes="20vw" /><span className="ai-tag">Representational image</span></figure>
+            <figure><Image src={withBasePath("/images/aj-foundation/highlight-institutional.webp")} alt="Stakeholders reviewing programme plans" fill sizes="20vw" /><span className="ai-tag">Representational image</span></figure>
           </div>
         </div>
       </section>
@@ -181,6 +187,7 @@ export default function Home() {
       <section id="donate" className="section donation-section">
         <Image src={withBasePath("/images/aj-foundation/donation-background.webp")} alt="" fill className="donation-bg" sizes="100vw" />
         <div className="donation-overlay" />
+        <span className="ai-tag">Representational image</span>
         <div className="site-shell donation-inner">
           <div className="donation-copy"><Eyebrow light>Support the mission</Eyebrow><h2>Your support can help build a path from custody to capability.</h2></div>
           <div className="donation-card">

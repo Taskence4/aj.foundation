@@ -50,6 +50,7 @@ export default async function UpdateArticlePage({ params }: PageProps<"/updates/
       <div className="site-shell article-cover-wrap">
         <figure className="article-cover">
           <Image src={withBasePath(post.image)} alt={post.imageAlt} fill priority sizes="(max-width: 1240px) 100vw, 1200px" />
+          <span className="ai-tag">Representational image</span>
         </figure>
       </div>
 
