@@ -245,6 +245,17 @@ h1, h2, h3, blockquote { font-family: var(--font-parkinsans), sans-serif; font-w
 .scope-banner p { margin: 0; max-width: 480px; color: rgba(255,255,255,.82); line-height: 1.65; }
 .about-closing { margin-top: 64px; }
 
+/* Our Work page */
+.connect-flow { display: flex; align-items: stretch; gap: 18px; margin: 32px 0 0; }
+.connect-step-wrap { display: flex; align-items: center; gap: 18px; flex: 1; }
+.connect-step { flex: 1; height: 100%; padding: 26px; border-radius: 16px; background: var(--cream); }
+.connect-step svg { width: 26px; height: 26px; margin-bottom: 14px; color: var(--primary); }
+.connect-step p { margin: 0; color: var(--dark); font-size: 15px; line-height: 1.6; }
+.connect-arrow { flex-shrink: 0; width: 20px; height: 20px; color: var(--gold); }
+.synthesis-block { display: flex; align-items: flex-start; gap: 22px; margin-top: 22px; padding: 40px 44px; border-radius: 20px; background: var(--dark); }
+.synthesis-block svg { flex-shrink: 0; width: 30px; height: 30px; color: var(--gold); }
+.synthesis-block p { margin: 0; color: white; font-family: var(--font-parkinsans); font-size: clamp(18px, 2vw, 22px); font-weight: 600; letter-spacing: -0.3px; line-height: 1.5; }
+
 /* Editorial pages */
 .updates-page-hero, .article-hero { position: relative; overflow: hidden; background: var(--dark); color: white; }
 .updates-page-hero::before, .article-hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 78% 22%, rgba(0,118,29,.28), transparent 34%), linear-gradient(140deg, transparent 50%, rgba(255,255,255,.04)); pointer-events: none; }
@@ -420,6 +431,10 @@ h1, h2, h3, blockquote { font-family: var(--font-parkinsans), sans-serif; font-w
   .trust-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
   .domain-grid, .collaborate-grid { grid-template-columns: 1fr; margin-top: 36px; }
   .scope-banner { padding: 28px; margin-top: 40px; }
+  .connect-flow { flex-direction: column; }
+  .connect-step-wrap { flex-direction: column; align-items: stretch; }
+  .connect-arrow { align-self: center; transform: rotate(90deg); }
+  .synthesis-block { padding: 28px; }
   .principle-list { margin-top: 36px; gap: 30px; }
   .trust-card, .trust-photo { min-height: 265px; }
   .trust-card { padding: 26px; }

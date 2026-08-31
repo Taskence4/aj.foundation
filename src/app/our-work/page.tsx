@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Compass, HeartHandshake, Link2, Quote, Scale } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
 import { ourWork } from "@/data/ourWork";
+
+const connections = [
+  { icon: Scale, body: "A livelihood certificate cannot resolve an unresolved legal barrier." },
+  { icon: HeartHandshake, body: "Legal assistance alone may not create work or housing." },
+  { icon: Compass, body: "A job lead may fail if identity documents, family support or practical preparation are missing." },
+] as const;
 
 export const metadata: Metadata = {
   title: "Our Work | AJ Foundation",
@@ -40,12 +46,30 @@ export default function OurWorkPage() {
           </div>
 
           <div className="page-content after-grid">
-            <h2>How the pathways connect</h2>
+            <div className="page-eyebrow-heading"><Link2 /><h2>How the pathways connect</h2></div>
+            <p className="about-section-lead">Taken alone, each pathway can stall. Taken together, they hold.</p>
+          </div>
+
+          <div className="connect-flow">
+            {connections.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <div className="connect-step-wrap" key={step.body}>
+                  <div className="connect-step">
+                    <Icon />
+                    <p>{step.body}</p>
+                  </div>
+                  {index < connections.length - 1 && <ArrowRight className="connect-arrow" />}
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="synthesis-block">
+            <Quote />
             <p>
-              A livelihood certificate cannot resolve an unresolved legal barrier. Legal assistance alone may not
-              create work or housing. A job lead may fail if identity documents, family support or practical
-              preparation are missing. Our approach therefore begins with the person&rsquo;s circumstances, consent
-              and priorities, and builds referrals and opportunities around them.
+              Our approach begins with the person&rsquo;s circumstances, consent and priorities, and builds
+              referrals and opportunities around them.
             </p>
           </div>
         </div>
