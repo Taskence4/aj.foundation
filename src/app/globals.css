@@ -256,6 +256,16 @@ h1, h2, h3, blockquote { font-family: var(--font-parkinsans), sans-serif; font-w
 .synthesis-block svg { flex-shrink: 0; width: 30px; height: 30px; color: var(--gold); }
 .synthesis-block p { margin: 0; color: white; font-family: var(--font-parkinsans); font-size: clamp(18px, 2vw, 22px); font-weight: 600; letter-spacing: -0.3px; line-height: 1.5; }
 
+/* How We Work page */
+.principles-overview { position: relative; display: flex; justify-content: space-between; gap: 6px; margin: 48px 0 0; }
+.principles-overview::before { content: ""; position: absolute; top: 26px; left: 40px; right: 40px; height: 2px; background: var(--line); z-index: 0; }
+.principle-node { position: relative; z-index: 1; display: flex; flex: 1; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+.principle-node .node-circle { display: flex; flex-shrink: 0; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 50%; background: var(--dark); color: var(--gold); }
+.principle-node span { max-width: 108px; color: var(--dark); font-size: 12px; font-weight: 700; line-height: 1.35; }
+.principle-detail-grid { grid-template-columns: repeat(2, 1fr); }
+.principle-card { position: relative; }
+.principle-index { position: absolute; top: 24px; right: 26px; color: rgba(0,118,29,.3); font-family: var(--font-parkinsans); font-size: 26px; font-weight: 700; }
+
 /* Editorial pages */
 .updates-page-hero, .article-hero { position: relative; overflow: hidden; background: var(--dark); color: white; }
 .updates-page-hero::before, .article-hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 78% 22%, rgba(0,118,29,.28), transparent 34%), linear-gradient(140deg, transparent 50%, rgba(255,255,255,.04)); pointer-events: none; }
@@ -436,6 +446,10 @@ h1, h2, h3, blockquote { font-family: var(--font-parkinsans), sans-serif; font-w
   .connect-arrow { align-self: center; transform: rotate(90deg); }
   .synthesis-block { padding: 28px; }
   .principle-list { margin-top: 36px; gap: 30px; }
+  .principles-overview { flex-direction: column; align-items: flex-start; gap: 26px; margin-top: 36px; }
+  .principles-overview::before { top: 24px; bottom: 24px; left: 25px; right: auto; width: 2px; height: auto; }
+  .principle-node { flex-direction: row; text-align: left; }
+  .principle-node span { max-width: none; }
   .trust-card, .trust-photo { min-height: 265px; }
   .trust-card { padding: 26px; }
   .trust-card h3 { font-size: 27px; }
