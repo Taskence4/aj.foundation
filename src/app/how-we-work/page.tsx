@@ -18,30 +18,16 @@ export default function HowWeWorkPage() {
         description="How support is offered matters as much as what is offered. Our work is intended to protect dignity, agency, safety and accountability at every stage."
       />
 
-      <section className="section section-white">
-        <div className="site-shell page-content">
-          <div className="page-eyebrow-heading"><ListChecks /><h2>Six principles, at every stage</h2></div>
-          <p className="about-section-lead">
-            From first contact to follow-up, the same commitments apply &mdash; they are not optional extras layered
-            onto a programme.
-          </p>
-
-          <div className="principles-overview">
-            {principles.map((principle) => {
-              const Icon = principle.icon;
-              return (
-                <div className="principle-node" key={principle.title}>
-                  <div className="node-circle"><Icon size={20} /></div>
-                  <span>{principle.title}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       <section className="section section-warm">
         <div className="site-shell">
+          <div className="page-content">
+            <div className="page-eyebrow-heading"><ListChecks /><h2>Six principles, at every stage</h2></div>
+            <p className="about-section-lead">
+              From first contact to follow-up, the same commitments apply &mdash; they are not optional extras
+              layered onto a programme.
+            </p>
+          </div>
+
           <div className="collaborate-grid principle-detail-grid">
             {principles.map((principle, index) => {
               const Icon = principle.icon;
