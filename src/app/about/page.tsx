@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
+import { NoticeBox } from "@/components/layout/NoticeBox";
 import { HashLink } from "@/components/HashLink";
 
 export const metadata: Metadata = {
@@ -30,6 +31,13 @@ export default function AboutPage() {
             addressed through competent partnerships.
           </p>
 
+          <NoticeBox label="Registered details — pending confirmation">
+            <p>
+              AJ Foundation&rsquo;s registered legal name, legal form, registration number and registered office
+              address will be published here once confirmed.
+            </p>
+          </NoticeBox>
+
           <h2>Our vision</h2>
           <p>
             A society in which people affected by incarceration can access justice, rebuild capabilities and return
@@ -49,6 +57,20 @@ export default function AboutPage() {
             <li>People with limited financial means, documentation, family support or access to competent services.</li>
             <li>Families and communities affected by incarceration, where engagement is appropriate and consent-based.</li>
           </ol>
+
+          <h2>Where we work</h2>
+          <p>
+            AJ Foundation&rsquo;s initial programme development and operations are focused on Karnataka, with a
+            broader aspiration to contribute across India over time through partnerships and scalable approaches.
+          </p>
+
+          <h2>Founder &amp; governance</h2>
+          <NoticeBox label="Coming soon">
+            <p>
+              A note from our Founder, along with details of AJ Foundation&rsquo;s governance and leadership, will
+              be published here once finalised.
+            </p>
+          </NoticeBox>
 
           <HashLink className="action-link page-cta" href="/our-work">
             <span>Explore our work</span>

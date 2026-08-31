@@ -47,10 +47,19 @@ export default function InitialProgrammePage() {
             <li>Referral and limited follow-up within the approved implementation model.</li>
           </ol>
 
+          <h2>Proposed programme structure</h2>
+          <ol className="page-list">
+            <li>Initial trades: Electrical and Plumbing.</li>
+            <li>Cohort size: approximately 20&ndash;30 participants per trade.</li>
+            <li>Duration: a three-month training cycle.</li>
+            <li>Schedule: four training days per week, approximately four hours of training per day.</li>
+          </ol>
+
           <NoticeBox label="Programme status">
             <p>
-              This programme is still under development. Location, trades, start date, batch size and confirmed
-              partners will be published here once institutional approval and partner agreements are in place.
+              This programme is still under development. Site inspection, implementation arrangements, cohort
+              sequencing and the launch schedule are still being finalised. No institution has been named and no
+              partnership or launch date has been confirmed. Final details will be published here once agreed.
             </p>
           </NoticeBox>
         </div>

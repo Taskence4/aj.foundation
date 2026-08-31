@@ -7,6 +7,7 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div className="site-shell footer-top">
+        <div><p>Call us</p><a href="tel:+918050089834">+91 80500 89834</a></div>
         <div><p>Email</p><a href="mailto:info@ajfoundation.org">info@ajfoundation.org</a></div>
         <div className="footer-social"><Link href="#" aria-label="Instagram"><InstagramIcon /></Link><Link href="#" aria-label="LinkedIn"><LinkedInIcon /></Link><Link href="#" aria-label="Facebook"><FacebookIcon /></Link></div>
       </div>

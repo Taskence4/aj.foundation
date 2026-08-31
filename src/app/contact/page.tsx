@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
 import { NoticeBox } from "@/components/layout/NoticeBox";
 import { GeneralEnquiryForm } from "@/components/sections/GeneralEnquiryForm";
@@ -20,8 +20,9 @@ export default function ContactPage() {
 
       <section className="section section-white">
         <div className="site-shell">
-          <div className="page-content">
+          <div className="page-content contact-links">
             <a className="contact-email-link" href="mailto:info@ajfoundation.org"><Mail size={18} /> info@ajfoundation.org</a>
+            <a className="contact-email-link" href="tel:+918050089834"><Phone size={18} /> +91 80500 89834</a>
           </div>
 
           <GeneralEnquiryForm />
