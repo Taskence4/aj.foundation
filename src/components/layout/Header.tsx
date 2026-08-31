@@ -9,9 +9,12 @@ import { HashLink } from "@/components/HashLink";
 
 const links = [
   ["Home", "/#home"],
-  ["About", "/#about"],
-  ["Programmes", "/#programmes"],
-  ["Updates", "/updates"],
+  ["About", "/about"],
+  ["Our Work", "/our-work"],
+  ["How We Work", "/how-we-work"],
+  ["Insights", "/updates"],
+  ["Partner With Us", "/partner-with-us"],
+  ["Contact", "/contact"],
 ];
 
 export function Header() {
@@ -47,7 +50,7 @@ export function Header() {
             ),
           )}
         </nav>
-        <HashLink className="header-cta" href="/#contact"><span>Join the Mission</span><i><ArrowRight size={18} /></i></HashLink>
+        <Link className="header-cta" href="/contact"><span>Join the Mission</span><i><ArrowRight size={18} /></i></Link>
         <button className="menu-button" type="button" onClick={() => setOpen(!open)} aria-label="Toggle navigation">{open ? <X /> : <Menu />}</button>
       </div>
     </header>

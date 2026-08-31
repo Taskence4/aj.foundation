@@ -1,11 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowUpRight,
   Check,
   Compass,
-  HandHeart,
   HeartHandshake,
-  Quote,
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
@@ -30,11 +29,17 @@ function Eyebrow({ children, light = false }: { children: React.ReactNode; light
 }
 
 function ActionLink({ href, children, light = false }: { href: string; children: React.ReactNode; light?: boolean }) {
-  return (
-    <HashLink className={`action-link ${light ? "action-link-light" : ""}`} href={href}>
+  const className = `action-link ${light ? "action-link-light" : ""}`;
+  const content = (
+    <>
       <span>{children}</span>
       <span className="action-icon"><ArrowUpRight size={18} /></span>
-    </HashLink>
+    </>
+  );
+  return href.includes("#") ? (
+    <HashLink className={className} href={href}>{content}</HashLink>
+  ) : (
+    <Link className={className} href={href}>{content}</Link>
   );
 }
 
@@ -57,14 +62,6 @@ export default function Home() {
             <ActionLink href="#contact" light>Support now</ActionLink>
             <ActionLink href="#programmes">Learn more</ActionLink>
           </div>
-          <div className="hero-support">
-            <div className="avatar-stack">
-              {["supporter-01.webp", "supporter-02.webp", "supporter-03.webp", "supporter-04.webp"].map((image) => (
-                <Image key={image} src={withBasePath(`/images/aj-foundation/${image}`)} alt="AJ Foundation supporter" width={54} height={54} />
-              ))}
-            </div>
-            <div><strong>1,000+ lives</strong><span>JOIN THE MISSION</span></div>
-          </div>
           <p className="hero-footline">Committed to dignity, driven by change.</p>
         </div>
       </section>
@@ -83,9 +80,9 @@ export default function Home() {
             </figure>
             <div className="about-center">
               <div className="about-stat"><strong>5</strong><span>core programme pillars</span></div>
-              <div className="about-stat"><strong>1,000+</strong><span>lives reached</span></div>
+              <div className="about-stat"><strong>3</strong><span>connected pathways</span></div>
               <p>Our work is focused, practical, and built around one clear purpose: helping individuals prepare for a responsible life beyond prison.</p>
-              <ActionLink href="#programmes" light>About us</ActionLink>
+              <ActionLink href="/about" light>About us</ActionLink>
             </div>
             <figure className="portrait-card portrait-offset">
               <Image src={withBasePath("/images/aj-foundation/about-collaboration.webp")} alt="Programme stakeholders planning together" fill sizes="(max-width: 768px) 100vw, 30vw" />
@@ -102,7 +99,7 @@ export default function Home() {
               <Eyebrow>Our programmes</Eyebrow>
               <h2>Priorities for a stronger future</h2>
             </div>
-            <ActionLink href="#contact" light>Partner with us</ActionLink>
+            <ActionLink href="/partner-with-us" light>Partner with us</ActionLink>
           </div>
           <div className="programme-grid">
             {priorities.map((item, index) => (
@@ -115,7 +112,7 @@ export default function Home() {
                 <div className="programme-body">
                   <h3>{item.title}</h3>
                   <p>{item.body}</p>
-                  <HashLink href="#contact" aria-label={`Learn about ${item.title}`}><ArrowUpRight /></HashLink>
+                  <Link href="/our-work" aria-label={`Learn about ${item.title}`}><ArrowUpRight /></Link>
                 </div>
               </article>
             ))}
@@ -130,7 +127,7 @@ export default function Home() {
               <Eyebrow light>Why people trust our movement</Eyebrow>
               <h2>Rehabilitation built on structure, consistency, and trust</h2>
             </div>
-            <ActionLink href="#contact" light>Get in touch</ActionLink>
+            <ActionLink href="/contact" light>Get in touch</ActionLink>
           </div>
           <div className="trust-grid">
             <article className="trust-card blue-card">
@@ -146,25 +143,8 @@ export default function Home() {
             <article className="trust-card dark-card wide-card">
               <Compass />
               <div><h3>Focused on real results</h3><p>From self-belief and employability to documentation awareness and post-release readiness.</p></div>
-              <ActionLink href="#contact">Join our mission</ActionLink>
+              <ActionLink href="/contact">Join our mission</ActionLink>
             </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section testimonial-section">
-        <div className="site-shell">
-          <div className="section-intro centered light-copy">
-            <Eyebrow light>Testimonials</Eyebrow>
-            <h2>What partners and supporters say</h2>
-          </div>
-          <div className="testimonial-stage">
-            <Quote className="quote-mark" />
-            <blockquote>“A practical approach to rehabilitation—focused, respectful, and built with a clear purpose.”</blockquote>
-            <div className="testimonial-person">
-              <div className="testimonial-avatar"><Image src={withBasePath("/images/aj-foundation/supporter-03.webp")} alt="Programme partner" fill sizes="72px" /></div>
-              <div><strong>Programme partner</strong><span>Institutional stakeholder</span></div>
-            </div>
           </div>
         </div>
       </section>
@@ -184,27 +164,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="donate" className="section donation-section">
-        <Image src={withBasePath("/images/aj-foundation/donation-background.webp")} alt="" fill className="donation-bg" sizes="100vw" />
-        <div className="donation-overlay" />
-        <span className="ai-tag">Representational image</span>
-        <div className="site-shell donation-inner">
-          <div className="donation-copy"><Eyebrow light>Support the mission</Eyebrow><h2>Your support can help build a path from custody to capability.</h2></div>
-          <div className="donation-card">
-            <HandHeart />
-            <strong>Every contribution matters</strong>
-            <p>Donations help fund training resources, programme materials, volunteer coordination, and participant readiness support.</p>
-            <ActionLink href="#contact" light>Donate now</ActionLink>
-          </div>
-        </div>
-      </section>
-
       <section className="section section-white faq-section">
         <div className="site-shell faq-grid">
           <div className="faq-intro">
             <Eyebrow>FAQs</Eyebrow>
             <h2>Common questions from supporters</h2>
-            <div className="question-box"><Sparkles /><h3>Still have a question?</h3><p>Reach out and our team will get back to you directly.</p><ActionLink href="#contact" light>Ask us</ActionLink></div>
+            <div className="question-box"><Sparkles /><h3>Still have a question?</h3><p>Reach out and our team will get back to you directly.</p><ActionLink href="/contact" light>Ask us</ActionLink></div>
           </div>
           <div className="faq-list">
             {faqs.map((faq, index) => (

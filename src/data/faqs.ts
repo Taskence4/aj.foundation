@@ -20,11 +20,6 @@ export const faqs = [
       "Volunteers can support training, mentoring, awareness programmes, documentation, coordination, and post-release readiness initiatives.",
   },
   {
-    question: "How are donations used?",
-    answer:
-      "Donations support training materials, skill development workshops, volunteer coordination, programme logistics, participant resources, and readiness support.",
-  },
-  {
     question: "Does AJ Foundation work directly with prison authorities?",
     answer:
       "Yes. AJ Foundation works respectfully with prison systems and institutional stakeholders to ensure programmes are safe, structured, transparent, and aligned with institutional processes.",
