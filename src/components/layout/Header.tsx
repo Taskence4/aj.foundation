@@ -14,7 +14,6 @@ const links = [
   ["How We Work", "/how-we-work"],
   ["Insights", "/updates"],
   ["Partner With Us", "/partner-with-us"],
-  ["Contact", "/contact"],
 ];
 
 export function Header() {
