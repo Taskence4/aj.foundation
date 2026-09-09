@@ -1,10 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
-import { withBasePath } from "@/lib/utils";
 import { HashLink } from "@/components/HashLink";
 
 const links = [
@@ -31,14 +29,7 @@ export function Header() {
     <header className={`main-header ${scrolled ? "is-scrolled" : ""}`}>
       <div className="site-shell header-inner">
         <Link href="/" className="brand" onClick={() => setOpen(false)}>
-          <Image
-            className="brand-logo brand-logo-light"
-            src={withBasePath("/brand/aj-foundation-transparent.webp")}
-            alt="AJ Foundation"
-            width={320}
-            height={89}
-            priority
-          />
+          <span className="brand-wordmark">aj.foundation</span>
         </Link>
         <nav className={`header-nav ${open ? "open" : ""}`}>
           {links.map(([label, href]) =>

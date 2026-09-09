@@ -15,6 +15,7 @@ const inter = localFont({
   ],
 });
 const parkinsans = localFont({ src: "./fonts/parkinsans.woff2", variable: "--font-parkinsans", display: "swap" });
+const orbitron = localFont({ src: "./fonts/orbitron-bold.ttf", variable: "--font-orbitron", display: "swap" });
 
 export const metadata: Metadata = {
   title: "AJ Foundation | Skills for Rehabilitation. Readiness for Life.",
@@ -22,5 +23,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" className={`${inter.variable} ${parkinsans.variable}`}><body><SiteMotion /><Header /><main>{children}</main><Footer /></body></html>;
+  return <html lang="en" className={`${inter.variable} ${parkinsans.variable} ${orbitron.variable}`}><body><SiteMotion /><Header /><main>{children}</main><Footer /></body></html>;
 }
