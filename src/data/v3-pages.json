@@ -1,0 +1,954 @@
+{
+  "about": {
+    "eyebrow": "About AJ Foundation",
+    "title": "Building pathways beyond incarceration",
+    "intro": "AJ Foundation is being established to support people affected by incarceration through connected work in access to justice, rehabilitation and capability development, and reintegration.",
+    "sections": [
+      {
+        "heading": "Who we are",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation is being developed as a focused platform connecting legal-support navigation, learning and livelihood pathways, pre-release preparation and post-release connection."
+          },
+          {
+            "kind": "paragraph",
+            "text": "Our starting point is simple: people should not have to navigate legal, livelihood and social barriers as isolated problems."
+          },
+          {
+            "kind": "paragraph",
+            "text": "Sustainable reintegration requires these barriers to be understood together and addressed through competent partnerships."
+          }
+        ]
+      },
+      {
+        "heading": "Our vision",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "A society in which people affected by incarceration can access justice, rebuild capabilities and return to family and community with dignity, opportunity and support."
+          }
+        ]
+      },
+      {
+        "heading": "Our mission",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "To facilitate connected pathways to legal support, learning, livelihoods and reintegration through ethical practice, institutional collaboration and evidence-informed programmes."
+          }
+        ]
+      },
+      {
+        "heading": "Who we seek to serve",
+        "blocks": [
+          {
+            "kind": "item",
+            "text": "People in prison who face legal, livelihood or reintegration barriers."
+          },
+          {
+            "kind": "item",
+            "text": "People preparing for release or rebuilding life after release."
+          },
+          {
+            "kind": "item",
+            "text": "People with limited financial means, documentation, family support or access to competent services."
+          },
+          {
+            "kind": "item",
+            "text": "Families and communities affected by incarceration, where engagement is appropriate and consent -based."
+          }
+        ]
+      },
+      {
+        "heading": "Why AJ Foundation",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "A person's legal situation, livelihood prospects and ability to reintegrate are often closely connected."
+          },
+          {
+            "kind": "paragraph",
+            "text": "Legal support without livelihood options may leave a person economically vulnerable. Skills training alone may have limited value if documents, family support or access to services are missing. Reintegration is therefore stronger when these challenges are addressed together."
+          },
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation seeks to contribute by connecting competent institutions, professionals and opportunities around the needs and priorities of the person."
+          }
+        ]
+      },
+      {
+        "heading": "Registration",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation is currently being established. Formal registration, governance and registered-office details will be published following completion and approval of the relevant institutional processes."
+          },
+          {
+            "kind": "link",
+            "text": "Explore Our Work",
+            "href": "/our-work"
+          }
+        ]
+      }
+    ]
+  },
+  "our-work": {
+    "eyebrow": "Our Work",
+    "title": "Three connected pathways. One purpose.",
+    "intro": "Legal access, capability development and reintegration are deeply connected. AJ Foundation seeks to bring them together so that support can begin before release and continue through the transition beyond prison.",
+    "sections": [
+      {
+        "heading": "Access to Justice",
+        "blocks": [
+          {
+            "kind": "subheading",
+            "text": "Understanding rights. Reaching the right institutions."
+          },
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation seeks to help people understand available legal-aid mechanisms, identify and organise legal-support needs, and reach competent institutions authorised to advise or represent them."
+          },
+          {
+            "kind": "link",
+            "text": "Explore Access to Justice",
+            "href": "/our-work/access-to-justice"
+          }
+        ]
+      },
+      {
+        "heading": "Rehabilitation & Capability Development",
+        "blocks": [
+          {
+            "kind": "subheading",
+            "text": "Capabilities that open real choices"
+          },
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation seeks to combine practical livelihood learning with foundational digital and financial capabilities, work readiness, constructive engagement and pathways to certification or further learning."
+          },
+          {
+            "kind": "link",
+            "text": "Explore Rehabilitation & Capability Development",
+            "href": "/our-work/rehabilitation"
+          }
+        ]
+      },
+      {
+        "heading": "Reintegration & Second Chances",
+        "blocks": [
+          {
+            "kind": "subheading",
+            "text": "Release is a moment. Reintegration is a journey."
+          },
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation seeks to support preparation for release and connections to documents, entitlements, employment, enterprise, family, community and appropriate post-release services."
+          },
+          {
+            "kind": "link",
+            "text": "Explore Reintegration & Second Chances",
+            "href": "/our-work/reintegration"
+          }
+        ]
+      },
+      {
+        "heading": "How the pathways connect",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "A livelihood certificate cannot resolve an unresolved legal barrier."
+          },
+          {
+            "kind": "paragraph",
+            "text": "Legal assistance alone may not create work, housing or social support."
+          },
+          {
+            "kind": "paragraph",
+            "text": "A job opportunity may be difficult to sustain if identity documents, family support or practical preparation are missing."
+          },
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation therefore seeks to begin with the person's circumstances, consent and priorities, and connect appropriate institutions and opportunities around them."
+          }
+        ]
+      },
+      {
+        "heading": "From programme design to implementation",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation is developing its first livelihood-skilling initiative as part of the Rehabilitation & Capability Development pathway."
+          },
+          {
+            "kind": "paragraph",
+            "text": "The proposed programme currently focuses on Electrical and Plumbing skills alongside digital and financial capability, work readiness and preparation for future livelihood opportunities."
+          },
+          {
+            "kind": "link",
+            "text": "View Initial Programme",
+            "href": "/initial-programme"
+          }
+        ]
+      }
+    ]
+  },
+  "our-work/access-to-justice": {
+    "eyebrow": "Access to Justice",
+    "title": "Understanding rights. Reaching the right institutions.",
+    "intro": "AJ Foundation seeks to help people affected by incarceration navigate available legal-aid pathways with clarity, dignity, informed consent and appropriate professional support.",
+    "sections": [
+      {
+        "heading": "Why access to justice matters",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "A person may be unable to pursue a legitimate legal remedy because information is unclear, documents are missing, communication is limited, or the appropriate legal-services institution has not been reached."
+          },
+          {
+            "kind": "paragraph",
+            "text": "These barriers can be especially difficult for people with limited financial means or family support."
+          },
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation's proposed role is to facilitate access and continuity — not to replace courts, Legal Services Authorities or authorised legal professionals."
+          }
+        ]
+      },
+      {
+        "heading": "Areas of support",
+        "blocks": [
+          {
+            "kind": "item",
+            "text": "Understandable information about available legal-aid mechanisms."
+          },
+          {
+            "kind": "item",
+            "text": "Consent-based identification of legal-support needs."
+          },
+          {
+            "kind": "item",
+            "text": "Assistance in organising available documents and information."
+          },
+          {
+            "kind": "item",
+            "text": "Referral to the appropriate Legal Services Authority, prison legal-aid mechanism, authorised advocate or competent organisation."
+          },
+          {
+            "kind": "item",
+            "text": "Documentation support connected with legal aid, release, identity and eligible entitlements."
+          },
+          {
+            "kind": "item",
+            "text": "Appropriate follow-up within the Foundation's agreed role."
+          }
+        ]
+      },
+      {
+        "heading": "How support may be navigated",
+        "blocks": [
+          {
+            "kind": "step",
+            "text": "Referral or enquiry",
+            "detail": "Basic information may be received through authorised institutional channels, Legal Services Institutions, family members or credible voluntary organisations."
+          },
+          {
+            "kind": "step",
+            "text": "Consent and initial review",
+            "detail": "The person's consent, immediate need and available information are reviewed through an approved process."
+          },
+          {
+            "kind": "step",
+            "text": "Documentation",
+            "detail": "Only information necessary for the stated purpose is organised and handled responsibly."
+          },
+          {
+            "kind": "step",
+            "text": "Referral",
+            "detail": "The matter is connected to the competent legal-services institution or authorised professional."
+          },
+          {
+            "kind": "step",
+            "text": "Follow-up",
+            "detail": "AJ Foundation may follow up within the agreed role, without promising a legal outcome."
+          }
+        ]
+      },
+      {
+        "heading": "Important legal-services notice",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation is not a court, Legal Services Authority or law firm. Information on this website is general and does not constitute legal advice or create a lawyer-client relationship. AJ Foundation does not guarantee legal representation, release, bail, parole, appeal or any particular legal outcome."
+          },
+          {
+            "kind": "paragraph",
+            "text": "For statutory legal aid, individuals should contact the appropriate Legal Services Authority or other authorised legal-aid mechanism."
+          },
+          {
+            "kind": "link",
+            "text": "Contact Us",
+            "href": "/contact"
+          }
+        ]
+      }
+    ]
+  },
+  "our-work/rehabilitation": {
+    "eyebrow": "Rehabilitation & Capability Development",
+    "title": "Capabilities that open real choices",
+    "intro": "Rehabilitation should do more than occupy time. It should help people build practical skills, confidence and capabilities that can strengthen pathways to learning, work or enterprise.",
+    "sections": [
+      {
+        "heading": "Our approach",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation seeks to develop rehabilitation programmes that connect technical learning with the wider capabilities people may need to use those skills after release."
+          },
+          {
+            "kind": "paragraph",
+            "text": "Programme design will be informed by participant interests, labour-market relevance, institutional requirements, realistic certification pathways and reintegration needs."
+          }
+        ]
+      },
+      {
+        "heading": "Programme components",
+        "blocks": [
+          {
+            "kind": "item",
+            "text": "Market-relevant vocational and livelihood skills."
+          },
+          {
+            "kind": "item",
+            "text": "Foundational digital capability and safe technology use."
+          },
+          {
+            "kind": "item",
+            "text": "Financial literacy and budgeting."
+          },
+          {
+            "kind": "item",
+            "text": "Communication and work readiness."
+          },
+          {
+            "kind": "item",
+            "text": "Problem-solving and enterprise orientation."
+          },
+          {
+            "kind": "item",
+            "text": "Assessment and certification where competent arrangements are confirmed."
+          },
+          {
+            "kind": "item",
+            "text": "Wellbeing or psychosocial inputs through qualified partners where appropriate."
+          },
+          {
+            "kind": "item",
+            "text": "Connections to continuing training, employment, enterprise or support services."
+          }
+        ]
+      },
+      {
+        "heading": "What quality should mean",
+        "blocks": [
+          {
+            "kind": "item",
+            "text": "Participants understand the programme and join through an approved process."
+          },
+          {
+            "kind": "item",
+            "text": "Training is appropriate to the institutional setting."
+          },
+          {
+            "kind": "item",
+            "text": "Curricula and trainers are suited to the programme."
+          },
+          {
+            "kind": "item",
+            "text": "Attendance, learning and feedback are documented responsibly."
+          },
+          {
+            "kind": "item",
+            "text": "Certification or employment linkages are not promised before confirmation."
+          },
+          {
+            "kind": "item",
+            "text": "Training is connected, where possible, to preparation for life after release."
+          }
+        ]
+      },
+      {
+        "heading": "Initial programme",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation's first programme focus is a rehabilitation-integrated livelihood-skilling initiative currently under development."
+          },
+          {
+            "kind": "link",
+            "text": "View Initial Programme",
+            "href": "/initial-programme"
+          }
+        ]
+      }
+    ]
+  },
+  "our-work/reintegration": {
+    "eyebrow": "Reintegration & Second Chances",
+    "title": "Release is a moment. Reintegration is a journey.",
+    "intro": "A sustainable return to family and community often depends on preparation, documentation, livelihood options and reliable connections before release.",
+    "sections": [
+      {
+        "heading": "Our approach",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation seeks to support practical, person-centred preparation for release and connection to competent services and opportunities."
+          },
+          {
+            "kind": "paragraph",
+            "text": "Support should be based on informed consent, verified need, institutional permission and realistic follow-up capacity."
+          }
+        ]
+      },
+      {
+        "heading": "Areas of support",
+        "blocks": [
+          {
+            "kind": "item",
+            "text": "Individual pre-release planning."
+          },
+          {
+            "kind": "item",
+            "text": "Prioritisation of immediate needs."
+          },
+          {
+            "kind": "item",
+            "text": "Identity-document and entitlement readiness."
+          },
+          {
+            "kind": "item",
+            "text": "Connection to education, training, employment or enterprise pathways."
+          },
+          {
+            "kind": "item",
+            "text": "Family or community reconnection where desired, safe and appropriate."
+          },
+          {
+            "kind": "item",
+            "text": "Referral to housing, health, psychosocial or other competent services."
+          },
+          {
+            "kind": "item",
+            "text": "Time-bound mentoring or follow-up within approved capacity."
+          }
+        ]
+      },
+      {
+        "heading": "What 'second chance' means",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "A second chance is not the absence of accountability."
+          },
+          {
+            "kind": "paragraph",
+            "text": "It is an opportunity to rebuild life with dignity, responsibility, support and access to legitimate social and economic pathways."
+          },
+          {
+            "kind": "paragraph",
+            "text": "Reintegration works best when the individual's agency, the safety and needs of others, and the responsibilities of institutions and communities are held together."
+          }
+        ]
+      },
+      {
+        "heading": "Connection to the other pathways",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Legal barriers, capability gaps and reintegration challenges often overlap."
+          },
+          {
+            "kind": "paragraph",
+            "text": "For this reason, AJ Foundation seeks to connect reintegration with both Access to Justice and Rehabilitation & Capability Development rather than treat release as the end of the programme journey."
+          },
+          {
+            "kind": "link",
+            "text": "Explore Our Work",
+            "href": "/our-work"
+          }
+        ]
+      }
+    ]
+  },
+  "initial-programme": {
+    "eyebrow": "Programme under development",
+    "title": "Livelihood skills connected to life after release",
+    "intro": "AJ Foundation is developing an initial livelihood-skilling programme that combines practical vocational learning with digital and financial capability, work readiness and preparation for future livelihood opportunities.",
+    "sections": [
+      {
+        "heading": "Proposed objective",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "To enable participants to build relevant practical skills and readiness for continuing training, employment or enterprise, while connecting learning inside prison with preparation for life after release."
+          }
+        ]
+      },
+      {
+        "heading": "Initial trade focus",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "The current programme design includes:"
+          },
+          {
+            "kind": "item",
+            "text": "Electrical"
+          },
+          {
+            "kind": "item",
+            "text": "Plumbing"
+          },
+          {
+            "kind": "paragraph",
+            "text": "These trades have been identified as the initial focus, subject to institutional approval, site readiness and implementation planning."
+          }
+        ]
+      },
+      {
+        "heading": "Proposed programme model",
+        "blocks": [
+          {
+            "kind": "item",
+            "text": "Approximately 20–30 participants per trade."
+          },
+          {
+            "kind": "item",
+            "text": "Approximately three months per cohort."
+          },
+          {
+            "kind": "item",
+            "text": "Four training days per week."
+          },
+          {
+            "kind": "item",
+            "text": "Approximately four hours per training day."
+          },
+          {
+            "kind": "paragraph",
+            "text": "The programme is also intended to include:"
+          },
+          {
+            "kind": "item",
+            "text": "Foundational digital capability."
+          },
+          {
+            "kind": "item",
+            "text": "Financial literacy."
+          },
+          {
+            "kind": "item",
+            "text": "Communication and work readiness."
+          },
+          {
+            "kind": "item",
+            "text": "Enterprise orientation."
+          },
+          {
+            "kind": "item",
+            "text": "Preparation for further learning, employment or livelihood pathways."
+          }
+        ]
+      },
+      {
+        "heading": "Learning and certification",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Assessment and certification pathways will be aligned, where applicable, with relevant NSQF/KSDC requirements and delivered through competent or authorised institutions once arrangements are confirmed."
+          },
+          {
+            "kind": "paragraph",
+            "text": "No certification should be presented as guaranteed until the relevant partner and process are formally confirmed."
+          }
+        ]
+      },
+      {
+        "heading": "Participant journey",
+        "blocks": [
+          {
+            "kind": "step",
+            "text": "Orientation",
+            "detail": "Understanding the programme and available options."
+          },
+          {
+            "kind": "step",
+            "text": "Selection",
+            "detail": "Transparent selection based on approved criteria."
+          },
+          {
+            "kind": "step",
+            "text": "Training",
+            "detail": "Structured technical and capability-development learning."
+          },
+          {
+            "kind": "step",
+            "text": "Assessment",
+            "detail": "Practical assessment and certification where confirmed."
+          },
+          {
+            "kind": "step",
+            "text": "Transition planning",
+            "detail": "Preparation for continuing training, employment, enterprise or other livelihood pathways."
+          },
+          {
+            "kind": "step",
+            "text": "Referral and limited follow-up",
+            "detail": "Within the approved implementation model and available capacity."
+          }
+        ]
+      },
+      {
+        "heading": "Implementation status",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Implementation details remain subject to institutional approvals, site readiness and confirmation of training and certification arrangements."
+          }
+        ]
+      },
+      {
+        "heading": "Connection to the wider AJ Foundation model",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "This programme sits within Rehabilitation & Capability Development and is intended to connect, where appropriate, with Access to Justice and Reintegration & Second Chances."
+          },
+          {
+            "kind": "link",
+            "text": "Explore Rehabilitation & Capability Development",
+            "href": "/our-work/rehabilitation"
+          },
+          {
+            "kind": "link",
+            "text": "Explore Our Work",
+            "href": "/our-work"
+          }
+        ]
+      }
+    ]
+  },
+  "how-we-work": {
+    "eyebrow": "How We Work",
+    "title": "Principles before programmes",
+    "intro": "How support is offered matters as much as what is offered. AJ Foundation seeks to work in ways that protect dignity, agency, safety and accountability at every stage.",
+    "sections": [
+      {
+        "heading": "Dignity and agency",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "We recognise participants as people with rights, responsibilities, knowledge and aspirations — not as cases, statistics or passive recipients. Participation should be informed and voluntary within the realities of the institutional setting."
+          }
+        ]
+      },
+      {
+        "heading": "Consent, privacy and confidentiality",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation seeks only the information necessary for a defined purpose. We aim to explain how information will be used, protect it appropriately, and obtain specific consent before sharing personal information, photographs or stories."
+          }
+        ]
+      },
+      {
+        "heading": "Equity and non-discrimination",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "We seek to recognise how poverty, gender, caste, disability, language, age, family support and other inequalities may shape access to justice and opportunity. Programme decisions should not reproduce exclusion or stigma."
+          }
+        ]
+      },
+      {
+        "heading": "Safeguarding and do-no-harm",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "We seek to consider potential risks before collecting personal information, contacting families, making referrals, publishing identities or stories, or offering support. Safeguarding and grievance processes should be established and approved for the relevant programme."
+          }
+        ]
+      },
+      {
+        "heading": "Institutional partnership",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation seeks to complement — not duplicate — the responsibilities of prison authorities, Legal Services Institutions, qualified professionals, relevant public authorities and experienced civil-society organisations. Roles, permissions, referrals and public claims should be clearly documented."
+          }
+        ]
+      },
+      {
+        "heading": "Evidence and accountability",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation intends to set realistic objectives, listen to participant feedback, document learning, report accurately, and distinguish clearly between proposed activities, approved targets and achieved results."
+          },
+          {
+            "kind": "link",
+            "text": "Explore Our Work",
+            "href": "/our-work"
+          }
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "eyebrow": "Policies",
+    "title": "Privacy Notice",
+    "intro": "",
+    "sections": [
+      {
+        "heading": "Who we are",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "This website is operated by AJ Foundation. AJ Foundation is currently being established. Formal legal and registered-office details will be published once the relevant institutional processes are complete. For privacy-related enquiries, please contact: info@ajfoundation.org."
+          }
+        ]
+      },
+      {
+        "heading": "Information we collect",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "We may collect information that visitors choose to provide through our enquiry forms, including name, email address, phone number, organisation, role, area of interest and message. We may also collect limited technical information required for website security and operation. Please do not submit sensitive personal information, identity documents, court records, medical records or case files through the general enquiry form."
+          }
+        ]
+      },
+      {
+        "heading": "Why we use information",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "We may use information provided through the website to receive and respond to enquiries; communicate about programme or partnership conversations initiated by the visitor; maintain website security and prevent misuse; troubleshoot technical issues; and comply with applicable legal obligations."
+          }
+        ]
+      },
+      {
+        "heading": "Consent and withdrawal",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Where information is processed on the basis of consent, a person may withdraw that consent by contacting AJ Foundation. Withdrawal does not affect processing already undertaken lawfully, and some information may need to be retained where required by law or for an existing legitimate purpose."
+          }
+        ]
+      },
+      {
+        "heading": "Sharing and service providers",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation does not sell personal information. Information may be handled by authorised service providers supporting website hosting, email, forms, security or technical support. Information may also be disclosed where required by law or with specific consent."
+          }
+        ]
+      },
+      {
+        "heading": "Retention",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Personal information should be retained only for as long as reasonably necessary for the purpose for which it was collected or where required by law."
+          }
+        ]
+      },
+      {
+        "heading": "Security",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation seeks to use reasonable administrative and technical measures to protect personal information. No method of electronic transmission or storage can be guaranteed to be completely secure."
+          }
+        ]
+      },
+      {
+        "heading": "Requests and concerns",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "A person may contact AJ Foundation to request access, correction, updating or erasure of personal information, or to raise a concern about how information has been handled, subject to applicable law and identity verification. Contact: info@ajfoundation.org."
+          }
+        ]
+      },
+      {
+        "heading": "Children",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "The public website and general enquiry forms are not designed to collect personal information directly from children."
+          },
+          {
+            "kind": "paragraph",
+            "text": "Any future programme involving children should use separately approved safeguarding and consent processes."
+          }
+        ]
+      },
+      {
+        "heading": "Cookies and analytics",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "This website does not set cookies or use analytics or non-essential tracking. Enquiry forms prepare an email in your email application; the website does not store or directly transmit form submissions. If analytics or non-essential tracking is introduced, this notice and visitor-consent mechanism will be updated before activation."
+          }
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "eyebrow": "Policies",
+    "title": "Terms of Use & Legal Disclaimer",
+    "intro": "",
+    "sections": [
+      {
+        "heading": "General information",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Content on this website is provided for general information and institutional communication. The website may describe proposed or developing programmes. Such content should not be treated as a promise of eligibility, programme admission, funding, employment, certification, service or outcome."
+          }
+        ]
+      },
+      {
+        "heading": "Legal-services disclaimer",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation is not a court, Legal Services Authority or law firm. Information on this website does not constitute legal advice and does not create a lawyer-client relationship. Contacting AJ Foundation does not guarantee legal representation, release, bail, parole, appeal or any particular legal outcome. For legal advice or statutory legal aid, individuals should contact an authorised legal professional or the appropriate Legal Services Authority."
+          }
+        ]
+      },
+      {
+        "heading": "Accuracy and availability",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation seeks to keep website information accurate and current, but information may change as programmes, partnerships and institutional arrangements develop. The Foundation does not guarantee that all content will always be complete, error-free or continuously available."
+          }
+        ]
+      },
+      {
+        "heading": "Acceptable use",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Visitors should not misuse the website, interfere with its security, submit unlawful or harmful material, impersonate another person, or attempt unauthorised access to systems or information."
+          }
+        ]
+      },
+      {
+        "heading": "Intellectual property",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Unless otherwise stated, website text, design and original materials are owned by or licensed to AJ Foundation and may not be reproduced commercially without permission, except where permitted by law."
+          }
+        ]
+      },
+      {
+        "heading": "Third-party links",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "External links are provided for convenience or reference. AJ Foundation is not responsible for the content, availability, privacy practices or policies of third-party websites."
+          }
+        ]
+      }
+    ]
+  },
+  "accessibility": {
+    "eyebrow": "Policies",
+    "title": "Accessibility Statement",
+    "intro": "",
+    "sections": [
+      {
+        "heading": "Our commitment",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "AJ Foundation is committed to making its website usable by people with diverse disabilities, devices and access needs."
+          },
+          {
+            "kind": "paragraph",
+            "text": "We aim to use WCAG 2.2 Level AA as a practical accessibility baseline."
+          }
+        ]
+      },
+      {
+        "heading": "Measures we aim to maintain",
+        "blocks": [
+          {
+            "kind": "item",
+            "text": "Clear page structure and meaningful headings."
+          },
+          {
+            "kind": "item",
+            "text": "Keyboard-accessible navigation."
+          },
+          {
+            "kind": "item",
+            "text": "Visible focus states."
+          },
+          {
+            "kind": "item",
+            "text": "Readable colour contrast."
+          },
+          {
+            "kind": "item",
+            "text": "Scalable text."
+          },
+          {
+            "kind": "item",
+            "text": "Alternative text for informative images."
+          },
+          {
+            "kind": "item",
+            "text": "Descriptive links and form labels."
+          },
+          {
+            "kind": "item",
+            "text": "Responsive layouts across common devices."
+          },
+          {
+            "kind": "item",
+            "text": "Captions or transcripts for meaningful audio-visual content where relevant."
+          }
+        ]
+      },
+      {
+        "heading": "Known limitations",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "A formal accessibility review is planned as the website moves towards public launch."
+          }
+        ]
+      },
+      {
+        "heading": "Feedback and assistance",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "If a visitor experiences difficulty using the website or requires information in another accessible format, they may contact AJ Foundation."
+          },
+          {
+            "kind": "paragraph",
+            "text": "Email: info@ajfoundation.org Phone: +91 80500 89834"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ActionLink } from "@/components/layout/ContentPage";
 import { PageHero } from "@/components/layout/PageHero";
 import { PartnerEnquiryForm } from "@/components/sections/PartnerEnquiryForm";
 import { collaborateWays } from "@/data/collaborate";
@@ -14,12 +15,13 @@ export default function PartnerWithUsPage() {
       <PageHero
         eyebrow="Partner With Us"
         title="Build pathways that no organisation can build alone"
-        description="Justice, rehabilitation and reintegration require coordinated expertise. We welcome conversations with institutions and professionals committed to responsible, practical collaboration."
+        description="Justice, rehabilitation and reintegration require coordinated expertise. AJ Foundation welcomes conversations with institutions, professionals and organisations interested in responsible, practical collaboration."
       />
 
       <section className="section section-white">
         <div className="site-shell">
           <div className="page-content">
+            <ActionLink href="#partnership-enquiry">Start a Partnership Conversation</ActionLink>
             <h2>Ways to collaborate</h2>
           </div>
           <div className="collaborate-grid">
@@ -34,16 +36,18 @@ export default function PartnerWithUsPage() {
           <div className="page-content after-grid">
             <h2>What partners can expect</h2>
             <ol className="page-list">
-              <li>A clear purpose, proposed scope and division of responsibilities.</li>
-              <li>Accurate communication about programme status and partner roles.</li>
-              <li>Consent, safeguarding, privacy and responsible use of participant information.</li>
+              <li>A clear purpose and proposed scope.</li>
+              <li>Defined roles and responsibilities.</li>
+              <li>Accurate communication about programme status.</li>
+              <li>Responsible use of participant information.</li>
+              <li>Safeguarding and privacy considerations.</li>
               <li>Agreed monitoring, learning and financial-accountability arrangements.</li>
             </ol>
           </div>
         </div>
       </section>
 
-      <section className="section section-warm">
+      <section id="partnership-enquiry" className="section section-warm">
         <div className="site-shell">
           <PartnerEnquiryForm />
         </div>

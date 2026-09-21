@@ -85,7 +85,7 @@ export function SiteMotion() {
     <div className={`site-loader ${leaving ? "is-leaving" : ""}`} aria-hidden="true">
       <div className="loader-mark"><span>AJ</span></div>
       <div className="loader-line"><i /></div>
-      <p>Building skills. Restoring purpose.</p>
+      <p>Dignity. Access. A pathway forward.</p>
     </div>
   ) : null;
 }

@@ -21,7 +21,7 @@ export type UpdatePost = {
 export const updates = [
   {
     slug: "why-skills-training-matters-in-prison-rehabilitation",
-    category: "Rehabilitation",
+    category: "Practice Note",
     title: "Why Skills Training Matters in Prison Rehabilitation",
     excerpt:
       "Skills training can help individuals build discipline, confidence, and practical readiness for life after release.",
@@ -55,7 +55,7 @@ export const updates = [
         heading: "The most valuable skills travel across settings",
         paragraphs: [
           "Vocational knowledge is important, but the value of training should not depend on one specific job remaining available. Communication, numeracy, digital familiarity, teamwork, planning, and safe working habits travel across occupations. They also support daily responsibilities such as managing appointments, understanding documents, and communicating with institutions.",
-          "AJ Foundation favours learning experiences that combine a practical task with these transferable habits. The aim is not simply to complete an activity inside a classroom. It is to help a participant recognise how the same discipline can be used in an interview, a workplace, a household, or a community setting.",
+          "AJ Foundation seeks to develop learning experiences that combine a practical task with these transferable habits. The aim is not simply to complete an activity inside a classroom. It is to help a participant recognise how the same discipline can be used in an interview, a workplace, a household, or a community setting.",
         ],
       },
       {
@@ -71,7 +71,7 @@ export const updates = [
   },
   {
     slug: "preparing-for-work-after-release",
-    category: "Employability",
+    category: "Practice Note",
     title: "Preparing for Work After Release",
     excerpt:
       "Employability support is not just about jobs. It is about confidence, communication, responsibility, and readiness.",
@@ -105,7 +105,7 @@ export const updates = [
         heading: "Administrative readiness is employment readiness",
         paragraphs: [
           "A capable candidate can still be excluded by missing identity documents, limited access to a phone or email, unfamiliarity with online forms, or uncertainty about disclosure requirements. These barriers are often treated as separate from employability, even though they directly determine whether a person can complete recruitment and onboarding.",
-          "Work-readiness support should therefore include a practical checklist: identification, bank access, contact details, transport planning, digital basics, references, qualifications, and any role-specific requirements. Resolving these items early protects momentum at a point when delays can be especially discouraging.",
+          "Work-readiness support should therefore include a practical checklist: identification, bank access, budgeting and financial capability, contact details, transport planning, digital basics, references, qualifications, family or community support, and pathways to continuing training or realistic livelihood opportunities. Resolving these items early protects momentum at a point when delays can be especially discouraging.",
         ],
       },
       {
@@ -121,7 +121,7 @@ export const updates = [
   },
   {
     slug: "building-rehabilitation-programmes-prison-systems-can-trust",
-    category: "Institutional Trust",
+    category: "Practice Note",
     title: "Building Rehabilitation Programmes That Prison Systems Can Trust",
     excerpt:
       "Long-term rehabilitation work depends on transparency, safety, consistency, and respectful collaboration with institutions.",

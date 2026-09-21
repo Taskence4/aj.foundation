@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Link from "next/link";
 import { Briefcase, Building2, CheckCircle2, Mail, MessageSquare, Send, User } from "lucide-react";
 import { collaborateWays } from "@/data/collaborate";
 
@@ -50,16 +51,18 @@ export function PartnerEnquiryForm() {
 
   if (submitted) {
     return (
-      <div className="contact-form contact-form-done">
+      <div className="contact-form contact-form-done" role="status">
         <span className="contact-form-done-icon"><CheckCircle2 /></span>
-        <strong>Your email client should now be open</strong>
-        <p>Review the pre-filled message and hit send — our team will get back to you shortly.</p>
+        <strong>Your email draft is ready.</strong>
+        <p>If your email application did not open, email <a href="mailto:info@ajfoundation.org">info@ajfoundation.org</a>.</p>
+        <p>Please send the draft in your email application to complete your enquiry. The website has not submitted it.</p>
+        <button type="button" onClick={() => setSubmitted(false)}>Return to form</button>
       </div>
     );
   }
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit} noValidate>
+    <form className="contact-form" onSubmit={handleSubmit}>
       <div className="contact-form-head">
         <span className="contact-form-kicker">Partnership enquiry</span>
         <h3>Start a partnership conversation</h3>
@@ -96,19 +99,10 @@ export function PartnerEnquiryForm() {
         <label id="partner-interest-label">Area of interest</label>
         <div className="contact-intent-group" role="radiogroup" aria-labelledby="partner-interest-label">
           {collaborateWays.map((way) => (
-            <button
-              key={way.title}
-              type="button"
-              role="radio"
-              aria-checked={interest === way.title}
-              className={`contact-intent-pill ${interest === way.title ? "is-active" : ""}`}
-              onClick={() => {
-                setInterest(way.title);
-                setInterestTouched(false);
-              }}
-            >
+            <label key={way.title} className={`contact-intent-pill ${interest === way.title ? "is-active" : ""}`}>
+              <input type="radio" name="interest" value={way.title} checked={interest === way.title} onChange={() => { setInterest(way.title); setInterestTouched(false); }} required />
               {way.title}
-            </button>
+            </label>
           ))}
         </div>
         {interestTouched && !interest && <p className="contact-intent-error">Please select an area of interest.</p>}
@@ -133,11 +127,12 @@ export function PartnerEnquiryForm() {
           required
         />
         <label htmlFor="partner-consent">
-          I consent to AJ Foundation using the information provided to respond to this partnership enquiry, in accordance with the Privacy Notice.
+          I consent to AJ Foundation using the information provided to respond to this partnership enquiry, in accordance with the <Link href="/privacy" className="underline">Privacy Notice</Link>.
         </label>
       </div>
       {interestTouched && !consented && <p className="contact-intent-error">Please provide consent to continue.</p>}
 
+      <p className="form-delivery-note">This form opens a draft in your email application. Review and send it there to complete your enquiry.</p>
       <button type="submit"><span>Send Partnership Enquiry</span><i><Send size={16} /></i></button>
     </form>
   );

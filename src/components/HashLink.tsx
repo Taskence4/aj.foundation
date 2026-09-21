@@ -12,5 +12,5 @@ type HashLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & { href: string };
 export function HashLink({ href, ...props }: HashLinkProps) {
   const [path, hash] = href.split("#");
   const resolvedPath = path ? withBasePath(path) : "";
-  return <a href={`${resolvedPath}#${hash}`} {...props} />;
+  return <a href={hash === undefined ? resolvedPath : `${resolvedPath}#${hash}`} {...props} />;
 }

@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Link from "next/link";
 import { CheckCircle2, Mail, MessageSquare, Send, User } from "lucide-react";
 
-const enquiryTypes = ["General", "Partnership", "Programme", "Media", "Other"] as const;
+const enquiryTypes = ["General", "Programme", "Media", "Other"] as const;
 
 export function GeneralEnquiryForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -47,16 +48,18 @@ export function GeneralEnquiryForm() {
 
   if (submitted) {
     return (
-      <div className="contact-form contact-form-done">
+      <div className="contact-form contact-form-done" role="status">
         <span className="contact-form-done-icon"><CheckCircle2 /></span>
-        <strong>Thank you. Your enquiry has been received.</strong>
-        <p>If a response is required, our team will contact you using the details provided.</p>
+        <strong>Your email draft is ready.</strong>
+        <p>If your email application did not open, email <a href="mailto:info@ajfoundation.org">info@ajfoundation.org</a>.</p>
+        <p>Please send the draft in your email application to complete your enquiry. The website has not submitted it.</p>
+        <button type="button" onClick={() => setSubmitted(false)}>Return to form</button>
       </div>
     );
   }
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit} noValidate>
+    <form className="contact-form" onSubmit={handleSubmit}>
       <div className="contact-form-head">
         <span className="contact-form-kicker">General enquiry</span>
         <h3>Connect with AJ Foundation</h3>
@@ -88,19 +91,10 @@ export function GeneralEnquiryForm() {
         <label id="general-type-label">Enquiry type</label>
         <div className="contact-intent-group" role="radiogroup" aria-labelledby="general-type-label">
           {enquiryTypes.map((type) => (
-            <button
-              key={type}
-              type="button"
-              role="radio"
-              aria-checked={enquiryType === type}
-              className={`contact-intent-pill ${enquiryType === type ? "is-active" : ""}`}
-              onClick={() => {
-                setEnquiryType(type);
-                setTypeTouched(false);
-              }}
-            >
+            <label key={type} className={`contact-intent-pill ${enquiryType === type ? "is-active" : ""}`}>
+              <input type="radio" name="enquiryType" value={type} checked={enquiryType === type} onChange={() => { setEnquiryType(type); setTypeTouched(false); }} required />
               {type}
-            </button>
+            </label>
           ))}
         </div>
         {typeTouched && !enquiryType && <p className="contact-intent-error">Please select an enquiry type.</p>}
@@ -120,11 +114,12 @@ export function GeneralEnquiryForm() {
           required
         />
         <label htmlFor="general-consent">
-          I consent to AJ Foundation using the information provided to respond to this enquiry, in accordance with the Privacy Notice.
+          I consent to AJ Foundation using the information provided to respond to this enquiry, in accordance with the <Link href="/privacy" className="underline">Privacy Notice</Link>.
         </label>
       </div>
       {typeTouched && !consented && <p className="contact-intent-error">Please provide consent to continue.</p>}
 
+      <p className="form-delivery-note">This form opens a draft in your email application. Review and send it there to complete your enquiry.</p>
       <button type="submit"><span>Send Enquiry</span><i><Send size={16} /></i></button>
     </form>
   );
