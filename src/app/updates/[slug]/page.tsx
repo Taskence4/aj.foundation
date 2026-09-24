@@ -42,7 +42,7 @@ export default async function UpdateArticlePage({ params }: PageProps<"/updates/
       <section className="article-hero">
         <div className="site-shell article-hero-inner">
           <Link className="page-back-link" href="/updates"><ArrowLeft /> All updates</Link>
-          <div className="article-meta-top"><span>{post.category}</span><span>Practice Note</span></div>
+          <div className="article-meta-top"><span>{post.category}</span></div>
           <h1>{post.title}</h1>
           <p className="article-deck">{post.excerpt}</p>
           <div className="article-byline">
