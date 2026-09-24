@@ -1,8 +1,45 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import {
+  ArrowUpRight,
+  CalendarCheck,
+  CalendarDays,
+  Clock3,
+  GraduationCap,
+  Laptop,
+  Layers,
+  Lightbulb,
+  MessageSquare,
+  Route,
+  ShieldCheck,
+  Target,
+  Users,
+  Wallet,
+  Wrench,
+  Zap,
+} from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
 import { NoticeBox } from "@/components/layout/NoticeBox";
+
+const trades = [
+  { icon: Zap, name: "Electrical" },
+  { icon: Wrench, name: "Plumbing" },
+] as const;
+
+const model = [
+  { icon: Users, qualifier: "Approximately", value: "20–30", label: "participants per trade" },
+  { icon: CalendarDays, qualifier: "Approximately", value: "Three months", label: "per cohort" },
+  { icon: CalendarCheck, qualifier: "", value: "Four", label: "training days per week" },
+  { icon: Clock3, qualifier: "Approximately", value: "Four hours", label: "per training day" },
+] as const;
+
+const capabilities = [
+  { icon: Laptop, text: "Foundational digital capability." },
+  { icon: Wallet, text: "Financial literacy." },
+  { icon: MessageSquare, text: "Communication and work readiness." },
+  { icon: Lightbulb, text: "Enterprise orientation." },
+  { icon: Route, text: "Preparation for further learning, employment or livelihood pathways." },
+] as const;
 
 const journey = [
   { title: "Orientation", body: "Understanding the programme and available options." },
@@ -30,42 +67,71 @@ export default function InitialProgrammePage() {
       />
 
       <section className="section section-white">
-        <div className="site-shell page-content">
-          <h2>Proposed objective</h2>
-          <p>
-            To enable participants to build relevant practical skills and readiness for continuing training,
-            employment or enterprise, while connecting learning inside prison with preparation for life after
-            release.
-          </p>
+        <div className="site-shell page-content page-content-wide">
+          <div className="synthesis-block">
+            <Target />
+            <p>
+              To enable participants to build relevant practical skills and readiness for continuing training,
+              employment or enterprise, while connecting learning inside prison with preparation for life after
+              release.
+            </p>
+          </div>
 
-          <h2>Initial trade focus</h2>
+          <div className="page-eyebrow-heading after-grid"><Layers /><h2>Initial trade focus</h2></div>
           <p>The current programme design includes:</p>
-          <ul className="page-list">
-            <li>Electrical</li>
-            <li>Plumbing</li>
-          </ul>
+          <div className="trade-grid">
+            {trades.map((trade) => {
+              const Icon = trade.icon;
+              return (
+                <article className="trade-card" key={trade.name}>
+                  <Icon />
+                  <h3>{trade.name}</h3>
+                </article>
+              );
+            })}
+          </div>
           <p>
             These trades have been identified as the initial focus, subject to institutional approval, site
             readiness and implementation planning.
           </p>
+        </div>
+      </section>
 
-          <h2>Proposed programme model</h2>
-          <ul className="page-list">
-            <li>Approximately 20&ndash;30 participants per trade.</li>
-            <li>Approximately three months per cohort.</li>
-            <li>Four training days per week.</li>
-            <li>Approximately four hours per training day.</li>
-          </ul>
-          <p>The programme is also intended to include:</p>
-          <ul className="page-list">
-            <li>Foundational digital capability.</li>
-            <li>Financial literacy.</li>
-            <li>Communication and work readiness.</li>
-            <li>Enterprise orientation.</li>
-            <li>Preparation for further learning, employment or livelihood pathways.</li>
-          </ul>
+      <section className="section section-warm">
+        <div className="site-shell page-content page-content-wide">
+          <div className="page-eyebrow-heading"><CalendarDays /><h2>Proposed programme model</h2></div>
+          <div className="ip-stats">
+            {model.map((stat) => {
+              const Icon = stat.icon;
+              return (
+                <div className="ip-stat" key={stat.label}>
+                  <Icon />
+                  <span className="ip-stat-qual">{stat.qualifier}</span>
+                  <strong>{stat.value}</strong>
+                  <span className="ip-stat-label">{stat.label}</span>
+                </div>
+              );
+            })}
+          </div>
 
-          <h2>Learning and certification</h2>
+          <div className="page-eyebrow-heading after-grid"><Lightbulb /><h2>The programme is also intended to include</h2></div>
+          <div className="ip-capabilities">
+            {capabilities.map((capability) => {
+              const Icon = capability.icon;
+              return (
+                <div className="ip-capability" key={capability.text}>
+                  <Icon />
+                  <span>{capability.text}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-white">
+        <div className="site-shell page-content page-content-wide">
+          <div className="page-eyebrow-heading"><GraduationCap /><h2>Learning and certification</h2></div>
           <p>
             Assessment and certification pathways will be aligned, where applicable, with relevant NSQF/KSDC
             requirements and delivered through competent or authorised institutions once arrangements are
@@ -75,15 +141,26 @@ export default function InitialProgrammePage() {
             No certification should be presented as guaranteed until the relevant partner and process are formally
             confirmed.
           </p>
+        </div>
+      </section>
 
-          <h2>Participant journey</h2>
-          <ol className="page-list">
+      <section className="section section-warm">
+        <div className="site-shell page-content page-content-wide">
+          <div className="page-eyebrow-heading"><Route /><h2>Participant journey</h2></div>
+          <ol className="journey">
             {journey.map((step) => (
-              <li key={step.title}><strong>{step.title}.</strong> {step.body}</li>
+              <li key={step.title}>
+                <h3>{step.title}</h3>
+                <p>{step.body}</p>
+              </li>
             ))}
           </ol>
+        </div>
+      </section>
 
-          <h2>Implementation status</h2>
+      <section className="section section-white">
+        <div className="site-shell page-content page-content-wide">
+          <div className="page-eyebrow-heading"><ShieldCheck /><h2>Implementation status</h2></div>
           <NoticeBox label="Status">
             <p>
               Implementation details remain subject to institutional approvals, site readiness and confirmation of
@@ -91,21 +168,23 @@ export default function InitialProgrammePage() {
             </p>
           </NoticeBox>
 
-          <h2>Connection to the wider AJ Foundation model</h2>
-          <p>
-            This programme sits within Rehabilitation &amp; Capability Development and is intended to connect,
-            where appropriate, with Access to Justice and Reintegration &amp; Second Chances.
-          </p>
-
-          <div className="page-cta-row page-cta">
-            <Link className="action-link" href="/our-work/rehabilitation">
-              <span>Explore Rehabilitation &amp; Capability Development</span>
-              <span className="action-icon"><ArrowUpRight /></span>
-            </Link>
-            <Link className="action-link" href="/our-work">
-              <span>Explore Our Work</span>
-              <span className="action-icon"><ArrowUpRight /></span>
-            </Link>
+          <div className="question-box">
+            <Target />
+            <h3>Connection to the wider AJ Foundation model</h3>
+            <p>
+              This programme sits within Rehabilitation &amp; Capability Development and is intended to connect,
+              where appropriate, with Access to Justice and Reintegration &amp; Second Chances.
+            </p>
+            <div className="page-cta-row page-cta">
+              <Link className="action-link" href="/our-work/rehabilitation">
+                <span>Explore Rehabilitation &amp; Capability Development</span>
+                <span className="action-icon"><ArrowUpRight /></span>
+              </Link>
+              <Link className="action-link" href="/our-work">
+                <span>Explore Our Work</span>
+                <span className="action-icon"><ArrowUpRight /></span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

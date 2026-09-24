@@ -217,6 +217,7 @@ h1, h2, h3, blockquote { font-family: var(--font-parkinsans), sans-serif; font-w
 .page-content-wide { max-width: none; }
 .hero-cta { margin-top: 34px; }
 .page-content-wide > .page-list, .page-content-wide > p { max-width: 760px; }
+.page-content-wide > .article-takeaways, .page-content-wide > .question-box, .page-content-wide > .synthesis-block { max-width: 900px; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 12px 32px; margin-bottom: 0; }
 .contact-email-link { display: inline-flex; align-items: center; min-height: 40px; gap: 8px; margin-bottom: 40px; color: var(--primary); font-size: 17px; font-weight: 700; }
 .page-content > p { margin: 0 0 22px; color: #48453e; font-size: 17px; line-height: 1.8; }
@@ -560,3 +561,43 @@ ol.page-list { list-style: decimal; }
 .article-scope-note { margin: 0 0 32px; padding: 16px 20px; border-left: 3px solid var(--primary); border-radius: 0 10px 10px 0; background: var(--cream); color: var(--dark); font-size: 15px; line-height: 1.6; }
 .form-delivery-note { margin: 0 0 14px; color: #6b6b6b; font-size: 13px; line-height: 1.55; }
 .contact-form-done button { margin-top: 18px; padding: 12px 22px; border: 1px solid rgba(0,0,0,.18); border-radius: 999px; background: transparent; color: inherit; font: inherit; font-weight: 600; cursor: pointer; }
+
+/* Initial Programme — visual treatment for the programme detail page */
+.trade-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin: 26px 0 24px; }
+.trade-card { display: flex; align-items: center; gap: 20px; padding: 28px 30px; border-radius: 18px; background: var(--cream); }
+.trade-card > svg { flex-shrink: 0; box-sizing: content-box; width: 26px; height: 26px; padding: 13px; border-radius: 50%; background: white; color: var(--primary); }
+.trade-card h3 { margin: 0; font-size: 24px; letter-spacing: -.8px; }
+
+.ip-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin: 26px 0 0; }
+.ip-stat { padding: 26px 24px; border-radius: 18px; background: white; border: 1px solid var(--line); }
+.ip-stat > svg { width: 22px; height: 22px; margin-bottom: 18px; color: var(--primary); }
+.ip-stat-qual { display: block; height: 16px; line-height: 16px; margin-bottom: 6px; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; }
+.ip-stat strong { display: block; font-family: var(--font-parkinsans); font-size: 34px; line-height: 1.05; letter-spacing: -1.4px; color: var(--dark); }
+.ip-stat-label { display: block; margin-top: 10px; color: var(--muted); font-size: 14px; line-height: 1.45; }
+
+.ip-capabilities { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0 0; }
+.ip-capability { display: flex; align-items: center; gap: 14px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: white; }
+.ip-capability > svg { flex-shrink: 0; width: 20px; height: 20px; color: var(--primary); }
+.ip-capability span { color: var(--dark); font-size: 14.5px; line-height: 1.5; }
+
+.journey { margin: 30px 0 0; padding: 0; list-style: none; counter-reset: journey; }
+.journey li { position: relative; padding: 0 0 34px 64px; counter-increment: journey; }
+.journey li::before { content: counter(journey, decimal-leading-zero); position: absolute; top: 0; left: 0; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--primary); color: white; font-family: var(--font-parkinsans); font-size: 15px; font-weight: 700; }
+.journey li::after { content: ""; position: absolute; top: 54px; bottom: 4px; left: 21px; width: 2px; border-radius: 2px; background: var(--line); }
+.journey li:last-child { padding-bottom: 0; }
+.journey li:last-child::after { display: none; }
+.journey h3 { margin: 9px 0 6px; font-size: 19px; letter-spacing: -.4px; }
+.journey p { margin: 0; max-width: 620px; color: var(--muted); font-size: 15.5px; line-height: 1.6; }
+
+@media (max-width: 980px) {
+  .ip-stats { grid-template-columns: repeat(2, 1fr); }
+  .ip-capabilities { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .trade-grid { grid-template-columns: 1fr; }
+  .ip-stats, .ip-capabilities { grid-template-columns: 1fr; }
+  .ip-stat strong { font-size: 30px; }
+  .journey li { padding-left: 54px; padding-bottom: 28px; }
+  .journey li::before { width: 38px; height: 38px; font-size: 14px; }
+  .journey li::after { top: 48px; left: 18px; }
+}
