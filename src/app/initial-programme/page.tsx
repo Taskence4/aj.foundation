@@ -97,14 +97,16 @@ export default function InitialProgrammePage() {
             where appropriate, with Access to Justice and Reintegration &amp; Second Chances.
           </p>
 
-          <Link className="action-link page-cta" href="/our-work/rehabilitation">
-            <span>Explore Rehabilitation &amp; Capability Development</span>
-            <span className="action-icon"><ArrowUpRight /></span>
-          </Link>
-          <Link className="action-link page-cta" href="/our-work">
-            <span>Explore Our Work</span>
-            <span className="action-icon"><ArrowUpRight /></span>
-          </Link>
+          <div className="page-cta-row page-cta">
+            <Link className="action-link" href="/our-work/rehabilitation">
+              <span>Explore Rehabilitation &amp; Capability Development</span>
+              <span className="action-icon"><ArrowUpRight /></span>
+            </Link>
+            <Link className="action-link" href="/our-work">
+              <span>Explore Our Work</span>
+              <span className="action-icon"><ArrowUpRight /></span>
+            </Link>
+          </div>
         </div>
       </section>
     </>
