@@ -26,10 +26,10 @@ export function UpdateCard({ post, priority = false }: UpdateCardProps) {
         <span className="ai-tag">Representational image</span>
       </Link>
       <div className="news-body">
-        <small>AJ FOUNDATION · PRACTICE NOTE</small>
+        <small>AJ FOUNDATION · FIELD NOTE</small>
         <h3><Link href={href}>{post.title}</Link></h3>
         <p>{post.excerpt}</p>
-        <Link className="v3-read-link" href={href} aria-label={`Read Practice Note: ${post.title}`}>Read Practice Note <ArrowUpRight size={18} /></Link>
+        <Link href={href} aria-label={`Read ${post.title}`}><ArrowUpRight /></Link>
       </div>
     </article>
   );

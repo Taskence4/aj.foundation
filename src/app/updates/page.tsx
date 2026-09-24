@@ -1,21 +1,51 @@
-﻿import type { Metadata } from "next";
-import { PageHero } from "@/components/layout/PageHero";
-import { ActionLink } from "@/components/layout/ContentPage";
+import type { Metadata } from "next";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { UpdateCard } from "@/components/updates/UpdateCard";
 import { updates } from "@/data/updates";
+import { HashLink } from "@/components/HashLink";
 
 export const metadata: Metadata = {
-  title: "Insights & Updates | AJ Foundation",
-  description: "Perspectives and practical learning on access to justice, rehabilitation and capability development, reintegration, and responsible institutional practice.",
+  title: "Updates & Insights | AJ Foundation",
+  description:
+    "Field notes and practical perspectives from AJ Foundation on rehabilitation, employability, institutional trust, and readiness for life after release.",
 };
 
 export default function UpdatesPage() {
-  return <>
-    <PageHero eyebrow="Insights & Updates" title="Ideas, learning and updates" description="Perspectives and practical learning on access to justice, rehabilitation and capability development, reintegration, and responsible institutional practice." />
-    <section className="section updates-archive-section"><div className="site-shell">
-      <div className="v3-prose archive-introduction"><p>AJ Foundation&apos;s Practice Notes and Perspectives explore ideas that inform our developing work across justice, rehabilitation and reintegration.</p><p>They are intended to support learning and dialogue and should not be read as reports of completed AJ Foundation programmes unless explicitly stated.</p></div>
-      <div className="news-grid archive-grid">{updates.map(post => <UpdateCard key={post.slug} post={post} />)}</div>
-      <div className="v3-actions"><ActionLink href="/our-work">Explore Our Work</ActionLink></div>
-    </div></section>
-  </>;
+  return (
+    <>
+      <section className="updates-page-hero">
+        <div className="site-shell updates-page-hero-inner">
+          <HashLink className="page-back-link" href="/#updates"><ArrowLeft /> Back to home</HashLink>
+          <p className="eyebrow eyebrow-light">Updates & insights</p>
+          <h1>Ideas for rehabilitation that lasts.</h1>
+          <p>
+            Field notes on practical skills, work readiness, institutional partnership,
+            and the patient work of preparing people for life beyond custody.
+          </p>
+        </div>
+      </section>
+
+      <section className="section updates-archive-section">
+        <div className="site-shell">
+          <div className="archive-heading">
+            <div>
+              <p className="archive-kicker">AJ Foundation editorial</p>
+              <h2>Latest field notes</h2>
+            </div>
+            <p>Evidence-minded perspectives for institutions, practitioners, employers, volunteers, and supporters.</p>
+          </div>
+          <div className="news-grid archive-grid">
+            {updates.map((post, index) => <UpdateCard key={post.slug} post={post} priority={index < 3} />)}
+          </div>
+        </div>
+      </section>
+
+      <section className="editorial-cta">
+        <div className="site-shell editorial-cta-inner">
+          <div><span>Build the next pathway with us</span><h2>Turn shared insight into practical action.</h2></div>
+          <HashLink className="action-link action-link-light" href="/#contact"><span>Work with AJ Foundation</span><span className="action-icon"><ArrowUpRight /></span></HashLink>
+        </div>
+      </section>
+    </>
+  );
 }

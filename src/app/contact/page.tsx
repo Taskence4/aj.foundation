@@ -15,7 +15,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Connect with AJ Foundation"
-        description="For general, institutional, programme or media enquiries, please use the contact details or form below."
+        description="For institutional, programme, partnership or general enquiries, please use the details or form below."
       />
 
       <section className="section section-white">
@@ -30,13 +30,13 @@ export default function ContactPage() {
           <div className="page-content after-grid">
             <NoticeBox label="Important notice for legal-support enquiries">
               <p>
-                Please do not send Aadhaar numbers, court records, medical information, criminal-case documents
+                Please do not upload Aadhaar numbers, court records, medical information, criminal-case documents
                 or other sensitive personal information through this general contact form.
               </p>
               <p>
                 This form should not be used for emergencies, imminent court deadlines or urgent liberty-related
                 applications. Information on this website does not constitute legal advice. For statutory legal
-                aid, individuals should contact the appropriate Legal Services Authority or other authorised legal-aid mechanism.
+                aid, contact the relevant Legal Services Authority or call the NALSA helpline at 15100.
               </p>
             </NoticeBox>
           </div>

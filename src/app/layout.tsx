@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SiteMotion } from "@/components/layout/SiteMotion";
 
 const inter = localFont({
   variable: "--font-inter",
@@ -17,10 +18,10 @@ const parkinsans = localFont({ src: "./fonts/parkinsans.woff2", variable: "--fon
 const orbitron = localFont({ src: "./fonts/orbitron-bold.ttf", variable: "--font-orbitron", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "AJ Foundation | Dignity. Access. A pathway forward.",
-  description: "AJ Foundation is being established to support people affected by incarceration through access to justice, rehabilitation and capability development, and reintegration.",
+  title: "AJ Foundation | Skills for Rehabilitation. Readiness for Life.",
+  description: "AJ Foundation supports rehabilitation through skills, employability training, and post-release readiness.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" className={`${inter.variable} ${parkinsans.variable} ${orbitron.variable}`}><body><a className="skip-link" href="#main-content">Skip to content</a><Header /><main id="main-content" tabIndex={-1}>{children}</main><Footer /></body></html>;
+  return <html lang="en" className={`${inter.variable} ${parkinsans.variable} ${orbitron.variable}`}><body><SiteMotion /><Header /><main>{children}</main><Footer /></body></html>;
 }
