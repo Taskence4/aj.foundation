@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <>
       <section id="home" className="hero-section">
-        <Image className="hero-bg" src={withBasePath("/images/aj-foundation/hero-background.webp")} alt="A community solidarity gathering" fill priority sizes="100vw" />
+        <Image className="hero-bg" src={withBasePath("/images/aj-foundation/hero-dignity-courtyard.webp")} alt="" fill preload sizes="100vw" />
         <div className="hero-shade" />
         <Image className="hero-candidate" src={withBasePath("/images/aj-foundation/founder.webp")} alt="AJ Foundation founder speaking at a podium" width={1126} height={1397} priority />
         <span className="ai-tag">Representational image</span>
