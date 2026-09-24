@@ -58,14 +58,14 @@ export default function AccessToJusticePage() {
           </p>
 
           <h2>Areas of support</h2>
-          <ol className="page-list">
+          <ul className="page-list">
             <li>Understandable information about available legal-aid mechanisms.</li>
             <li>Consent-based identification of legal-support needs.</li>
             <li>Assistance in organising available documents and information.</li>
             <li>Referral to the appropriate Legal Services Authority, prison legal-aid mechanism, authorised advocate or competent organisation.</li>
             <li>Documentation support connected with legal aid, release, identity and eligible entitlements.</li>
             <li>Appropriate follow-up within the Foundation&rsquo;s agreed role.</li>
-          </ol>
+          </ul>
 
           <h2>How support may be navigated</h2>
           <ol className="page-list">

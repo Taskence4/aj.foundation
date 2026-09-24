@@ -36,12 +36,12 @@ export default function PrivacyPage() {
           </p>
 
           <h2>3. Why we use the information</h2>
-          <ol className="page-list">
+          <ul className="page-list">
             <li>To receive, review and respond to your enquiry.</li>
             <li>To communicate about a partnership or programme conversation that you initiate.</li>
             <li>To maintain website security, prevent misuse and troubleshoot technical problems.</li>
             <li>To comply with applicable legal obligations.</li>
-          </ol>
+          </ul>
 
           <h2>4. Consent and withdrawal</h2>
           <p>

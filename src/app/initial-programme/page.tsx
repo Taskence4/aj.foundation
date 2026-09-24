@@ -40,30 +40,30 @@ export default function InitialProgrammePage() {
 
           <h2>Initial trade focus</h2>
           <p>The current programme design includes:</p>
-          <ol className="page-list">
+          <ul className="page-list">
             <li>Electrical</li>
             <li>Plumbing</li>
-          </ol>
+          </ul>
           <p>
             These trades have been identified as the initial focus, subject to institutional approval, site
             readiness and implementation planning.
           </p>
 
           <h2>Proposed programme model</h2>
-          <ol className="page-list">
+          <ul className="page-list">
             <li>Approximately 20&ndash;30 participants per trade.</li>
             <li>Approximately three months per cohort.</li>
             <li>Four training days per week.</li>
             <li>Approximately four hours per training day.</li>
-          </ol>
+          </ul>
           <p>The programme is also intended to include:</p>
-          <ol className="page-list">
+          <ul className="page-list">
             <li>Foundational digital capability.</li>
             <li>Financial literacy.</li>
             <li>Communication and work readiness.</li>
             <li>Enterprise orientation.</li>
             <li>Preparation for further learning, employment or livelihood pathways.</li>
-          </ol>
+          </ul>
 
           <h2>Learning and certification</h2>
           <p>

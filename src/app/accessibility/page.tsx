@@ -22,7 +22,7 @@ export default function AccessibilityPage() {
           </p>
 
           <h2>Measures we aim to maintain</h2>
-          <ol className="page-list">
+          <ul className="page-list">
             <li>Clear page structure and meaningful headings.</li>
             <li>Keyboard-accessible navigation.</li>
             <li>Visible focus states.</li>
@@ -32,7 +32,7 @@ export default function AccessibilityPage() {
             <li>Descriptive links and form labels.</li>
             <li>Responsive layouts across common devices.</li>
             <li>Captions or transcripts for meaningful audio-visual content where relevant.</li>
-          </ol>
+          </ul>
 
           <h2>Known limitations</h2>
           <p>

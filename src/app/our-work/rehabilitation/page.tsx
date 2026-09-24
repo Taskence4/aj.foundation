@@ -32,7 +32,7 @@ export default function RehabilitationPage() {
           </p>
 
           <h2>Programme components</h2>
-          <ol className="page-list">
+          <ul className="page-list">
             <li>Market-relevant vocational and livelihood skills.</li>
             <li>Foundational digital capability and safe technology use.</li>
             <li>Financial literacy and budgeting.</li>
@@ -41,17 +41,17 @@ export default function RehabilitationPage() {
             <li>Assessment and certification where competent arrangements are confirmed.</li>
             <li>Wellbeing or psychosocial inputs through qualified partners where appropriate.</li>
             <li>Connections to continuing training, employment, enterprise or support services.</li>
-          </ol>
+          </ul>
 
           <h2>What quality should mean</h2>
-          <ol className="page-list">
+          <ul className="page-list">
             <li>Participants understand the programme and join through an approved process.</li>
             <li>Training is appropriate to the institutional setting.</li>
             <li>Curricula and trainers are suited to the programme.</li>
             <li>Attendance, learning and feedback are documented responsibly.</li>
             <li>Certification or employment linkages are not promised before confirmation.</li>
             <li>Training is connected, where possible, to preparation for life after release.</li>
-          </ol>
+          </ul>
 
           <h2>Initial programme</h2>
           <p>

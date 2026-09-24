@@ -32,7 +32,7 @@ export default function ReintegrationPage() {
           </p>
 
           <h2>Areas of support</h2>
-          <ol className="page-list">
+          <ul className="page-list">
             <li>Individual pre-release planning.</li>
             <li>Prioritisation of immediate needs.</li>
             <li>Identity-document and entitlement readiness.</li>
@@ -40,7 +40,7 @@ export default function ReintegrationPage() {
             <li>Family or community reconnection where desired, safe and appropriate.</li>
             <li>Referral to housing, health, psychosocial or other competent services.</li>
             <li>Time-bound mentoring or follow-up within approved capacity.</li>
-          </ol>
+          </ul>
 
           <h2>What &ldquo;second chance&rdquo; means</h2>
           <p>A second chance is not the absence of accountability.</p>

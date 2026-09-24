@@ -5,12 +5,14 @@ export function PageHero({
   eyebrow,
   title,
   description,
+  action,
   backHref = "/",
   backLabel = "Back to home",
 }: {
   eyebrow: string;
   title: string;
   description?: string;
+  action?: React.ReactNode;
   backHref?: string;
   backLabel?: string;
 }) {
@@ -21,6 +23,7 @@ export function PageHero({
         <p className="eyebrow eyebrow-light">{eyebrow}</p>
         <h1>{title}</h1>
         {description && <p>{description}</p>}
+        {action}
       </div>
     </section>
   );
