@@ -1,7 +1,7 @@
 export const collaborateWays = [
   {
     title: "Public institutions",
-    body: "Programme permissions, institutional coordination, legal-aid pathways, certification, entitlements and reintegration linkages.",
+    body: "Programme permissions, institutional coordination, legal-aid pathways, entitlements, certification and reintegration linkages.",
   },
   {
     title: "Legal-services institutions and professionals",
@@ -13,7 +13,7 @@ export const collaborateWays = [
   },
   {
     title: "Employers and enterprise partners",
-    body: "Market insight, apprenticeships, fair employment pathways, mentoring, tools and responsible enterprise connections.",
+    body: "Market insight, employment pathways, mentoring and responsible enterprise connections.",
   },
   {
     title: "Civil society and service providers",

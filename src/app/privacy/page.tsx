@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
-import { AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Privacy Notice | AJ Foundation",
@@ -14,10 +13,16 @@ export default function PrivacyPage() {
 
       <section className="section section-white">
         <div className="site-shell page-content">
-          <div className="draft-banner"><AlertTriangle size={18} /> Draft notice — pending legal review and final institutional details.</div>
-
           <h2>1. Who we are</h2>
-          <p>This website is operated by AJ Foundation, referred to in this notice as &ldquo;we&rdquo;, &ldquo;us&rdquo; or &ldquo;our&rdquo;.</p>
+          <p>
+            This website is operated by AJ Foundation, referred to in this notice as &ldquo;we&rdquo;,
+            &ldquo;us&rdquo; or &ldquo;our&rdquo;. AJ Foundation is currently being established. Formal legal and
+            registered-office details will be published once the relevant institutional processes are complete.
+          </p>
+          <p>
+            For privacy-related enquiries, please contact{" "}
+            <a href="mailto:info@ajfoundation.org">info@ajfoundation.org</a>.
+          </p>
 
           <h2>2. Information we collect</h2>
           <p>
@@ -54,9 +59,9 @@ export default function PrivacyPage() {
 
           <h2>6. Retention</h2>
           <p>
-            We retain personal information only for as long as reasonably necessary for the purpose stated in this
-            notice or as required by applicable law, unless a longer period is required for an active engagement or
-            legal obligation.
+            Personal information should be retained only for as long as reasonably necessary for the purpose for
+            which it was collected or where required by law. The actual retention period for general and
+            partnership enquiries will be confirmed and published before public launch.
           </p>
 
           <h2>7. Security</h2>
@@ -70,7 +75,8 @@ export default function PrivacyPage() {
           <p>
             You may contact us to request access, correction, completion, updating or erasure of personal
             information, or to raise a concern about how it has been handled, subject to applicable law and
-            verification of your identity.
+            verification of your identity. Requests may be sent to{" "}
+            <a href="mailto:info@ajfoundation.org">info@ajfoundation.org</a>.
           </p>
 
           <h2>9. Children</h2>
@@ -82,8 +88,10 @@ export default function PrivacyPage() {
 
           <h2>10. Cookies and analytics</h2>
           <p>
-            We use essential cookies only at this stage. If non-essential analytics or third-party tracking is
-            introduced, visitors will be given the required information and choice before it is activated.
+            This website does not set cookies and does not use analytics or non-essential tracking. Enquiry forms
+            open a draft in your own email application rather than submitting data to this website. If analytics
+            or non-essential tracking is introduced, this notice and a visitor-consent mechanism will be updated
+            before activation.
           </p>
 
           <h2>11. Changes to this notice</h2>

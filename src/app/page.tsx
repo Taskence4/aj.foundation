@@ -1,45 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowUpRight,
-  Check,
-  Compass,
-  HeartHandshake,
-  ShieldCheck,
-  Sparkles,
-} from "lucide-react";
-import { priorities } from "@/data/priorities";
-import { faqs } from "@/data/faqs";
-import { updates } from "@/data/updates";
+import { ArrowUpRight, Compass, HeartHandshake, Scale } from "lucide-react";
 import { withBasePath } from "@/lib/utils";
-import { UpdateCard } from "@/components/updates/UpdateCard";
-import { ContactCTAForm } from "@/components/sections/ContactCTAForm";
-import { HashLink } from "@/components/HashLink";
 
-const programmeImages = [
-  withBasePath("/images/aj-foundation/programme-rehabilitation.webp"),
-  withBasePath("/images/aj-foundation/programme-engagement.webp"),
-  withBasePath("/images/aj-foundation/programme-employability.webp"),
-  withBasePath("/images/aj-foundation/event-orientation.webp"),
-  withBasePath("/images/aj-foundation/event-workshop.webp"),
-];
+const pathways = [
+  {
+    slug: "access-to-justice",
+    icon: Scale,
+    title: "Access to Justice",
+    body: "Helping people understand available legal-aid pathways, organise necessary information and documents, and reach competent institutions authorised to advise or represent them.",
+  },
+  {
+    slug: "rehabilitation",
+    icon: HeartHandshake,
+    title: "Rehabilitation & Capability Development",
+    body: "Developing practical livelihood, digital, financial and work-readiness capabilities that can strengthen pathways to learning, employment or enterprise.",
+  },
+  {
+    slug: "reintegration",
+    icon: Compass,
+    title: "Reintegration & Second Chances",
+    body: "Supporting preparation for release and connections to documents, entitlements, livelihoods, family, community and appropriate services.",
+  },
+] as const;
 
 function Eyebrow({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
   return <p className={`eyebrow ${light ? "eyebrow-light" : ""}`}>{children}</p>;
 }
 
 function ActionLink({ href, children, light = false }: { href: string; children: React.ReactNode; light?: boolean }) {
-  const className = `action-link ${light ? "action-link-light" : ""}`;
-  const content = (
-    <>
+  return (
+    <Link className={`action-link ${light ? "action-link-light" : ""}`} href={href}>
       <span>{children}</span>
       <span className="action-icon"><ArrowUpRight size={18} /></span>
-    </>
-  );
-  return href.includes("#") ? (
-    <HashLink className={className} href={href}>{content}</HashLink>
-  ) : (
-    <Link className={className} href={href}>{content}</Link>
+    </Link>
   );
 }
 
@@ -52,157 +46,122 @@ export default function Home() {
         <Image className="hero-candidate" src={withBasePath("/images/aj-foundation/founder.webp")} alt="AJ Foundation founder speaking at a podium" width={1126} height={1397} priority />
         <span className="ai-tag">Representational image</span>
         <div className="site-shell hero-content">
-          <Eyebrow light>People deserve a second chance.</Eyebrow>
-          <h1>Building skills.<br />Restoring purpose.</h1>
+          <Eyebrow light>AJ Foundation</Eyebrow>
+          <h1>Dignity. Access.<br />A pathway forward.</h1>
           <p className="hero-copy">
-            Supporting rehabilitation through structured skills, constructive engagement,
-            employability training, and readiness for life beyond prison.
+            AJ Foundation is being established to support people affected by incarceration through connected
+            pathways in access to justice, rehabilitation and capability development, and reintegration.
+          </p>
+          <p className="hero-copy">
+            We seek to work with public institutions, professionals and community partners so that legal barriers,
+            loss of livelihood and social exclusion are not addressed in isolation.
           </p>
           <div className="hero-actions">
-            <ActionLink href="#contact" light>Support now</ActionLink>
-            <ActionLink href="#programmes">Learn more</ActionLink>
+            <ActionLink href="/our-work" light>Explore Our Work</ActionLink>
+            <ActionLink href="/partner-with-us">Partner With Us</ActionLink>
           </div>
-          <p className="hero-footline">Committed to dignity, driven by change.</p>
         </div>
       </section>
 
-      <section id="about" className="section section-white">
+      <section id="why" className="section section-white">
+        <div className="site-shell page-content">
+          <div className="section-intro">
+            <Eyebrow>Why AJ Foundation</Eyebrow>
+            <h2>Why this work matters</h2>
+          </div>
+          <p>Incarceration can create or deepen several barriers at the same time.</p>
+          <p>
+            A person may need understandable legal information, identity documents, opportunities to learn and
+            earn, and support to reconnect with family and community. When these needs are addressed
+            separately&mdash;or too late&mdash;the path forward becomes harder.
+          </p>
+          <p>
+            AJ Foundation is being developed to help connect these dimensions through responsible institutional
+            partnerships and practical pathways before and after release.
+          </p>
+          <ActionLink href="/about" light>About AJ Foundation</ActionLink>
+        </div>
+      </section>
+
+      <section id="pathways" className="section section-warm">
         <div className="site-shell">
-          <div className="section-intro centered">
-            <Eyebrow>About AJ Foundation</Eyebrow>
-            <h2>Serving people with integrity and purpose</h2>
-            <p>We create meaningful opportunities for people within prison systems while working respectfully with institutions that believe rehabilitation can build safer, stronger communities.</p>
+          <div className="section-intro">
+            <Eyebrow>Our Work</Eyebrow>
+            <h2>Three connected pathways. One purpose.</h2>
+            <p>
+              Legal access, capability development and reintegration are deeply connected. AJ Foundation seeks to
+              bring these areas together around the circumstances, priorities and dignity of the person.
+            </p>
           </div>
-          <div className="about-grid">
-            <figure className="portrait-card portrait-tall">
-              <Image src={withBasePath("/images/aj-foundation/about-speaker.webp")} alt="A facilitator leading a communication skills session" fill sizes="(max-width: 768px) 100vw, 30vw" />
-              <span className="ai-tag">Representational image</span>
-            </figure>
-            <div className="about-center">
-              <div className="about-stat"><strong>5</strong><span>core programme pillars</span></div>
-              <div className="about-stat"><strong>3</strong><span>connected pathways</span></div>
-              <p>Our work is focused, practical, and built around one clear purpose: helping individuals prepare for a responsible life beyond prison.</p>
-              <ActionLink href="/about" light>About us</ActionLink>
-            </div>
-            <figure className="portrait-card portrait-offset">
-              <Image src={withBasePath("/images/aj-foundation/about-collaboration.webp")} alt="Programme stakeholders planning together" fill sizes="(max-width: 768px) 100vw, 30vw" />
-              <span className="ai-tag">Representational image</span>
-            </figure>
+          <div className="domain-grid">
+            {pathways.map((pathway) => {
+              const Icon = pathway.icon;
+              return (
+                <article className="trust-card light-card" key={pathway.slug}>
+                  <Icon />
+                  <div>
+                    <h3>{pathway.title}</h3>
+                    <p>{pathway.body}</p>
+                  </div>
+                </article>
+              );
+            })}
           </div>
-        </div>
-      </section>
-
-      <section id="programmes" className="section section-warm">
-        <div className="site-shell">
-          <div className="section-row">
-            <div className="section-intro">
-              <Eyebrow>Our programmes</Eyebrow>
-              <h2>Priorities for a stronger future</h2>
-            </div>
-            <ActionLink href="/partner-with-us" light>Partner with us</ActionLink>
-          </div>
-          <div className="programme-grid">
-            {priorities.map((item, index) => (
-              <article className="programme-card" key={item.slug}>
-                <div className="programme-image">
-                  <Image src={programmeImages[index]} alt="" fill sizes="(max-width: 768px) 100vw, 33vw" />
-                  <span>0{index + 1}</span>
-                  <span className="ai-tag">Representational image</span>
-                </div>
-                <div className="programme-body">
-                  <h3>{item.title}</h3>
-                  <p>{item.body}</p>
-                  <Link href="/our-work" aria-label={`Learn about ${item.title}`}><ArrowUpRight /></Link>
-                </div>
-              </article>
-            ))}
+          <div className="page-content after-grid">
+            <ActionLink href="/our-work" light>Explore Our Work</ActionLink>
           </div>
         </div>
       </section>
 
-      <section id="impact" className="section trust-section">
-        <div className="site-shell">
-          <div className="section-row trust-heading">
-            <div className="section-intro">
-              <Eyebrow light>Why people trust our movement</Eyebrow>
-              <h2>Rehabilitation built on structure, consistency, and trust</h2>
-            </div>
-            <ActionLink href="/contact" light>Get in touch</ActionLink>
+      <section id="initial-programme" className="section section-white">
+        <div className="site-shell page-content">
+          <div className="section-intro">
+            <Eyebrow>Programme under development</Eyebrow>
+            <h2>Livelihood skills connected to life after release</h2>
           </div>
-          <div className="trust-grid">
-            <article className="trust-card blue-card">
-              <HeartHandshake />
-              <div><h3>People-first support</h3><p>Every programme is designed around dignity, responsibility, and practical outcomes.</p></div>
-            </article>
-            <figure className="trust-photo wide-photo"><Image src={withBasePath("/images/aj-foundation/trust-volunteer.webp")} alt="A mentor supporting a vocational training session" fill sizes="50vw" /><span className="ai-tag">Representational image</span></figure>
-            <figure className="trust-photo"><Image src={withBasePath("/images/aj-foundation/trust-partnership.webp")} alt="An institutional programme review meeting" fill sizes="33vw" /><span className="ai-tag">Representational image</span></figure>
-            <article className="trust-card light-card">
-              <ShieldCheck />
-              <div><h3>Institution-ready</h3><p>Transparent, safe, and reliable programmes built to work within institutional realities.</p></div>
-            </article>
-            <article className="trust-card dark-card wide-card">
-              <Compass />
-              <div><h3>Focused on real results</h3><p>From self-belief and employability to documentation awareness and post-release readiness.</p></div>
-              <ActionLink href="/contact">Join our mission</ActionLink>
-            </article>
-          </div>
+          <p>
+            AJ Foundation is developing an initial livelihood-skilling programme combining practical vocational
+            learning with foundational digital and financial capabilities, work readiness and preparation for
+            future livelihood opportunities.
+          </p>
+          <p>
+            The current programme design includes Electrical and Plumbing as initial trades and will proceed
+            subject to institutional approvals, site readiness and confirmation of training and certification
+            arrangements.
+          </p>
+          <ActionLink href="/initial-programme" light>View Initial Programme</ActionLink>
         </div>
       </section>
 
-      <section className="section section-warm highlights-section">
-        <div className="site-shell">
-          <div className="section-row">
-            <div className="section-intro"><Eyebrow>In the field</Eyebrow><h2>Highlights from our programmes</h2></div>
-            <p className="section-sidecopy">Practical learning, institutional collaboration, and community participation in action.</p>
+      <section id="how-we-work" className="section section-warm">
+        <div className="site-shell page-content">
+          <div className="section-intro">
+            <Eyebrow>How We Work</Eyebrow>
+            <h2>Principles before programmes</h2>
           </div>
-          <div className="highlight-grid">
-            <figure className="highlight-a"><Image src={withBasePath("/images/aj-foundation/highlight-main.webp")} alt="A practical vocational skills programme in progress" fill sizes="60vw" /><span className="ai-tag">Representational image</span></figure>
-            <figure className="highlight-b"><Image src={withBasePath("/images/aj-foundation/highlight-skills.webp")} alt="Learners reviewing work-readiness materials" fill sizes="40vw" /><span className="ai-tag">Representational image</span></figure>
-            <figure><Image src={withBasePath("/images/aj-foundation/highlight-community.webp")} alt="A community group discussion" fill sizes="20vw" /><span className="ai-tag">Representational image</span></figure>
-            <figure><Image src={withBasePath("/images/aj-foundation/highlight-institutional.webp")} alt="Stakeholders reviewing programme plans" fill sizes="20vw" /><span className="ai-tag">Representational image</span></figure>
-          </div>
-        </div>
-      </section>
-
-      <section className="section section-white faq-section">
-        <div className="site-shell faq-grid">
-          <div className="faq-intro">
-            <Eyebrow>FAQs</Eyebrow>
-            <h2>Common questions from supporters</h2>
-            <div className="question-box"><Sparkles /><h3>Still have a question?</h3><p>Reach out and our team will get back to you directly.</p><ActionLink href="/contact" light>Ask us</ActionLink></div>
-          </div>
-          <div className="faq-list">
-            {faqs.map((faq, index) => (
-              <details key={faq.question} open={index === 0}>
-                <summary><span>{String(index + 1).padStart(2, "0")}. {faq.question}</span><span className="faq-plus">+</span></summary>
-                <p>{faq.answer}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="updates" className="section section-warm">
-        <div className="site-shell">
-          <div className="section-row">
-            <div className="section-intro"><Eyebrow>Updates & insights</Eyebrow><h2>Stories, learnings, and field updates</h2></div>
-            <ActionLink href="/updates" light>More news</ActionLink>
-          </div>
-          <div className="news-grid">
-            {updates.map((post) => <UpdateCard key={post.slug} post={post} />)}
-          </div>
+          <p>How support is offered matters as much as what is offered.</p>
+          <p>
+            AJ Foundation&rsquo;s work is intended to be guided by dignity and agency, informed participation,
+            safeguarding, equity, responsible institutional partnership, evidence and accountability.
+          </p>
+          <ActionLink href="/how-we-work" light>How We Work</ActionLink>
         </div>
       </section>
 
       <section id="contact" className="join-section">
         <div className="site-shell join-inner">
-          <Eyebrow light>Work with us</Eyebrow>
-          <h2>Join the mission today for progress.</h2>
-          <p>Institutions, volunteers, trainers, employers, donors, and partners all have a role in building practical pathways for reintegration.</p>
-          <div className="join-points">
-            {["Volunteer", "Partner", "Train", "Support"].map((point) => <span key={point}><Check />{point}</span>)}
+          <Eyebrow light>Partner &amp; contact</Eyebrow>
+          <h2>Building pathways requires partnership</h2>
+          <p>Justice, rehabilitation and reintegration require coordinated expertise.</p>
+          <p>
+            We welcome conversations with public institutions, legal-services professionals, training and
+            education partners, employers, civil-society organisations and philanthropic or CSR partners
+            interested in responsible collaboration.
+          </p>
+          <div className="hero-actions">
+            <ActionLink href="/partner-with-us" light>Partner With Us</ActionLink>
+            <ActionLink href="/contact">Contact Us</ActionLink>
           </div>
-          <ContactCTAForm />
         </div>
       </section>
     </>

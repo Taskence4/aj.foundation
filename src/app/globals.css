@@ -25,11 +25,17 @@ button { font: inherit; }
 
 .main-header { position: fixed; z-index: 50; top: 0; left: 0; width: 100%; padding: 26px 0; color: white; transition: background-color .3s ease, padding .3s ease, box-shadow .3s ease; }
 .main-header.is-scrolled { background: rgba(26, 26, 26, .92); backdrop-filter: blur(10px); padding: 14px 0; box-shadow: 0 8px 30px rgba(0,0,0,.16); }
-.header-inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; }
+.header-inner { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 24px; }
 .brand { display: flex; align-items: center; width: max-content; }
 .brand-wordmark { display: block; font-family: var(--font-orbitron), sans-serif; font-size: 22px; font-weight: 700; letter-spacing: .04em; color: #fff; text-transform: lowercase; }
-.header-nav { display: flex; align-items: center; gap: 2px; padding: 7px 10px; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; backdrop-filter: blur(12px); background: rgba(26,26,26,.2); }
-.header-nav a { padding: 11px 12px; font-size: 13.5px; font-weight: 600; white-space: nowrap; flex-shrink: 0; transition: opacity .2s; }
+.header-nav { justify-self: end; display: flex; align-items: center; gap: 2px; padding: 7px 10px; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; backdrop-filter: blur(12px); background: rgba(26,26,26,.2); }
+.header-nav a { padding: 11px 9px; font-size: 12.5px; font-weight: 600; white-space: nowrap; flex-shrink: 0; transition: opacity .2s; }
+.header-nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; }
+.nav-work { position: relative; }
+.nav-work-label { display: flex; align-items: center; }
+.nav-work-label button { display: grid; place-items: center; width: 28px; min-height: 44px; padding: 0; border: 0; background: transparent; color: inherit; cursor: pointer; }
+.nav-subnav { position: absolute; z-index: 60; top: calc(100% + 14px); left: 0; width: 320px; padding: 10px; border-radius: 14px; background: #fff; color: var(--dark); box-shadow: 0 20px 50px rgba(0,0,0,.2); }
+.nav-subnav a { display: block; white-space: normal; line-height: 1.5; }
 .header-nav a:hover { opacity: .65; }
 .header-cta { justify-self: end; flex-shrink: 0; display: inline-flex; align-items: center; gap: 18px; height: 50px; padding: 5px 5px 5px 24px; background: var(--primary); border-radius: 999px; font-weight: 700; font-size: 14px; white-space: nowrap; }
 .header-cta i { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; background: white; color: var(--primary); font-style: normal; }
@@ -372,7 +378,10 @@ h1, h2, h3, blockquote { font-family: var(--font-parkinsans), sans-serif; font-w
   .header-inner { grid-template-columns: 1fr auto; }
   .header-nav { display: none; position: absolute; top: 74px; left: 16px; right: 16px; flex-direction: column; align-items: stretch; background: #fff; color: var(--dark); border-radius: 18px; padding: 12px; box-shadow: 0 20px 50px rgba(0,0,0,.2); }
   .header-nav.open { display: flex; }
-  .header-nav a { padding: 12px 14px; white-space: normal; }
+  .header-nav a { padding: 12px 14px; font-size: 14px; white-space: normal; }
+  .header-nav { max-height: calc(100dvh - 120px); overflow-y: auto; }
+  .nav-work-label { justify-content: space-between; }
+  .nav-subnav { position: static; width: 100%; padding: 0 0 6px 16px; border-radius: 0; box-shadow: none; }
   .header-cta { display: none; }
   .menu-button { display: block; }
 }
@@ -533,3 +542,7 @@ h1, h2, h3, blockquote { font-family: var(--font-parkinsans), sans-serif; font-w
   .site-loader { display: none; }
   .motion-ready .reveal-item { opacity: 1; transform: none; }
 }
+
+.article-scope-note { margin: 0 0 32px; padding: 16px 20px; border-left: 3px solid var(--primary); border-radius: 0 10px 10px 0; background: var(--cream); color: var(--dark); font-size: 15px; line-height: 1.6; }
+.form-delivery-note { margin: 0 0 14px; color: #6b6b6b; font-size: 13px; line-height: 1.55; }
+.contact-form-done button { margin-top: 18px; padding: 12px 22px; border: 1px solid rgba(0,0,0,.18); border-radius: 999px; background: transparent; color: inherit; font: inherit; font-weight: 600; cursor: pointer; }

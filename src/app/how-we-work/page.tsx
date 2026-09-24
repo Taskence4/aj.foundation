@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { ArrowUpRight, HandHeart, ListChecks } from "lucide-react";
+import Link from "next/link";
+import { ArrowUpRight, HandHeart } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
-import { HashLink } from "@/components/HashLink";
 import { principles } from "@/data/principles";
 
 export const metadata: Metadata = {
@@ -15,19 +15,11 @@ export default function HowWeWorkPage() {
       <PageHero
         eyebrow="How We Work"
         title="Principles before programmes"
-        description="How support is offered matters as much as what is offered. Our work is intended to protect dignity, agency, safety and accountability at every stage."
+        description="How support is offered matters as much as what is offered. AJ Foundation seeks to work in ways that protect dignity, agency, safety and accountability at every stage."
       />
 
       <section className="section section-warm">
         <div className="site-shell">
-          <div className="page-content">
-            <div className="page-eyebrow-heading"><ListChecks /><h2>Six principles, at every stage</h2></div>
-            <p className="about-section-lead">
-              From first contact to follow-up, the same commitments apply &mdash; they are not optional extras
-              layered onto a programme.
-            </p>
-          </div>
-
           <div className="collaborate-grid principle-detail-grid">
             {principles.map((principle, index) => {
               const Icon = principle.icon;
@@ -50,10 +42,10 @@ export default function HowWeWorkPage() {
             <HandHeart />
             <h3>See these principles applied</h3>
             <p>Explore how dignity, consent and accountability shape the pathways AJ Foundation is developing.</p>
-            <HashLink className="action-link" href="/our-work">
-              <span>Explore our work</span>
+            <Link className="action-link" href="/our-work">
+              <span>Explore Our Work</span>
               <span className="action-icon"><ArrowUpRight /></span>
-            </HashLink>
+            </Link>
           </div>
         </div>
       </section>

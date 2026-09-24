@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { CheckCircle2, Mail, MessageSquare, Send, User } from "lucide-react";
 
-const enquiryTypes = ["General", "Partnership", "Programme", "Media", "Other"] as const;
+const enquiryTypes = ["General", "Programme", "Media", "Other"] as const;
 
 export function GeneralEnquiryForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -47,10 +47,12 @@ export function GeneralEnquiryForm() {
 
   if (submitted) {
     return (
-      <div className="contact-form contact-form-done">
+      <div className="contact-form contact-form-done" role="status">
         <span className="contact-form-done-icon"><CheckCircle2 /></span>
-        <strong>Thank you. Your enquiry has been received.</strong>
-        <p>If a response is required, our team will contact you using the details provided.</p>
+        <strong>Your email draft is ready.</strong>
+        <p>Please send the draft from your email application to complete your enquiry. The website has not submitted it for you.</p>
+        <p>If your email application did not open, write to <a href="mailto:info@ajfoundation.org">info@ajfoundation.org</a>.</p>
+        <button type="button" onClick={() => setSubmitted(false)}>Return to form</button>
       </div>
     );
   }
@@ -125,6 +127,7 @@ export function GeneralEnquiryForm() {
       </div>
       {typeTouched && !consented && <p className="contact-intent-error">Please provide consent to continue.</p>}
 
+      <p className="form-delivery-note">This form opens a draft in your email application. Review and send it there to complete your enquiry.</p>
       <button type="submit"><span>Send Enquiry</span><i><Send size={16} /></i></button>
     </form>
   );

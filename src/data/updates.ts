@@ -10,7 +10,6 @@ export type UpdatePost = {
   excerpt: string;
   image: string;
   imageAlt: string;
-  date: string;
   readingTime: string;
   intro: string;
   takeaways: readonly string[];
@@ -21,13 +20,12 @@ export type UpdatePost = {
 export const updates = [
   {
     slug: "why-skills-training-matters-in-prison-rehabilitation",
-    category: "Rehabilitation",
+    category: "Practice Note",
     title: "Why Skills Training Matters in Prison Rehabilitation",
     excerpt:
       "Skills training can help individuals build discipline, confidence, and practical readiness for life after release.",
     image: "/images/aj-foundation/news-skills-rehabilitation.webp",
     imageAlt: "A facilitated rehabilitation group discussing practical skills",
-    date: "17 July 2026",
     readingTime: "7 min read",
     intro:
       "Rehabilitation becomes meaningful when people have repeated opportunities to practise responsibility, solve problems, and see evidence of their own progress. Well-designed skills training creates that structure.",
@@ -71,13 +69,12 @@ export const updates = [
   },
   {
     slug: "preparing-for-work-after-release",
-    category: "Employability",
+    category: "Practice Note",
     title: "Preparing for Work After Release",
     excerpt:
       "Employability support is not just about jobs. It is about confidence, communication, responsibility, and readiness.",
     image: "/images/aj-foundation/news-work-readiness.webp",
     imageAlt: "Participants and a facilitator reviewing work-readiness plans",
-    date: "17 July 2026",
     readingTime: "8 min read",
     intro:
       "A job can provide income, routine, identity, and connection. But sustainable employment after release requires more than a vacancy: it requires preparation on both sides of the workplace door.",
@@ -121,13 +118,12 @@ export const updates = [
   },
   {
     slug: "building-rehabilitation-programmes-prison-systems-can-trust",
-    category: "Institutional Trust",
+    category: "Practice Note",
     title: "Building Rehabilitation Programmes That Prison Systems Can Trust",
     excerpt:
       "Long-term rehabilitation work depends on transparency, safety, consistency, and respectful collaboration with institutions.",
     image: "/images/aj-foundation/news-institutional-trust.webp",
     imageAlt: "Institutional partners reviewing programme information together",
-    date: "17 July 2026",
     readingTime: "7 min read",
     intro:
       "Rehabilitation programmes operate inside environments where safety, accountability, and operational discipline are essential. Trust is earned when a programme respects those realities and delivers consistently within them.",

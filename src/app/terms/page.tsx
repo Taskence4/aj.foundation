@@ -64,10 +64,7 @@ export default function TermsPage() {
             and is not responsible for third-party content, availability, privacy or practices.
           </p>
 
-          <h2>8. Limitation and governing law</h2>
-          <p>Approved limitation-of-liability, indemnity, governing-law and jurisdiction clauses will be added here following qualified legal review.</p>
-
-          <h2>9. Contact</h2>
+          <h2>8. Contact</h2>
           <p>
             Questions about these terms can be sent through our{" "}
             <HashLink href="/contact">Contact page</HashLink>.

@@ -24,19 +24,20 @@ export default function AccessibilityPage() {
           <h2>Measures we aim to maintain</h2>
           <ol className="page-list">
             <li>Clear page structure and meaningful headings.</li>
-            <li>Keyboard-accessible navigation and visible focus states.</li>
-            <li>Readable colour contrast and scalable text.</li>
+            <li>Keyboard-accessible navigation.</li>
+            <li>Visible focus states.</li>
+            <li>Readable colour contrast.</li>
+            <li>Scalable text.</li>
             <li>Alternative text for informative images.</li>
-            <li>Descriptive links, labels and form instructions.</li>
+            <li>Descriptive links and form labels.</li>
             <li>Responsive layouts across common devices.</li>
-            <li>Captions or transcripts for meaningful audio-visual content.</li>
+            <li>Captions or transcripts for meaningful audio-visual content where relevant.</li>
           </ol>
 
           <h2>Known limitations</h2>
           <p>
-            This website has not yet undergone formal accessibility testing. We plan to carry out a structured
-            audit and will update this page with the test date, method and any known limitations once it is
-            complete.
+            A formal accessibility review is planned as the website moves towards public launch. We will update
+            this page with the review date, method and any known limitations once it is complete.
           </p>
 
           <h2>Feedback and assistance</h2>
@@ -45,6 +46,11 @@ export default function AccessibilityPage() {
             please let us know through our <HashLink href="/contact">Contact page</HashLink>. Tell us the page, the
             problem encountered, the device or assistive technology used if you are comfortable doing so, and the
             format you need.
+          </p>
+          <p>
+            Email: <a href="mailto:info@ajfoundation.org">info@ajfoundation.org</a>
+            <br />
+            Phone: <a href="tel:+918050089834">+91 80500 89834</a>
           </p>
 
           <h2>Response commitment</h2>

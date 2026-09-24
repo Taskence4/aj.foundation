@@ -50,10 +50,12 @@ export function PartnerEnquiryForm() {
 
   if (submitted) {
     return (
-      <div className="contact-form contact-form-done">
+      <div className="contact-form contact-form-done" role="status">
         <span className="contact-form-done-icon"><CheckCircle2 /></span>
-        <strong>Your email client should now be open</strong>
-        <p>Review the pre-filled message and hit send — our team will get back to you shortly.</p>
+        <strong>Your email draft is ready.</strong>
+        <p>Please send the draft from your email application to complete your partnership enquiry. The website has not submitted it for you.</p>
+        <p>If your email application did not open, write to <a href="mailto:info@ajfoundation.org">info@ajfoundation.org</a>.</p>
+        <button type="button" onClick={() => setSubmitted(false)}>Return to form</button>
       </div>
     );
   }
@@ -138,6 +140,7 @@ export function PartnerEnquiryForm() {
       </div>
       {interestTouched && !consented && <p className="contact-intent-error">Please provide consent to continue.</p>}
 
+      <p className="form-delivery-note">This form opens a draft in your email application. Review and send it there to complete your enquiry.</p>
       <button type="submit"><span>Send Partnership Enquiry</span><i><Send size={16} /></i></button>
     </form>
   );

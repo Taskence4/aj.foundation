@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Compass, HeartHandshake, Link2, Quote, Scale } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Compass, HeartHandshake, Link2, Quote, Scale, Sprout } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
 import { ourWork } from "@/data/ourWork";
 
 const connections = [
   { icon: Scale, body: "A livelihood certificate cannot resolve an unresolved legal barrier." },
-  { icon: HeartHandshake, body: "Legal assistance alone may not create work or housing." },
-  { icon: Compass, body: "A job lead may fail if identity documents, family support or practical preparation are missing." },
+  { icon: HeartHandshake, body: "Legal assistance alone may not create work, housing or social support." },
+  { icon: Compass, body: "A job opportunity may be difficult to sustain if identity documents, family support or practical preparation are missing." },
 ] as const;
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function OurWorkPage() {
       <PageHero
         eyebrow="Our Work"
         title="Three connected pathways. One purpose."
-        description="Legal access, capability development and reintegration are deeply connected. Our proposed work brings them together so that support begins before release and continues through the transition beyond prison."
+        description="Legal access, capability development and reintegration are deeply connected. AJ Foundation seeks to bring them together so that support can begin before release and continue through the transition beyond prison."
       />
 
       <section className="section section-white">
@@ -34,10 +34,11 @@ export default function OurWorkPage() {
                   <Icon />
                   <div>
                     <h3>{domain.title}</h3>
+                    <p className="about-section-lead">{domain.subheading}</p>
                     <p>{domain.body}</p>
                   </div>
-                  <Link className="action-link" href={`/our-work/${domain.slug}`} aria-label={`Explore ${domain.title}`}>
-                    <span>Learn more</span>
+                  <Link className="action-link" href={`/our-work/${domain.slug}`}>
+                    <span>{domain.cta}</span>
                     <span className="action-icon"><ArrowUpRight /></span>
                   </Link>
                 </article>
@@ -68,9 +69,25 @@ export default function OurWorkPage() {
           <div className="synthesis-block">
             <Quote />
             <p>
-              Our approach begins with the person&rsquo;s circumstances, consent and priorities, and builds
-              referrals and opportunities around them.
+              AJ Foundation therefore seeks to begin with the person&rsquo;s circumstances, consent and
+              priorities, and connect appropriate institutions and opportunities around them.
             </p>
+          </div>
+
+          <div className="page-content after-grid">
+            <div className="page-eyebrow-heading"><Sprout /><h2>From programme design to implementation</h2></div>
+            <p>
+              AJ Foundation is developing its first livelihood-skilling initiative as part of the Rehabilitation
+              &amp; Capability Development pathway.
+            </p>
+            <p>
+              The proposed programme currently focuses on Electrical and Plumbing skills alongside digital and
+              financial capability, work readiness and preparation for future livelihood opportunities.
+            </p>
+            <Link className="action-link page-cta" href="/initial-programme">
+              <span>View Initial Programme</span>
+              <span className="action-icon"><ArrowUpRight /></span>
+            </Link>
           </div>
         </div>
       </section>

@@ -18,8 +18,8 @@ const parkinsans = localFont({ src: "./fonts/parkinsans.woff2", variable: "--fon
 const orbitron = localFont({ src: "./fonts/orbitron-bold.ttf", variable: "--font-orbitron", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "AJ Foundation | Skills for Rehabilitation. Readiness for Life.",
-  description: "AJ Foundation supports rehabilitation through skills, employability training, and post-release readiness.",
+  title: "AJ Foundation | Dignity. Access. A pathway forward.",
+  description: "AJ Foundation is being established to support people affected by incarceration through connected pathways in access to justice, rehabilitation and capability development, and reintegration.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
