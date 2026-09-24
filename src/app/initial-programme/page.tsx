@@ -67,7 +67,7 @@ export default function InitialProgrammePage() {
       />
 
       <section className="section section-white">
-        <div className="site-shell page-content page-content-wide">
+        <div className="site-shell page-content page-content-mid">
           <div className="synthesis-block">
             <Target />
             <p>
@@ -98,7 +98,7 @@ export default function InitialProgrammePage() {
       </section>
 
       <section className="section section-warm">
-        <div className="site-shell page-content page-content-wide">
+        <div className="site-shell page-content page-content-mid">
           <div className="page-eyebrow-heading"><CalendarDays /><h2>Proposed programme model</h2></div>
           <div className="ip-stats">
             {model.map((stat) => {
@@ -130,7 +130,7 @@ export default function InitialProgrammePage() {
       </section>
 
       <section className="section section-white">
-        <div className="site-shell page-content page-content-wide">
+        <div className="site-shell page-content page-content-mid">
           <div className="page-eyebrow-heading"><GraduationCap /><h2>Learning and certification</h2></div>
           <p>
             Assessment and certification pathways will be aligned, where applicable, with relevant NSQF/KSDC
@@ -145,7 +145,7 @@ export default function InitialProgrammePage() {
       </section>
 
       <section className="section section-warm">
-        <div className="site-shell page-content page-content-wide">
+        <div className="site-shell page-content page-content-mid">
           <div className="page-eyebrow-heading"><Route /><h2>Participant journey</h2></div>
           <ol className="journey">
             {journey.map((step) => (
@@ -159,7 +159,7 @@ export default function InitialProgrammePage() {
       </section>
 
       <section className="section section-white">
-        <div className="site-shell page-content page-content-wide">
+        <div className="site-shell page-content page-content-mid">
           <div className="page-eyebrow-heading"><ShieldCheck /><h2>Implementation status</h2></div>
           <NoticeBox label="Status">
             <p>
