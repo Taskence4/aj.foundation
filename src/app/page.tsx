@@ -107,7 +107,7 @@ export default function Home() {
               );
             })}
           </div>
-          <div className="page-content page-content-wide after-grid">
+          <div className="page-content after-grid grid-cta">
             <ActionLink href="/our-work" light>Explore Our Work</ActionLink>
           </div>
         </div>

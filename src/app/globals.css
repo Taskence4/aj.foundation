@@ -214,6 +214,7 @@ h1, h2, h3, blockquote { font-family: var(--font-parkinsans), sans-serif; font-w
 /* Institutional content pages */
 .page-content { max-width: 760px; margin: 0 auto; }
 .page-content.after-grid { margin-top: 80px; }
+.page-content.grid-cta { display: flex; justify-content: center; margin-top: 40px; }
 .page-content-wide { max-width: none; }
 .page-content-mid { max-width: 960px; margin-inline: auto; }
 .page-content-mid > p, .page-content-mid > .page-list, .page-content-mid > .article-takeaways, .page-content-mid > .question-box { max-width: 780px; }
