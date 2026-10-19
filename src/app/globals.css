@@ -16,6 +16,7 @@ body { margin: 0; background: white; color: var(--dark); font-family: var(--font
 main, section, header, footer { max-width: 100%; }
 img, svg { max-width: 100%; }
 a { color: inherit; text-decoration: none; }
+a:focus-visible, button:focus-visible, [role="radio"]:focus-visible, input[type="checkbox"]:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 4px; }
 button { font: inherit; }
 .site-shell { width: min(1200px, calc(100% - 48px)); margin-inline: auto; }
 .section { position: relative; padding: 112px 0; }
@@ -193,6 +194,7 @@ h1, h2, h3, blockquote { font-family: var(--font-parkinsans), sans-serif; font-w
 .contact-field input, .contact-field textarea { width: 100%; padding: 13px 16px; border: 1px solid var(--line); border-radius: 12px; font: inherit; font-size: 14px; color: var(--dark); background: var(--cream); transition: border-color .2s ease, background .2s ease; }
 .contact-field input::placeholder, .contact-field textarea::placeholder { color: rgba(26,26,26,.35); }
 .contact-field input:focus, .contact-field textarea:focus { outline: none; border-color: var(--primary); background: #fff; }
+.contact-field input:focus-visible, .contact-field textarea:focus-visible { box-shadow: 0 0 0 3px rgba(0,118,29,.25); }
 .contact-field textarea { resize: vertical; min-height: 96px; }
 .contact-intent-group { display: flex; flex-wrap: wrap; gap: 8px; }
 .contact-intent-pill { display: inline-flex; align-items: center; min-height: 40px; padding: 9px 16px; border: 1px solid var(--line); border-radius: 999px; background: var(--cream); font-size: 13px; font-weight: 600; color: var(--muted); cursor: pointer; transition: background .18s ease, border-color .18s ease, color .18s ease; }
@@ -201,6 +203,8 @@ h1, h2, h3, blockquote { font-family: var(--font-parkinsans), sans-serif; font-w
 .contact-intent-error { margin: 8px 0 0; font-size: 12px; font-weight: 600; color: #c0392b; }
 .contact-form button[type="submit"] { margin-top: 28px; display: inline-flex; align-items: center; justify-content: center; gap: 14px; width: 100%; height: 54px; padding: 0 6px 0 26px; border: 0; border-radius: 999px; background: var(--dark); color: white; font-weight: 700; font-size: 14px; cursor: pointer; transition: opacity .2s ease; }
 .contact-form button[type="submit"]:hover { opacity: .88; }
+.contact-form button[type="submit"]:disabled { opacity: .6; cursor: progress; }
+.form-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .contact-form button[type="submit"] i { display: grid; place-items: center; width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%; background: white; color: var(--dark); }
 .contact-form-done { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; padding: 56px 40px; color: var(--dark); }
 .contact-form-done-icon { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: rgba(0,118,29,.1); color: var(--primary); }
@@ -387,7 +391,7 @@ ol.page-list { list-style: decimal; }
 .footer-main > div:not(:first-child) { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; font-size: 14px; }
 .footer-main > div:not(:first-child) > a { display: inline-flex; align-items: center; min-height: 32px; }
 .footer-main h3 { margin-bottom: 8px; }
-.footer-legal-note { margin: 0; padding-top: 28px; color: rgba(255,255,255,.4); font-size: 12px; line-height: 1.6; max-width: 720px; }
+.footer-legal-note { max-width: 720px; margin: 0 auto; padding: 28px 0 24px; color: rgba(255,255,255,.4); font-size: 12px; line-height: 1.6; text-align: center; overflow-wrap: break-word; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 30px; padding: 25px 0; border-top: 1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.4); font-size: 12px; }
 
 @media (max-width: 1180px) {

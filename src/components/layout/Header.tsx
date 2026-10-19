@@ -6,12 +6,9 @@ import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 
 const links = [
-  ["Home", "/"],
   ["About", "/about"],
   ["Our Work", "/our-work"],
-  ["Initial Programme", "/initial-programme"],
   ["How We Work", "/how-we-work"],
-  ["Insights", "/updates"],
   ["Partner With Us", "/partner-with-us"],
   ["Contact", "/contact"],
 ];
@@ -20,6 +17,7 @@ const pathways = [
   ["Access to Justice", "/our-work/access-to-justice"],
   ["Rehabilitation & Capability Development", "/our-work/rehabilitation"],
   ["Reintegration & Second Chances", "/our-work/reintegration"],
+  ["Initial Programme", "/initial-programme"],
 ];
 
 export function Header() {

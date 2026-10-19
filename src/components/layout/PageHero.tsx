@@ -6,8 +6,8 @@ export function PageHero({
   title,
   description,
   action,
-  backHref = "/",
-  backLabel = "Back to home",
+  backHref,
+  backLabel,
 }: {
   eyebrow: string;
   title: string;
@@ -19,7 +19,7 @@ export function PageHero({
   return (
     <section className="updates-page-hero">
       <div className="site-shell updates-page-hero-inner">
-        <HashLink className="page-back-link" href={backHref}><ArrowLeft /> {backLabel}</HashLink>
+        {backHref && backLabel && <HashLink className="page-back-link" href={backHref}><ArrowLeft /> {backLabel}</HashLink>}
         <p className="eyebrow eyebrow-light">{eyebrow}</p>
         <h1>{title}</h1>
         {description && <p>{description}</p>}

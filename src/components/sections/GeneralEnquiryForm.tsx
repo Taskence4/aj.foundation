@@ -2,57 +2,65 @@
 
 import { useState, type FormEvent } from "react";
 import { CheckCircle2, Mail, MessageSquare, Send, User } from "lucide-react";
+import { CONTACT_EMAIL, formsSubmitDirectly, submitEnquiry, type EnquiryResult } from "@/lib/site";
 
 const enquiryTypes = ["General", "Programme", "Media", "Other"] as const;
 
 export function GeneralEnquiryForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "error" | EnquiryResult>("idle");
   const [enquiryType, setEnquiryType] = useState<string>("");
   const [typeTouched, setTypeTouched] = useState(false);
   const [consented, setConsented] = useState(false);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const formElement = event.currentTarget;
+    setTypeTouched(true);
 
-    if (!enquiryType || !consented) {
-      setTypeTouched(true);
-      return;
+    if (!enquiryType || !formElement.reportValidity()) return;
+
+    const form = new FormData(formElement);
+    const value = (name: string) => String(form.get(name) ?? "");
+
+    setStatus("sending");
+    try {
+      setStatus(
+        await submitEnquiry({
+          subject: `AJ Foundation enquiry — ${enquiryType}`,
+          replyTo: value("email"),
+          botcheck: form.has("botcheck"),
+          fields: [
+            ["Name", value("name")],
+            ["Email", value("email")],
+            ["Phone", value("phone")],
+            ["Organisation", value("organisation")],
+            ["Enquiry type", enquiryType],
+            ["Message", value("message")],
+          ],
+        }),
+      );
+    } catch {
+      setStatus("error");
     }
-
-    const form = new FormData(event.currentTarget);
-    const name = String(form.get("name") ?? "");
-    const email = String(form.get("email") ?? "");
-    const phone = String(form.get("phone") ?? "");
-    const organisation = String(form.get("organisation") ?? "");
-    const message = String(form.get("message") ?? "");
-
-    const body = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      phone ? `Phone: ${phone}` : null,
-      organisation ? `Organisation: ${organisation}` : null,
-      `Enquiry type: ${enquiryType}`,
-      "",
-      message,
-    ]
-      .filter(Boolean)
-      .join("\n");
-
-    window.location.href = `mailto:info@ajfoundation.org?subject=${encodeURIComponent(
-      `AJ Foundation enquiry — ${enquiryType}`,
-    )}&body=${encodeURIComponent(body)}`;
-
-    setSubmitted(true);
   }
 
-  if (submitted) {
+  if (status === "sent" || status === "draft") {
     return (
       <div className="contact-form contact-form-done" role="status">
         <span className="contact-form-done-icon"><CheckCircle2 /></span>
-        <strong>Your email draft is ready.</strong>
-        <p>Please send the draft from your email application to complete your enquiry. The website has not submitted it for you.</p>
-        <p>If your email application did not open, write to <a href="mailto:info@ajfoundation.org">info@ajfoundation.org</a>.</p>
-        <button type="button" onClick={() => setSubmitted(false)}>Return to form</button>
+        {status === "sent" ? (
+          <>
+            <strong>Thank you — your enquiry has been sent.</strong>
+            <p>It has been delivered to the AJ Foundation team, who will reply to the email address you provided.</p>
+          </>
+        ) : (
+          <>
+            <strong>Your email draft is ready.</strong>
+            <p>Please send the draft from your email application to complete your enquiry. The website has not submitted it for you.</p>
+            <p>If your email application did not open, write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+          </>
+        )}
+        <button type="button" onClick={() => setStatus("idle")}>Return to form</button>
       </div>
     );
   }
@@ -96,10 +104,7 @@ export function GeneralEnquiryForm() {
               role="radio"
               aria-checked={enquiryType === type}
               className={`contact-intent-pill ${enquiryType === type ? "is-active" : ""}`}
-              onClick={() => {
-                setEnquiryType(type);
-                setTypeTouched(false);
-              }}
+              onClick={() => setEnquiryType(type)}
             >
               {type}
             </button>
@@ -112,6 +117,8 @@ export function GeneralEnquiryForm() {
         <label htmlFor="general-message"><MessageSquare /> Message</label>
         <textarea id="general-message" name="message" rows={4} placeholder="How can we help?" required />
       </div>
+
+      <input className="form-honeypot" type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
       <div className="consent-check">
         <input
@@ -127,8 +134,19 @@ export function GeneralEnquiryForm() {
       </div>
       {typeTouched && !consented && <p className="contact-intent-error">Please provide consent to continue.</p>}
 
-      <p className="form-delivery-note">This form opens a draft in your email application. Review and send it there to complete your enquiry.</p>
-      <button type="submit"><span>Send Enquiry</span><i><Send size={16} /></i></button>
+      {status === "error" && (
+        <p className="contact-intent-error" role="alert">
+          Sorry, your enquiry could not be sent. Please try again, or write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+        </p>
+      )}
+      <p className="form-delivery-note">
+        {formsSubmitDirectly
+          ? "Your enquiry will be sent securely to the AJ Foundation team."
+          : "This form opens a draft in your email application. Review and send it there to complete your enquiry."}
+      </p>
+      <button type="submit" disabled={status === "sending"}>
+        <span>{status === "sending" ? "Sending…" : "Send Enquiry"}</span><i><Send size={16} /></i>
+      </button>
     </form>
   );
 }

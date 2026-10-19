@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import {
-  ArrowUpRight,
   CalendarCheck,
   CalendarDays,
   Clock3,
@@ -175,16 +173,6 @@ export default function InitialProgrammePage() {
               This programme sits within Rehabilitation &amp; Capability Development and is intended to connect,
               where appropriate, with Access to Justice and Reintegration &amp; Second Chances.
             </p>
-            <div className="page-cta-row page-cta">
-              <Link className="action-link" href="/our-work/rehabilitation">
-                <span>Explore Rehabilitation &amp; Capability Development</span>
-                <span className="action-icon"><ArrowUpRight /></span>
-              </Link>
-              <Link className="action-link" href="/our-work">
-                <span>Explore Our Work</span>
-                <span className="action-icon"><ArrowUpRight /></span>
-              </Link>
-            </div>
           </div>
         </div>
       </section>

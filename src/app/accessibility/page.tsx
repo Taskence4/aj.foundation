@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
+import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_HREF } from "@/lib/site";
 import { HashLink } from "@/components/HashLink";
 
 export const metadata: Metadata = {
@@ -48,9 +49,9 @@ export default function AccessibilityPage() {
             format you need.
           </p>
           <p>
-            Email: <a href="mailto:info@ajfoundation.org">info@ajfoundation.org</a>
+            Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
             <br />
-            Phone: <a href="tel:+918050089834">+91 80500 89834</a>
+            Phone: <a href={CONTACT_PHONE_HREF}>{CONTACT_PHONE}</a>
           </p>
 
           <h2>Response commitment</h2>

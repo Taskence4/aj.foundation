@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
+import { CONTACT_EMAIL, formsSubmitDirectly } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Notice | AJ Foundation",
@@ -21,7 +22,7 @@ export default function PrivacyPage() {
           </p>
           <p>
             For privacy-related enquiries, please contact{" "}
-            <a href="mailto:info@ajfoundation.org">info@ajfoundation.org</a>.
+            <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
           </p>
 
           <h2>2. Information we collect</h2>
@@ -76,7 +77,7 @@ export default function PrivacyPage() {
             You may contact us to request access, correction, completion, updating or erasure of personal
             information, or to raise a concern about how it has been handled, subject to applicable law and
             verification of your identity. Requests may be sent to{" "}
-            <a href="mailto:info@ajfoundation.org">info@ajfoundation.org</a>.
+            <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
           </p>
 
           <h2>9. Children</h2>
@@ -88,13 +89,30 @@ export default function PrivacyPage() {
 
           <h2>10. Cookies and analytics</h2>
           <p>
-            This website does not set cookies and does not use analytics or non-essential tracking. Enquiry forms
-            open a draft in your own email application rather than submitting data to this website. If analytics
+            This website does not set cookies and does not use analytics or non-essential tracking. If analytics
             or non-essential tracking is introduced, this notice and a visitor-consent mechanism will be updated
             before activation.
           </p>
 
-          <h2>11. Changes to this notice</h2>
+          <h2>11. How our enquiry forms work</h2>
+          {formsSubmitDirectly ? (
+            <p>
+              When you submit the Contact or Partnership form, the details you enter are transmitted securely to
+              Web3Forms, a form-processing service, which forwards them by email to {CONTACT_EMAIL}. Web3Forms
+              acts only as a processor for delivering your message. This website does not store form submissions,
+              and the forms do not accept file uploads. Please see the{" "}
+              <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer">Web3Forms privacy policy</a>{" "}
+              for details of how that service handles data.
+            </p>
+          ) : (
+            <p>
+              The Contact and Partnership forms open a draft in your own email application addressed to{" "}
+              {CONTACT_EMAIL}. Nothing is submitted to or stored by this website; your message is only sent if you
+              choose to send the draft. The forms do not accept file uploads.
+            </p>
+          )}
+
+          <h2>12. Changes to this notice</h2>
           <p>We may update this Privacy Notice. The revised version will be posted on this page with an updated effective date.</p>
         </div>
       </section>

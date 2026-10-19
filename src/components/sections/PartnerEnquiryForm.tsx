@@ -3,59 +3,65 @@
 import { useState, type FormEvent } from "react";
 import { Briefcase, Building2, CheckCircle2, Mail, MessageSquare, Send, User } from "lucide-react";
 import { collaborateWays } from "@/data/collaborate";
+import { CONTACT_EMAIL, formsSubmitDirectly, submitEnquiry, type EnquiryResult } from "@/lib/site";
 
 export function PartnerEnquiryForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "error" | EnquiryResult>("idle");
   const [interest, setInterest] = useState<string>("");
   const [interestTouched, setInterestTouched] = useState(false);
   const [consented, setConsented] = useState(false);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const formElement = event.currentTarget;
+    setInterestTouched(true);
 
-    if (!interest || !consented) {
-      setInterestTouched(true);
-      return;
+    if (!interest || !formElement.reportValidity()) return;
+
+    const form = new FormData(formElement);
+    const value = (name: string) => String(form.get(name) ?? "");
+
+    setStatus("sending");
+    try {
+      setStatus(
+        await submitEnquiry({
+          subject: `AJ Foundation partnership enquiry — ${value("organisation") || value("name")}`,
+          replyTo: value("email"),
+          botcheck: form.has("botcheck"),
+          fields: [
+            ["Name", value("name")],
+            ["Organisation", value("organisation")],
+            ["Role", value("role")],
+            ["Email", value("email")],
+            ["Phone", value("phone")],
+            ["Area of interest", interest],
+            ["Proposed contribution/collaboration", value("contribution")],
+            ["Message", value("message")],
+          ],
+        }),
+      );
+    } catch {
+      setStatus("error");
     }
-
-    const form = new FormData(event.currentTarget);
-    const name = String(form.get("name") ?? "");
-    const organisation = String(form.get("organisation") ?? "");
-    const role = String(form.get("role") ?? "");
-    const email = String(form.get("email") ?? "");
-    const phone = String(form.get("phone") ?? "");
-    const contribution = String(form.get("contribution") ?? "");
-    const message = String(form.get("message") ?? "");
-
-    const body = [
-      `Name: ${name}`,
-      `Organisation: ${organisation}`,
-      `Role: ${role}`,
-      `Email: ${email}`,
-      phone ? `Phone: ${phone}` : null,
-      `Area of interest: ${interest}`,
-      contribution ? `Proposed contribution/collaboration: ${contribution}` : null,
-      "",
-      message,
-    ]
-      .filter(Boolean)
-      .join("\n");
-
-    window.location.href = `mailto:info@ajfoundation.org?subject=${encodeURIComponent(
-      `AJ Foundation partnership enquiry — ${organisation || name}`,
-    )}&body=${encodeURIComponent(body)}`;
-
-    setSubmitted(true);
   }
 
-  if (submitted) {
+  if (status === "sent" || status === "draft") {
     return (
       <div className="contact-form contact-form-done" role="status">
         <span className="contact-form-done-icon"><CheckCircle2 /></span>
-        <strong>Your email draft is ready.</strong>
-        <p>Please send the draft from your email application to complete your partnership enquiry. The website has not submitted it for you.</p>
-        <p>If your email application did not open, write to <a href="mailto:info@ajfoundation.org">info@ajfoundation.org</a>.</p>
-        <button type="button" onClick={() => setSubmitted(false)}>Return to form</button>
+        {status === "sent" ? (
+          <>
+            <strong>Thank you — your partnership enquiry has been sent.</strong>
+            <p>It has been delivered to the AJ Foundation team, who will reply to the email address you provided.</p>
+          </>
+        ) : (
+          <>
+            <strong>Your email draft is ready.</strong>
+            <p>Please send the draft from your email application to complete your partnership enquiry. The website has not submitted it for you.</p>
+            <p>If your email application did not open, write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+          </>
+        )}
+        <button type="button" onClick={() => setStatus("idle")}>Return to form</button>
       </div>
     );
   }
@@ -104,10 +110,7 @@ export function PartnerEnquiryForm() {
               role="radio"
               aria-checked={interest === way.title}
               className={`contact-intent-pill ${interest === way.title ? "is-active" : ""}`}
-              onClick={() => {
-                setInterest(way.title);
-                setInterestTouched(false);
-              }}
+              onClick={() => setInterest(way.title)}
             >
               {way.title}
             </button>
@@ -126,6 +129,8 @@ export function PartnerEnquiryForm() {
         <textarea id="partner-message" name="message" rows={4} placeholder="Tell us more about the collaboration you have in mind…" required />
       </div>
 
+      <input className="form-honeypot" type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+
       <div className="consent-check">
         <input
           id="partner-consent"
@@ -140,8 +145,19 @@ export function PartnerEnquiryForm() {
       </div>
       {interestTouched && !consented && <p className="contact-intent-error">Please provide consent to continue.</p>}
 
-      <p className="form-delivery-note">This form opens a draft in your email application. Review and send it there to complete your enquiry.</p>
-      <button type="submit"><span>Send Partnership Enquiry</span><i><Send size={16} /></i></button>
+      {status === "error" && (
+        <p className="contact-intent-error" role="alert">
+          Sorry, your enquiry could not be sent. Please try again, or write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+        </p>
+      )}
+      <p className="form-delivery-note">
+        {formsSubmitDirectly
+          ? "Your enquiry will be sent securely to the AJ Foundation team."
+          : "This form opens a draft in your email application. Review and send it there to complete your enquiry."}
+      </p>
+      <button type="submit" disabled={status === "sending"}>
+        <span>{status === "sending" ? "Sending…" : "Send Partnership Enquiry"}</span><i><Send size={16} /></i>
+      </button>
     </form>
   );
 }
