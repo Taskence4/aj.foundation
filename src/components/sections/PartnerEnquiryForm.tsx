@@ -25,7 +25,7 @@ export function PartnerEnquiryForm() {
     try {
       setStatus(
         await submitEnquiry({
-          subject: `AJ Foundation partnership enquiry — ${value("organisation") || value("name")}`,
+          subject: "Website – Partnership Enquiry",
           replyTo: value("email"),
           botcheck: form.has("botcheck"),
           fields: [

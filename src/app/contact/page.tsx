@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
-import { Mail, Phone } from "lucide-react";
+import { Briefcase, Landmark, Mail, MapPin, Phone } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
-import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_HREF } from "@/lib/site";
+import {
+  CAREERS_EMAIL,
+  CONTACT_EMAIL,
+  CONTACT_PHONE,
+  CONTACT_PHONE_HREF,
+  OPERATIONAL_OFFICE,
+  REGISTERED_OFFICE,
+} from "@/lib/site";
 import { NoticeBox } from "@/components/layout/NoticeBox";
 import { GeneralEnquiryForm } from "@/components/sections/GeneralEnquiryForm";
 
@@ -21,9 +28,32 @@ export default function ContactPage() {
 
       <section className="section section-white">
         <div className="site-shell">
-          <div className="page-content contact-links">
-            <a className="contact-email-link" href={`mailto:${CONTACT_EMAIL}`}><Mail size={18} /> {CONTACT_EMAIL}</a>
-            <a className="contact-email-link" href={CONTACT_PHONE_HREF}><Phone size={18} /> {CONTACT_PHONE}</a>
+          <div className="page-content">
+            <div className="collaborate-grid contact-details-grid">
+              <article>
+                <Mail />
+                <h3>General enquiries</h3>
+                <p><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+                <p><a href={CONTACT_PHONE_HREF}><Phone size={14} /> {CONTACT_PHONE}</a></p>
+              </article>
+              <article>
+                <Briefcase />
+                <h3>Careers / Internship</h3>
+                <p><a href={`mailto:${CAREERS_EMAIL}`}>{CAREERS_EMAIL}</a></p>
+                <p>For recruitment applications and recruitment-related communication.</p>
+              </article>
+              <article>
+                <Landmark />
+                <h3>Registered Office</h3>
+                <address>{REGISTERED_OFFICE.map((line) => <span key={line}>{line}</span>)}</address>
+              </article>
+              <article>
+                <MapPin />
+                <h3>Operational Office</h3>
+                <address>{OPERATIONAL_OFFICE.map((line) => <span key={line}>{line}</span>)}</address>
+                <p>Visits by prior appointment.</p>
+              </article>
+            </div>
           </div>
 
           <GeneralEnquiryForm />

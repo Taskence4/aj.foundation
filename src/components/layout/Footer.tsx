@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_HREF } from "@/lib/site";
+import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_HREF, LEGAL_FORM, REGISTRATION_NO } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -15,7 +15,7 @@ export function Footer() {
         <div><h3>Legal</h3><Link href="/privacy">Privacy Notice</Link><Link href="/terms">Terms of Use &amp; Legal Disclaimer</Link><Link href="/accessibility">Accessibility</Link></div>
       </div>
       <div className="site-shell"><p className="footer-legal-note">Information on this website is general and does not constitute legal advice. AJ Foundation does not guarantee representation, release or any particular legal outcome.</p></div>
-      <div className="site-shell footer-bottom"><span>&copy; {new Date().getFullYear()} AJ Foundation. All rights reserved.</span></div>
+      <div className="site-shell footer-bottom"><span>AJ Foundation | {LEGAL_FORM} | <span className="nowrap">Reg. No. {REGISTRATION_NO}</span></span><span>&copy; {new Date().getFullYear()} AJ Foundation. All rights reserved.</span></div>
     </footer>
   );
 }

@@ -68,7 +68,29 @@ Verified with headless Chrome at 375px and 1440px:
 - [ ] 🔒 GitHub repo → Settings → Pages → Custom domain `aj.foundation`, then Enforce HTTPS.
 - [ ] Code: remove the `/aj.foundation` base path in `next.config.ts`. Deploy this at the same time as the DNS switch, not before.
 
-## 8. Completion response to client
+## 8. Final approved changes (26 Oct 2026)
+
+- [x] §1 Pre-registration wording ("being established / being developed") replaced site-wide, including metadata. Programme wording stays future-facing.
+- [x] §2 Home: new hero copy, new "Why this work matters" sentence, Founder photo unlabelled. The home programme teaser was updated to match §8.
+- [x] §3 About: new hero and "Who we are" copy, Registration details block, Governance (2 trustees).
+- [x] §8 Initial Programme: status "Implementation under preparation", Bengaluru Central Prison location, legal-aid/release-support paragraph,
+      trades "Electrical, including Home Appliance Repair" + "Plumbing", "Up to 20 participants per trade/batch".
+      "KSDC" removed from the certification text, since it named a body before confirmation. The Rehabilitation page line was updated to match.
+- [x] §10 / §11 Form subjects: "Website – Partnership Enquiry" and "Website – General Enquiry". Both route to info@aj.foundation.
+- [x] §10 No CSR-1 claim anywhere.
+- [x] §11 Contact: general email and phone, careers@aj.foundation, Registered Office (exact, no C/o), Operational Office + "Visits by prior appointment".
+- [x] §12 Privacy: institutional opening; hosting (GitHub Pages), form processor (Web3Forms, shown when active), mailbox, no database storage,
+      access limited to authorised personnel, retention, no cookies, no analytics.
+- [ ] 🔒 §12 A specific retention period (e.g. "12 months"), if the client wants one stated. The current wording is general.
+- [x] §13 Terms: legal-identity section added. No governing-law or jurisdiction text invented. The banner now says those provisions are pending legal review.
+- [x] §14 Accessibility: no WCAG conformance claim. States that a formal test hasn't been completed.
+- [x] §15 Footer: "AJ Foundation | Public Charitable Trust | Reg. No. E-0041114(GBR)". No address in the footer.
+- [x] §17 No social links displayed (verified on all pages).
+- [ ] 🔒 §17 Add LinkedIn (then Instagram) once the official URLs are provided.
+- [ ] 🔒 §18 Live-domain form testing. Needs the domain switch and the Web3Forms key for info@aj.foundation.
+- [ ] 🔒 §21 Administrative handover to AJ Foundation: Openprovider, GitHub repo, Web3Forms, email admin. Transfer credentials securely.
+
+## 9. Completion response to client
 
 Hosted link, plus confirmation of: (1) public email, (2) form method and destination inbox, (3) footer fix,
 (4) navigation simplification, (5) image changes, (6) mobile / link / legal QA.

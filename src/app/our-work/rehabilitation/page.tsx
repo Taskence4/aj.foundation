@@ -56,7 +56,8 @@ export default function RehabilitationPage() {
           <h2>Initial programme</h2>
           <p>
             AJ Foundation&rsquo;s first programme focus is a rehabilitation-integrated livelihood-skilling
-            initiative currently under development.
+            initiative at Bengaluru Central Prison, Parappana Agrahara, Bengaluru, where implementation is under
+            preparation.
           </p>
 
           <Link className="action-link page-cta" href="/initial-programme">

@@ -26,7 +26,7 @@ export function GeneralEnquiryForm() {
     try {
       setStatus(
         await submitEnquiry({
-          subject: `AJ Foundation enquiry — ${enquiryType}`,
+          subject: "Website – General Enquiry",
           replyTo: value("email"),
           botcheck: form.has("botcheck"),
           fields: [

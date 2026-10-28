@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
-import { CONTACT_EMAIL, formsSubmitDirectly } from "@/lib/site";
+import { CONTACT_EMAIL, formsSubmitDirectly, LEGAL_FORM, LEGAL_NAME, REGISTERED_OFFICE, REGISTRATION_NO } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Notice | AJ Foundation",
@@ -16,9 +16,9 @@ export default function PrivacyPage() {
         <div className="site-shell page-content">
           <h2>1. Who we are</h2>
           <p>
-            This website is operated by AJ Foundation, referred to in this notice as &ldquo;we&rdquo;,
-            &ldquo;us&rdquo; or &ldquo;our&rdquo;. AJ Foundation is currently being established. Formal legal and
-            registered-office details will be published once the relevant institutional processes are complete.
+            {LEGAL_NAME} is a {LEGAL_FORM} registered under Registration No. {REGISTRATION_NO}. Its registered
+            office is at {REGISTERED_OFFICE.join(", ")}. In this notice, AJ Foundation is referred to as
+            &ldquo;we&rdquo;, &ldquo;us&rdquo; or &ldquo;our&rdquo;.
           </p>
           <p>
             For privacy-related enquiries, please contact{" "}
@@ -27,9 +27,9 @@ export default function PrivacyPage() {
 
           <h2>2. Information we collect</h2>
           <p>
-            We may collect information that you choose to provide through our enquiry forms, including your name,
-            email address, phone number, organisation, role, area of interest and message. We may also collect
-            limited technical information necessary for website security and operation.
+            We collect the information that you choose to provide through our Contact and Partnership forms or by
+            email: your name, email address, phone number (optional), organisation, role, enquiry type or area of
+            interest, and message. The forms do not accept file uploads.
           </p>
           <p>
             Please do not submit case files, identity documents, medical information or other sensitive personal
@@ -53,16 +53,32 @@ export default function PrivacyPage() {
 
           <h2>5. Sharing and service providers</h2>
           <p>
-            We do not sell personal information. We may use authorised service providers for website hosting,
-            email, forms, security or technical support, subject to appropriate arrangements. We may disclose
-            information where required by law or with your specific consent.
+            We do not sell personal information. This website relies on the following service providers:
+          </p>
+          <ul className="page-list">
+            <li>
+              <strong>Website hosting:</strong> GitHub Pages (GitHub, Inc.). When you visit the website, GitHub logs
+              technical information such as your IP address for security and operational purposes. See the{" "}
+              <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a>.
+            </li>
+            {formsSubmitDirectly && (
+              <li>
+                <strong>Form processing:</strong> Web3Forms, which receives form submissions and forwards them by
+                email to {CONTACT_EMAIL}. See the{" "}
+                <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer">Web3Forms privacy policy</a>.
+              </li>
+            )}
+            <li><strong>Email:</strong> our organisational email provider, which hosts the {CONTACT_EMAIL} mailbox.</li>
+          </ul>
+          <p>
+            We may also disclose information where required by law or with your specific consent.
           </p>
 
           <h2>6. Retention</h2>
           <p>
-            Personal information should be retained only for as long as reasonably necessary for the purpose for
-            which it was collected or where required by law. The actual retention period for general and
-            partnership enquiries will be confirmed and published before public launch.
+            Enquiries are kept in the {CONTACT_EMAIL} mailbox only for as long as reasonably necessary to respond
+            and to manage any resulting conversation or partnership, or where required by law. Access to that
+            mailbox is limited to authorised AJ Foundation personnel.
           </p>
 
           <h2>7. Security</h2>
@@ -97,12 +113,10 @@ export default function PrivacyPage() {
           <h2>11. How our enquiry forms work</h2>
           {formsSubmitDirectly ? (
             <p>
-              When you submit the Contact or Partnership form, the details you enter are transmitted securely to
-              Web3Forms, a form-processing service, which forwards them by email to {CONTACT_EMAIL}. Web3Forms
-              acts only as a processor for delivering your message. This website does not store form submissions,
-              and the forms do not accept file uploads. Please see the{" "}
-              <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer">Web3Forms privacy policy</a>{" "}
-              for details of how that service handles data.
+              When you submit the Contact or Partnership form, the details you enter are sent securely to
+              Web3Forms, which forwards them by email to {CONTACT_EMAIL}. This website does not store form
+              submissions in any database; your enquiry is held in the AJ Foundation mailbox as described in
+              section 6.
             </p>
           ) : (
             <p>

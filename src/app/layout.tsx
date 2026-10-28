@@ -19,7 +19,7 @@ const orbitron = localFont({ src: "./fonts/orbitron-bold.ttf", variable: "--font
 
 export const metadata: Metadata = {
   title: "AJ Foundation | Dignity. Access. A pathway forward.",
-  description: "AJ Foundation is being established to support people affected by incarceration through connected pathways in access to justice, rehabilitation and capability development, and reintegration.",
+  description: "AJ Foundation is a Public Charitable Trust working to advance access to justice, rehabilitation and capability development, and reintegration for people affected by incarceration.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

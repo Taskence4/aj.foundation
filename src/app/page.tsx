@@ -48,8 +48,8 @@ export default function Home() {
           <Eyebrow light>AJ Foundation</Eyebrow>
           <h1>Dignity. Access.<br />A pathway forward.</h1>
           <p className="hero-copy">
-            AJ Foundation is being established to support people affected by incarceration through connected
-            pathways in access to justice, rehabilitation and capability development, and reintegration.
+            AJ Foundation is a Public Charitable Trust working to advance access to justice, rehabilitation and
+            capability development, and reintegration for people affected by incarceration.
           </p>
           <p className="hero-copy">
             We seek to work with public institutions, professionals and community partners so that legal barriers,
@@ -75,8 +75,8 @@ export default function Home() {
             separately&mdash;or too late&mdash;the path forward becomes harder.
           </p>
           <p>
-            AJ Foundation is being developed to help connect these dimensions through responsible institutional
-            partnerships and practical pathways before and after release.
+            AJ Foundation seeks to bring these dimensions together through responsible institutional partnerships
+            and practical pathways before and after release.
           </p>
           <ActionLink href="/about" light>About AJ Foundation</ActionLink>
         </div>
@@ -115,18 +115,18 @@ export default function Home() {
       <section id="initial-programme" className="section section-white">
         <div className="site-shell page-content">
           <div className="section-intro">
-            <Eyebrow>Programme under development</Eyebrow>
+            <Eyebrow>Implementation under preparation</Eyebrow>
             <h2>Livelihood skills connected to life after release</h2>
           </div>
           <p>
-            AJ Foundation is developing an initial livelihood-skilling programme combining practical vocational
-            learning with foundational digital and financial capabilities, work readiness and preparation for
-            future livelihood opportunities.
+            AJ Foundation is supporting a rehabilitation-integrated livelihood-skilling initiative at Bengaluru
+            Central Prison, Parappana Agrahara, Bengaluru, combining practical vocational learning, work readiness
+            and preparation for livelihood opportunities after release.
           </p>
           <p>
-            The current programme design includes Electrical and Plumbing as initial trades and will proceed
-            subject to institutional approvals, site readiness and confirmation of training and certification
-            arrangements.
+            The initial trades are Electrical, including Home Appliance Repair, and Plumbing. Implementation and
+            infrastructure preparation are underway; certification arrangements will be announced only once
+            formally confirmed.
           </p>
           <ActionLink href="/initial-programme" light>View Initial Programme</ActionLink>
         </div>

@@ -37,8 +37,8 @@ export default function AccessibilityPage() {
 
           <h2>Known limitations</h2>
           <p>
-            A formal accessibility review is planned as the website moves towards public launch. We will update
-            this page with the review date, method and any known limitations once it is complete.
+            A formal accessibility test has not yet been completed, so we do not claim full WCAG conformance. We
+            will update this page with the review date, method and any known limitations once a review is done.
           </p>
 
           <h2>Feedback and assistance</h2>

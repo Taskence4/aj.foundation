@@ -20,12 +20,12 @@ import { PageHero } from "@/components/layout/PageHero";
 import { NoticeBox } from "@/components/layout/NoticeBox";
 
 const trades = [
-  { icon: Zap, name: "Electrical" },
+  { icon: Zap, name: "Electrical, including Home Appliance Repair" },
   { icon: Wrench, name: "Plumbing" },
 ] as const;
 
 const model = [
-  { icon: Users, qualifier: "Approximately", value: "20–30", label: "participants per trade" },
+  { icon: Users, qualifier: "Up to", value: "20", label: "participants per trade/batch" },
   { icon: CalendarDays, qualifier: "Approximately", value: "Three months", label: "per cohort" },
   { icon: CalendarCheck, qualifier: "", value: "Four", label: "training days per week" },
   { icon: Clock3, qualifier: "Approximately", value: "Four hours", label: "per training day" },
@@ -50,23 +50,29 @@ const journey = [
 
 export const metadata: Metadata = {
   title: "Initial Programme | AJ Foundation",
-  description: "AJ Foundation is developing a rehabilitation-integrated livelihood-skilling initiative for people in prison.",
+  description: "AJ Foundation is supporting a rehabilitation-integrated livelihood-skilling initiative at Bengaluru Central Prison, Parappana Agrahara, Bengaluru.",
 };
 
 export default function InitialProgrammePage() {
   return (
     <>
       <PageHero
-        eyebrow="Programme under development"
+        eyebrow="Implementation under preparation"
         title="Livelihood skills connected to life after release"
-        description="AJ Foundation is developing an initial livelihood-skilling programme that combines practical vocational learning with digital and financial capability, work readiness and preparation for future livelihood opportunities."
+        description="AJ Foundation is supporting a rehabilitation-integrated livelihood-skilling initiative at Bengaluru Central Prison, Parappana Agrahara, Bengaluru, combining practical vocational learning, work readiness and preparation for livelihood opportunities after release."
         backHref="/our-work/rehabilitation"
         backLabel="Back to Rehabilitation & Capability Development"
       />
 
       <section className="section section-white">
         <div className="site-shell page-content page-content-mid">
-          <div className="synthesis-block">
+          <p>
+            In parallel, AJ Foundation is developing legal-aid and release-support pathways for prisoners who are
+            legally eligible for release but remain constrained by verified economic, documentation or related
+            barriers, working through appropriate legal-services and institutional channels.
+          </p>
+
+          <div className="synthesis-block after-grid">
             <Target />
             <p>
               To enable participants to build relevant practical skills and readiness for continuing training,
@@ -89,8 +95,7 @@ export default function InitialProgrammePage() {
             })}
           </div>
           <p>
-            These trades have been identified as the initial focus, subject to institutional approval, site
-            readiness and implementation planning.
+            These trades form the initial focus while implementation and infrastructure preparation are underway.
           </p>
         </div>
       </section>
@@ -131,7 +136,7 @@ export default function InitialProgrammePage() {
         <div className="site-shell page-content page-content-mid">
           <div className="page-eyebrow-heading"><GraduationCap /><h2>Learning and certification</h2></div>
           <p>
-            Assessment and certification pathways will be aligned, where applicable, with relevant NSQF/KSDC
+            Assessment and certification pathways will be aligned, where applicable, with relevant NSQF
             requirements and delivered through competent or authorised institutions once arrangements are
             confirmed.
           </p>
@@ -159,10 +164,10 @@ export default function InitialProgrammePage() {
       <section className="section section-white">
         <div className="site-shell page-content page-content-mid">
           <div className="page-eyebrow-heading"><ShieldCheck /><h2>Implementation status</h2></div>
-          <NoticeBox label="Status">
+          <NoticeBox label="Status: Implementation under preparation">
             <p>
-              Implementation details remain subject to institutional approvals, site readiness and confirmation of
-              training and certification arrangements.
+              Implementation and infrastructure preparation are underway. Training will begin with the first cohort,
+              and certification arrangements will be confirmed before they are announced.
             </p>
           </NoticeBox>
 

@@ -8,6 +8,7 @@ import {
   DoorOpen,
   Eye,
   HeartHandshake,
+  Landmark,
   Scale,
   Target,
   Users,
@@ -15,6 +16,7 @@ import {
 } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
 import { withBasePath } from "@/lib/utils";
+import { LEGAL_FORM, LEGAL_NAME, REGISTRATION_NO } from "@/lib/site";
 
 const audiences = [
   {
@@ -41,7 +43,7 @@ const audiences = [
 
 export const metadata: Metadata = {
   title: "About AJ Foundation | Justice, Rehabilitation and Reintegration",
-  description: "Learn why AJ Foundation is being developed and how it seeks to connect access to justice, rehabilitation and reintegration.",
+  description: "AJ Foundation is a registered Public Charitable Trust connecting access to justice, rehabilitation and capability development, and reintegration for people affected by incarceration.",
 };
 
 export default function AboutPage() {
@@ -50,7 +52,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About AJ Foundation"
         title="Building pathways beyond incarceration"
-        description="AJ Foundation is being established to support people affected by incarceration through connected work in access to justice, rehabilitation and capability development, and reintegration."
+        description="AJ Foundation is a registered Public Charitable Trust working to advance access to justice, rehabilitation and capability development, and reintegration for people affected by incarceration."
       />
 
       <section className="section section-white">
@@ -59,8 +61,9 @@ export default function AboutPage() {
             <div>
               <div className="page-eyebrow-heading"><Building2 /><h2>Who we are</h2></div>
               <p>
-                AJ Foundation is being developed as a focused platform connecting legal-support navigation,
-                learning and livelihood pathways, pre-release preparation and post-release connection.
+                AJ Foundation is a registered Public Charitable Trust with jurisdiction across India. Its current
+                programme focus connects access to justice, rehabilitation and capability development, and
+                reintegration for people affected by incarceration.
               </p>
               <p>
                 Our starting point is simple: people should not have to navigate legal, livelihood and social
@@ -135,11 +138,19 @@ export default function AboutPage() {
             opportunities around the needs and priorities of the person.
           </p>
 
-          <div className="page-eyebrow-heading after-grid"><Building2 /><h2>Registration</h2></div>
-          <p>
-            AJ Foundation is currently being established. Formal registration, governance and registered-office
-            details will be published following completion and approval of the relevant institutional processes.
-          </p>
+          <div className="page-eyebrow-heading after-grid"><Building2 /><h2>Registration details</h2></div>
+          <dl className="institution-details">
+            <div><dt>Registered Legal Name</dt><dd>{LEGAL_NAME}</dd></div>
+            <div><dt>Legal Form</dt><dd>{LEGAL_FORM}</dd></div>
+            <div><dt>Registration No.</dt><dd>{REGISTRATION_NO}</dd></div>
+          </dl>
+
+          <div className="page-eyebrow-heading after-grid"><Landmark /><h2>Governance</h2></div>
+          <p>AJ Foundation is governed by its Board of Trustees in accordance with its Trust Deed.</p>
+          <dl className="institution-details">
+            <div><dt>Ankith Jain</dt><dd>Founder; President &amp; Managing Trustee</dd></div>
+            <div><dt>Pranjal Goutam Jain</dt><dd>Trustee</dd></div>
+          </dl>
 
           <div className="question-box about-closing">
             <Compass />
