@@ -12,7 +12,7 @@ export const OPERATIONAL_OFFICE = ["Co Space Connect", "#579, 10th Main, 32nd D 
 // Public Web3Forms access key (https://web3forms.com). It is tied to the inbox that
 // receives submissions and is safe to publish. While empty, the forms fall back to
 // opening an email draft addressed to CONTACT_EMAIL.
-export const WEB3FORMS_ACCESS_KEY = "";
+export const WEB3FORMS_ACCESS_KEY: string = "27246561-6849-4c7b-a63d-6c57b843e19f";
 
 export const formsSubmitDirectly = WEB3FORMS_ACCESS_KEY !== "";
 
