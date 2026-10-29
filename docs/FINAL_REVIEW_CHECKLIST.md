@@ -8,7 +8,7 @@ Legend: `[x]` done · `[ ]` to do · 🔒 blocked on client/owner input
 Contact details and the form key live in one place: [`src/lib/site.ts`](../src/lib/site.ts).
 
 **Status (29 Oct 2026):** Live at https://aj.foundation. Both forms are tested and delivering to info@aj.foundation.
-Remaining: careers@ mailbox test, administrative handover, LinkedIn URL, client acceptance check.
+Remaining: administrative handover, LinkedIn URL, client acceptance check.
 
 ## 1. Must fix before final approval
 
@@ -84,7 +84,7 @@ Verified on the live domain (https://aj.foundation), both forms, desktop and mob
 - [x] §10 / §11 Form subjects: "Website – Partnership Enquiry" and "Website – General Enquiry". Both route to info@aj.foundation.
 - [x] §10 No CSR-1 claim anywhere.
 - [x] §11 Contact: general email and phone, careers@aj.foundation, Registered Office (exact, no C/o), Operational Office + "Visits by prior appointment".
-- [ ] 🔒 §11 `careers@aj.foundation`: client to create it and confirm a test email arrives (the site link is already in place).
+- [x] §11 `careers@aj.foundation` created (29 Oct 2026). The live Contact page links to it.
 - [x] §12 Privacy: institutional opening; hosting (GitHub Pages), form processor (Web3Forms), mailbox, no database storage,
       access limited to authorised personnel, retention, no cookies, no analytics.
 - [ ] Optional §12: a specific retention period (e.g. "12 months"), if the client wants one. The current wording describes the actual arrangement.
