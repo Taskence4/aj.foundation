@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, Clock3 } from "lucide-react";
+import { ReadingProgress } from "@/components/updates/ReadingProgress";
 import { UpdateCard } from "@/components/updates/UpdateCard";
 import { getUpdate, updates } from "@/data/updates";
 import { withBasePath } from "@/lib/utils";
@@ -51,6 +52,7 @@ export default async function UpdateArticlePage({ params }: PageProps<"/updates/
 
   return (
     <>
+      <ReadingProgress />
       <section className="article-hero">
         <div className="site-shell article-hero-inner">
           <Link className="page-back-link" href="/updates"><ArrowLeft /> All Insights &amp; Updates</Link>

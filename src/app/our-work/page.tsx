@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Fragment } from "react";
 import { ArrowRight, ArrowUpRight, Compass, HeartHandshake, Link2, Quote, Scale, Sprout } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
 import { ourWork } from "@/data/ourWork";
@@ -46,7 +47,7 @@ export default function OurWorkPage() {
             })}
           </div>
 
-          <div className="page-content after-grid">
+          <div className="page-content after-grid connect-intro">
             <div className="page-eyebrow-heading"><Link2 /><h2>How the pathways connect</h2></div>
             <p className="about-section-lead">Taken alone, each pathway can stall. Taken together, they hold.</p>
           </div>
@@ -55,13 +56,20 @@ export default function OurWorkPage() {
             {connections.map((step, index) => {
               const Icon = step.icon;
               return (
-                <div className="connect-step-wrap" key={step.body}>
+                <Fragment key={step.body}>
+                  {index > 0 && (
+                    <div className="connect-link" aria-hidden="true">
+                      <span><ArrowRight /></span>
+                    </div>
+                  )}
                   <div className="connect-step">
-                    <Icon />
+                    <div className="connect-step-head">
+                      <Icon />
+                      <span className="connect-step-index">{String(index + 1).padStart(2, "0")}</span>
+                    </div>
                     <p>{step.body}</p>
                   </div>
-                  {index < connections.length - 1 && <ArrowRight className="connect-arrow" />}
-                </div>
+                </Fragment>
               );
             })}
           </div>

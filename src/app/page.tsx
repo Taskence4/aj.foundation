@@ -148,6 +148,7 @@ export default function Home() {
       </section>
 
       <section id="contact" className="join-section">
+        <div className="join-backdrop" aria-hidden="true" />
         <div className="site-shell join-inner">
           <Eyebrow light>Partner &amp; contact</Eyebrow>
           <h2>Building pathways requires partnership</h2>
