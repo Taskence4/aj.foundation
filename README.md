@@ -2,7 +2,7 @@
 
 Website for AJ Foundation, built with [Next.js](https://nextjs.org) and deployed as a static export to GitHub Pages.
 
-**Live site:** https://taskence4.github.io/aj.foundation/
+**Live site:** https://aj.foundation
 
 ## Development
 
